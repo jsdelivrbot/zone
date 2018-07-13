@@ -1,0 +1,73 @@
+<template>
+    <div class="first">
+        <div class="tip-bottom">
+            <div class="tip-bottom-l">
+            <img />
+            </div>
+            <div class="tip-bottom-r">
+                <div class="nav-left">
+                    <ul>
+                        <li class="li1">1</li>
+                        <li class="li2">1</li>
+                        <li class="li3">
+                            <span class="li3-p1">1</span>
+                            <span class="li3-p2">1</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <li class="li4">
+                        <label>
+                            <input type="checkbox"><b></b>
+                        </label>
+                    </li>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+             
+         },
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+    .third{z-index:2;}
+    .tip-bottom{width:6rem;margin:0 auto;display: flex;}
+    .tip-bottom-l{width: 2.11rem;height: 1.42rem;float: left;margin-top: 0.3rem;border-radius:0.1rem;overflow:hidden;}
+    .tip-bottom-l img{width: 2.11rem;height: 1.42rem;}
+    .tip-bottom-r{width: 3.9rem;height: 1.42rem;margin-top: 0.3rem;flex: 1;border-bottom:1px solid #e0e0e0;}
+
+
+    .nav-left{width:3.21rem;float:left;}
+    .tip-bottom-r ul{height: 1.42rem;margin-left:0.15rem;}
+
+    .tip-bottom-r .li1{line-height:0.49rem;font-size: 0.28rem;}
+    .tip-bottom-r .li2{line-height: 0.31rem;font-size: 0.22rem;overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+    .tip-bottom-r .li3{line-height: 0.18rem;height: 0.18rem;font-size: 0.16rem;margin-top: 0.15rem;}
+    .tip-bottom-r span{display: block;float: left;height: 0.18rem;}
+    .tip-bottom-r .li3-p1{background: url(../../../images/pa.png) no-repeat;background-size: 0.18rem 0.18rem;padding-left: 0.28rem;margin-right: 0.27rem;float: left;}
+    .tip-bottom-r .li3-p2{background: url(../../../images/tz.png) no-repeat;background-size: 0.18rem 0.18rem;padding-left: 0.28rem;float: left;}
+    .nav-right {width:0.46rem;height:1.42rem;float:right;}
+    .nav-right .li4{width:0.46rem;height:1.42rem;float:right;position: relative;}
+    label{width: 0.46rem;height: 0.46rem;border-radius:50%;display: block;position:relative;z-index:1;top:50%;transform: translateY(-50%);}
+    input[type="checkbox"] {display: none;position:absolute;}
+	input[type="checkbox"]+b {position:absolute;display: inline-block;width: 0.46rem;height: 0.46rem;border: 1px solid #ccc;cursor: pointer;border-radius: 50%;vertical-align: middle;}
+	input[type="checkbox"]:checked+b {background: url(../../../images/checkbox.png)no-repeat;background-size:cover;border:none;}
+    
+    
+</style>

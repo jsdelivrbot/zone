@@ -1,0 +1,45 @@
+<template>
+  <div class="yhrz">
+    <my-header title="用户认证"></my-header>
+    <div class="body">
+    	<div class="body-t">
+    		<img src="../../../images/other/post.png"/>
+    	</div>
+    	<div class="body-c">用户提交认证后,此邮箱会接收到一条信息,您还需要点击激活邮箱,用户认证方可通过。</div>
+    	<div class="body-b">
+    		<input type="text" placeholder="请输入邮箱号"/>
+    	</div>
+    	<div class="body-f">提交</div>
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .header{position: fixed;top: 0;background: #fff;width: 100%;}
+    .body{padding-top: 1.28rem;}
+    .body-t{width: 1.57rem;height: 1.3rem;margin: 0 auto;margin-top: 0.52rem;margin-bottom: 0.39rem;}
+    .body-t img{width: 1.57rem;height: 1.3rem;display: block;}
+    .body-c{width:4.72rem;color: #949494;font-size: 0.2rem;line-height: 0.3rem;text-align: center;margin: 0 auto;}
+    .body-b{width: 5.23rem;height: 0.62rem;margin: 0 auto;border: 1px solid #a6a6a6;border-radius: 0.31rem;margin-top: 0.61rem;margin-bottom: 0.6rem;}
+    .body-b input{width: 5.23rem;height: 0.62rem;display: block;text-align: center;font-size: 0.2rem;color: #949494;}
+    .body-b input::placeholder{color: #949494;}
+    .body-f{width: 2.38rem;height: 0.62rem;line-height: 0.62rem;color: #fff;background: #54c2f0;font-size: 0.22rem;border-radius: 0.31rem;text-align: center;margin: 0 auto;}
+</style>

@@ -1,0 +1,253 @@
+<template>
+  <div class="friend">
+     <div class="back">
+        <div class="header">
+            <div class="header-top">
+                <a href="javascript:history.go(-1);"></a>
+                <div class="user"></div>
+                <div class="ld"></div>
+            </div>
+        </div>
+      <span class="body">
+        <img src="../../images/banner.png"/>
+      </span>
+    </div>
+    <div class="center">
+        <div class="center-t">
+            <p class="p1">Pussssss</p>
+            <p class="p2">vip</p>
+            <p class="p3"></p>
+        </div>
+        <div class="center-t-b">
+            <p class="p4"></p>
+            <p class="p1">走别人的路,让别人无路走我的老路!!!</p>
+        </div>
+        <div class="center-b">
+            <dl>
+                <dt class="dt1"></dt>
+                <dd class="dd1">男</dd>
+            </dl>
+            <dl>
+                <dt class="dt2"></dt>
+                <dd class="dd2">北京</dd>
+            </dl>
+            <dl>
+                <dt class="dt3"></dt>
+                <dd class="dd3">北京市</dd>
+            </dl>
+        </div>
+        <div class="center-b centerg">
+            <dl>
+                <dt class="dt">好友数</dt>
+                <dd class="dd1">男</dd>
+            </dl>
+            <dl>
+                <dt class="dt">发帖数</dt>
+                <dd class="dd2">北京</dd>
+            </dl>
+            <dl>
+                <dt class="dt">圈子数</dt>
+                <dd class="dd3">北京市</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="taball">
+            <ul class="tab">
+                <li>
+                    <!-- @click="jump(index)
+                        index: 切换颜色   代表切换的路由文件
+                        :class="{'active_color': index==0}
+                        当index等于0的时候显示第一个，index：1 切换排球
+    
+                    -->
+                    <div class="body_bottom" @click="jump(0)" :class="{'active_color': index==0}">圈子</div>
+                </li>
+                <li>
+                    <div class="body_bottom" @click="jump(1)" :class="{'active_color': index==1}">好友</div>
+                </li>
+                <li>
+                    <div class="body_bottom" @click="jump(2)" :class="{'active_color': index==2}">帖子</div>
+                </li>
+            </ul>
+        </div>
+        <!-- 是否滑动
+             boxNum：代表有几个路由组件
+             marginLeft：偏移量
+        -->
+        <div class="wl">
+	    	<div :class="{shift: isMove}" :style="{width: boxNum * 6.4 + 'rem', marginLeft: marginLeft + 'rem'}" @touchstart="start($event)" @touchmove="move($event)" @touchend="end($event)"   >
+	        <!-- 三个路由组件放置的地方 -->
+	            <first></first>
+	            <second></second>
+	            <third></third>
+	        </div>
+        </div>
+  </div>
+</template>
+<script>
+import first from './nochild/nofirst.vue';
+import second from './nochild/nosecond.vue';
+import third from './nochild/nothird.vue';
+import qs from 'qs'
+export default{
+        data(){
+            return {
+                first:"first",
+                second:"second",
+                third:"third",
+                tabNum: 1, // tab 切换的页面宽度 ( 通过接口的数据计算 )
+                index: 0, // 选中了第几个选项卡
+                boxNum: 1, // 容器宽度
+                marginLeft: 0, // 偏移量
+                isMove: true, // 是否在滑动
+                startX: 0, startY: 0, moveX: 0, movrY: 0, endX: 0, endY: 0,
+                m_sX: 0, m_sY: 0, e_sX: 0, e_xY: 0, sML: 0
+            }
+        },
+        methods: {
+            jump(index){
+                this.index = index;
+            },
+            start (ev) {
+                ev.stopPropagation();
+                this.isMove = false;
+                this.startX = ev.changedTouches[0].clientX;
+                this.startY = ev.changedTouches[0].clientY;
+                this.sML = this.marginLeft;
+            },
+            move (ev) {
+                ev.stopPropagation();
+                this.moveX = ev.changedTouches[0].clientX;
+                this.moveY = ev.changedTouches[0].clientY;
+                this.m_sX = this.moveX/100 - (this.startX/100);
+                this.m_sY = this.moveY - this.startY;
+                var marginLeft = this.sML + this.m_sX;
+                 
+                marginLeft = marginLeft > 0 ? 0 : marginLeft;
+                marginLeft = marginLeft < 6.4 - this.boxNum * 6.4 ? 6.4 - this.boxNum * 6.4 : marginLeft;
+                this.marginLeft = marginLeft;
+            },
+            end (ev) {
+                this.isMove = true;
+                var multiple = this.m_sX > 0 ? -1 : 1;
+                var index = this.index + multiple;
+                index = index < 0 ? 0 : index;
+                index = index > this.boxNum - 1 ? this.boxNum - 1 : index;
+                this.index = index;
+                this.marginLeft = 0 - this.index * 6.4;
+            }
+        },
+        mounted(){
+            //路由组件的数量
+            this.boxNum =3;
+        },
+        components: {
+            //组件的名称
+            first,
+            second,
+            third,
+        },
+        watch: {
+            index: function (newValue, oldValue) {
+                this.marginLeft = 0 - this.index * 6.4;
+                 
+            }
+        }
+    }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .header{width:5.8rem;height: 0.88rem;margin:0 auto;padding-top: 0.4rem;position: relative;}
+    .header a{width: 0.18rem;height: 0.34rem;display: block;background: url(../../images/backw.png) no-repeat;background-size: cover;float:left;}
+    .header-top{overflow:hidden;}
+    
+    
+    .ld{width:0.28rem;height:0.88rem;float:right;background:url(../../images/jiauser.png) no-repeat 0 50%;background-size:0.28rem 0.3rem;}
+    .user{width:0.34rem;height:0.88rem;float:right;background:url(../../images/sixin.png) no-repeat 0 50%;background-size:0.34rem 0.28rem;margin-left:0.19rem;}
+    
+
+
+    .nav{margin:0 auto;width:78%;max-width:500px;padding-top:1rem;}
+    .login{height:100%;}
+    .back{height:4.43rem;width:100%;background:url(../../images/topbanner.png) no-repeat;background-size:cover;position:relative;}
+    .back a{width: 0.18rem;height: 0.34rem;background: url(../../images/back.png) no-repeat;background-size: cover;position: absolute;top: 0.67rem;display: block;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;top:0.38rem;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+    .body{width:1.8rem;height:1.8rem;border-radius:50%;display:block;position:absolute;bottom:-1rem;left:50%;margin-left:-0.9rem;padding:0.1rem;background:#fff;}
+    .body img{width:1.8rem;height:1.8rem;border-radius:50%;}
+
+    .center{line-height:0.78rem;color:#51667e;font-size:0.24rem;margin-top:1.03rem;position:relative;text-align:center;}
+    .center-t{height:100%;margin:0 auto;width:6rem;display:inline;position: relative;}
+    .center .p1{display:inline;}
+    .center .p2{color:#fff;width:0.5rem;height:0.26rem;border-radius:0.05rem;background:#f85772;text-align:center;line-height:0.26rem;font-size:0.2rem;position:absolute;top:0;right:-0.94rem;}
+    .center .p3{width:0.2rem;height:0.2rem;position:absolute;top:0.05rem;right:-0.3rem;background:url(../../images/men.png) no-repeat;background-size:cover;}
+    
+    
+
+    .center-t-b{width:6rem;margin:0 auto;border-bottom:1px solid #ededed;position:relative;}
+    .center-t-b .p4{width:0.36rem;height:0.38rem;position:absolute;top:0.2rem;left:0.6rem;background:url(../../images/yumao.png) no-repeat;background-size:cover;}
+
+
+
+
+
+    .center-b{width:5.8rem;height:1.03rem;border-bottom:1px solid #f0f0f0;overflow:hidden;margin:0 auto;padding-top:0.37rem;color:#54c2f0;}
+    .center-b dl{float:left;width:33.3%;}
+    .center-b dt{margin:0 auto;}
+    .center-b .dt1{width:0.38rem;height:0.31rem;background:url(../../images/sex.png) no-repeat;background-size:cover;}
+    .center-b .dt2{width:0.40rem;height:0.37rem;background:url(../../images/age.png) no-repeat;background-size:cover;}
+    .center-b .dt3{width:0.40rem;height:0.38rem;background:url(../../images/captail.png) no-repeat;background-size:cover;}
+    .center-b .dd1{margin-top:0.07rem;}
+    .center-b .dd2{margin-top:1px;}
+    .center-b .dd4{margin-top:0.06rem;}
+    .centerg{padding:0;}
+    .centerg dt{font-size:0.2rem;line-height:0.38rem;margin-top:0.19rem;}
+    .centerg dd{font-size:0.23rem;line-height:0.45rem;}
+
+    .bottom-ul .li1{width:100%;height:0.26rem;font-size:0.26rem;text-align:center;color:#000014;margin-top:0.3rem;}
+    .bottom-ul .li3{width:4.45rem;line-height:0.32rem;font-size:0.2rem;text-align:center;color:#bcc3cd;margin:0 auto;margin-top:0.24rem;color:#5c7086;}
+
+    .bottom-ul1{width:4.6rem;height:0.56rem;margin:0 auto;margin-top:0.72rem;}
+    .bottom-ul1 li{width:2.08rem;height:0.54rem;float:left;border-radius:0.28rem;border:0.01rem solid #008dd3;}
+    .bottom-ul1 li a{width:2.08rem;height:0.54rem;line-height:0.54rem;color:#008dd3;font-size:0.22rem;display:block;text-align:center;border-radius:0.28rem;}
+    .bottom-ul1 li a:hover{color:#fff;background:#008dd3;}
+    .bottom-ul1 .li2{float:right;}
+
+    .wl{margin: 0 auto;width: 6.4rem;overflow: hidden;}
+    .first{float:left;width:6.4rem;}
+    #headed{
+        width: 100%;
+        overflow: hidden;
+        float:left;
+    }
+    .taball{border-bottom: 1px solid #ebebeb;}
+    .tab{
+        width:6rem;
+        overflow: hidden;
+        padding: 0;
+        margin: 0 auto;
+        height: 0.76rem;
+        line-height: 0.76rem;
+        
+    }
+    .tab li{
+        float: left;
+        list-style: none;
+        width: 33.3%;
+        text-align: center;
+    }
+    .body_bottom{
+        height: 0.73rem;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.22rem;
+    }
+    .active_color{
+        color: #008dd3;
+        border-bottom: 0.03rem solid #008dd3 !important;
+    }
+    .shift {
+        transition-property: margin-left;
+        transition-duration: 1s;
+    }
+</style>

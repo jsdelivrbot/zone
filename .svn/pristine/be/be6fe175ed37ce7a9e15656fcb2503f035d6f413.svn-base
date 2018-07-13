@@ -1,0 +1,109 @@
+<template>
+    <div class="first">
+      	<div class="header">
+			<div class="headerall">
+				<a href="javascript:history.go(-1);" class="a1"></a>
+				<span class="forget">疑问</span>
+				<a class="a2"></a>
+			</div>
+	    </div>
+      <div class="nav">
+      	<div class="nav-all">
+      		<div class="nav-n">
+      			<div class="nav-l">
+	      			<img src="../../images/banner.png"/>
+	      		</div>
+	      		<div class="nav-r">
+	      			<ul>
+	      				<li class="li1">wo</li>
+	      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+	      				<li class="li3">2017.07.24</li>
+	      			</ul>
+	      		</div>
+      		</div>
+      		<div class="nav-n">
+      			<div class="nav-l">
+	      			<img src="../../images/banner.png"/>
+	      		</div>
+	      		<div class="nav-r">
+	      			<ul>
+	      				<li class="li1">wo</li>
+	      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+	      				<li class="li3">2017.07.24</li>
+	      			</ul>
+	      		</div>
+      		</div>
+      		<div class="nav-n">
+      			<div class="nav-l">
+	      			<img src="../../images/banner.png"/>
+	      		</div>
+	      		<div class="nav-r">
+	      			<ul>
+	      				<li class="li1">wo</li>
+	      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+	      				<li class="li3">2017.07.24</li>
+	      			</ul>
+	      		</div>
+      		</div>
+      		<div class="nav-n">
+      			<div class="nav-l">
+	      			<img src="../../images/banner.png"/>
+	      		</div>
+	      		<div class="nav-r">
+	      			<ul>
+	      				<li class="li1">wo</li>
+	      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+	      				<li class="li3">2017.07.24</li>
+	      			</ul>
+	      		</div>
+      		</div>
+      		<div class="nav-bottom">
+      			<div class="b-l"><img src="../../images/banner.png"/></div>
+      			<div class="b-r">评价已完成</div>
+      		</div>
+      	</div>
+      </div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+	.header{position: fixed;top: 0;height: 0.88rem;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;width: 100%;background: #fff;z-index: 1;}
+	.headerall{width: 6rem;margin: 0 auto;}
+	.header .a1{width: 0.18rem;height: 0.88rem;display: block;background: url(../../images/back.png) no-repeat 0 50%;background-size: 0.18rem 0.34rem;float:left;}
+    .header .a2{width: 0.32rem;height: 0.88rem;display: block;background: url(../../images/dian3.png) no-repeat 0 50%;background-size: 0.32rem 0.06rem;float:right;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+
+	.nav{position: absolute;top: 1.28rem;width: 100%;}
+	.nav-all{width:6rem;margin: 0 auto;overflow: hidden;}
+	.nav-n{margin-top: 0.27rem;display: flex;}
+	.nav-l{width: 0.82rem;height: 0.68rem;float: left;}
+	.nav-l img{width: 0.68rem;height: 0.68rem;margin: 0 auto;display: block;border-radius: 50%;}
+	.nav-r{float: left;overflow: hidden;flex: 1;margin-left: 0.13rem;border-bottom: 1px solid #ebebeb;}
+	.nav-r li{float: left;}
+	.nav-r .li1{font-size:0.22rem;line-height: 0.33rem;}
+	.nav-r .li2{font-size:0.2rem;line-height: 0.36rem;margin-top: 0.04rem;color: #242424;}
+	.nav-r .li3{font-size:0.14rem;line-height: 0.4rem;background: url(../../images/fbsj.png)no-repeat 0 50%;background-size: 0.18rem 0.18rem;padding-left: 0.29rem;padding-bottom: 0.2rem;}
+
+	.nav-bottom{line-height: 1.04rem; color: #54c2f0;font-size:0.2rem;display: flex;}
+	.nav-bottom .b-l{float: left;width: 0.47rem;height: 0.4rem;margin: 0.31rem 0.26rem 0 0.22rem;}
+	.nav-bottom .b-l img{float: left;width: 0.47rem;height: 0.4rem;display: block;}
+	.nav-bottom .b-r{float: left;flex: 1;}
+	
+
+</style>

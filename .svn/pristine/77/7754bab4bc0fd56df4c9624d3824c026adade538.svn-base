@@ -1,0 +1,128 @@
+<template>
+    <div id="headed">
+    	<div class="hw">
+    		<div class="header">
+	        	<div class="headerall">
+					<a href="javascript:history.go(-1);" class="a1"></a>
+					<span class="forget">我的任务</span>
+					<a class="a2" @click="toggle()"></a>
+				</div>
+		    </div>
+		    <div class="h-body">
+	        	<ul>
+	        		<li class="li1">积分：<span>102</span></li>
+	        		<li class="li2">兑换礼品</li>
+	        	</ul>
+		    </div>
+		    <div class="h-bottom">
+		    	<ul>
+		    		<li class="li1">签到</li>
+		    		<li class="li2">连续<span>101</span>天</li>
+		    	</ul>
+		    </div>
+    	</div>
+        <div class="content">
+        	<ul class="ul1">
+        		<li class="contentl"></li>
+        		<li class="contentc">高级任务</li>
+        		<li class="contentr"></li>
+        	</ul>
+        	<div class="cont-b">
+        		<ul class="ul2">
+	        		<li class="li2"><span class="sp2">[答题任务] 趣味答题[答题任务] 趣味答题[答题任务] 趣味答题[答题任务] 趣味答题</span></li>
+	        		<li class="li3">奖励积分：<span>12</span></li>
+	        		
+	        	</ul>
+	        	<a href="#/dati"><p class="li4">做任务</p></a>
+        	</div>
+        	
+        </div>
+        <div class="line"></div>
+        <div class="content">
+        	<ul class="ul1">
+        		<li class="contentl"></li>
+        		<li class="contentc">日常任务</li>
+        		<li class="contentr"></li>
+        	</ul>
+        	<div class="cont-b">
+        		<ul class="ul2">
+	        		<li class="li2"><span class="sp2">[答题任务] 趣味答题[答题任务] 趣味答题[答题任务] 趣味答题[答题任务] 趣味答题</span></li>
+	        		<li class="li3">奖励积分：<span>12</span></li>
+	        		
+	        	</ul>
+	        	<p class="li4">领取奖励</p>
+        	</div>
+        </div>
+        <div class="mark" v-show="show"></div>
+        <div class="up" v-show="show">
+      		<div class="up-b">
+      			<div class="up1">
+      				<div class="up-r">我的任务</div>
+      				<div class="up-l" @click="toggle()">取消</div>
+      			</div>
+      		</div>
+      	</div>
+    </div>
+</template>
+ 
+<script>
+    export default{
+        data () {
+             return {
+                show:false,
+                isshow:false
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+             toggle(){
+             	this.show=!this.show
+             },
+             toggle1(){
+             	this.isshow=!this.isshow
+             }
+         }
+    }
+</script>
+ 
+<style scoped="scoped">
+	.hw{width: 100%;height: 3.96rem;background: url(../../../images/listbanner.png)no-repeat;background-size: cover;}
+	.header{height: 0.88rem;padding-top: 0.4rem;}
+	.headerall{width: 5.8rem;margin: 0 auto;}
+	.header .a1{width: 0.18rem;height: 0.34rem;display: block;background: url(../../../images/backw.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+	.header .a2{width:0.3rem;height: 0.88rem;display: block;float: right;background: url(../../../images/dianw.png) no-repeat 0 50%;background-size: 0.3rem 0.06rem;}
+	.forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #fff;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+	
+	.h-body{width: 5.8rem;margin: 0 auto;}
+	.h-body ul li{color: #fff;font-size:0.22rem;}
+	.h-body .li1{float: left;}
+	.h-body .li2{width:1.18rem;height:0.42rem;border:1px solid #fff;line-height:0.42rem;text-align:center;float: right;border-radius: 0.05rem;}
+	
+	.h-bottom{width:1.41rem;height:1.41rem;color: #fff;margin: 0 auto;background: url(../../../images/circle.png)no-repeat;background-size: cover;text-align: center;margin-top: 0.59rem;}
+	.h-bottom .li1{font-size: 0.28rem;line-height: 0.42rem;padding-top: 0.32rem;}
+	.h-bottom .li2{font-size: 0.18rem;line-height: 0.33rem;}
+	
+	.content{width: 5.85rem;margin: 0 auto;overflow: hidden;}
+	.content ul{float: left;}
+	.content li{float: left;}
+	.contentl{width:2.18rem;height: 0.02rem;background: #dbdbdb;margin-top: 0.42rem;}
+	.contentc{height:0.86rem;line-height: 0.86rem;color: #292929;font-size:0.24rem;text-align: center;padding: 0 0.22rem;}
+	.contentr{width:2.18rem;height: 0.02rem;background: #dbdbdb;margin-top: 0.42rem;float: right;}
+	
+	.cont-b{margin-top: 0.13rem;float: left;width:100%;padding-bottom: 0.16rem;border-bottom: 1px solid #ebebeb;}
+	.content .ul2{width: 4.2rem;padding-left: 0.23rem;}
+	.content .ul2 .li2{font-size:0.24rem;color: #242424;line-height: 0.36rem;margin-top: 0.13rem;}
+	.content .ul2 .li3{font-size: 0.2rem;color: #ffa200;line-height: 0.35rem;}
+	.content .li4{width:1.18rem;height:0.42rem;font-size: 0.18rem;color: #0490d6;border: 1px solid #ced8dd;border-radius: 0.05rem;text-align: center;line-height: 0.42rem;float: right;margin-top: 0.2rem;}
+	
+	.mark{width:100%;height:100%;position:fixed;bottom:0;left:0;background:rgba(36,153,200,0.3);display:block;z-index:5;}
+
+	.up,.up-b{overflow: hidden;}
+	.up1{width: 5.8rem;margin: 0 auto;position:absolute;top: 50%;left:50%;transform: translate(-50%,-50%);}
+	.up{width: 100%;height: 1.65rem;border-top: 1px solid #ebebeb;background: #fff;position: fixed;bottom: 0;z-index:16;}
+	.up-l{float: right;width: 2.78rem;height: 0.8rem;font-size: 0.27rem;border: 1px solid #39b6f4;border-radius: 0.4rem;color: #39b6f4;text-align: center;line-height: 0.8rem;}
+	.up-r{float: left;width:2.8rem;height:0.82rem;font-size: 0.27rem;background:#39b6f4;border-radius: 0.4rem;color: #fff;text-align: center;line-height: 0.82rem;}
+	
+</style>

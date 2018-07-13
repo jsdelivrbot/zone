@@ -1,0 +1,63 @@
+<template>
+	<div class="index">
+		<my-header title="选择圈子分类"></my-header>
+		<div class="content">
+			<p>您一共可以创建<span>3</span>个圈子，已经创建了<span>1</span>个圈子</p>
+			<div class="con-b">
+				<dl>
+					<dt><img src="../../../images/other/hangye.png"/></dt>
+					<dd>行业交流</dd>
+				</dl>
+				<dl>
+					<dt><img src="../../../images/other/shenghuo.png"/></dt>
+					<dd>生活休闲</dd>
+				</dl>
+				<dl>
+					<dt><img src="../../../images/other/aihao.png"/></dt>
+					<dd>兴趣爱好</dd>
+				</dl>
+				<dl>
+					<dt><img src="../../../images/other/kaoshi.png"/></dt>
+					<dd>学习考试</dd>
+				</dl>
+				<dl>
+					<dt><img src="../../../images/other/pinpai.png"/></dt>
+					<dd>品牌交流</dd>
+				</dl>
+				<dl>
+					<dt><img src="../../../images/other/youxi.png"/></dt>
+					<dd>游戏</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+	.header{position: fixed;top: 0;width: 100%;}
+	.content{position: absolute;top: 1.28rem;bottom: 0.98rem;width: 100%;}
+	.content p{line-height: 0.82rem;text-align: center;color: #39b6f4;font-size: 0.18rem;background: #fafafa;}
+	.con-b{width: 6.3rem;margin: 0 auto;}
+	.con-b dl{width: 2.85rem;height: 1.2rem;box-shadow: 0 0 0.1rem #a3d3ec;float: left;position: relative;margin: 0.3rem 0.15rem 0 0.15rem;cursor: pointer;}
+	.con-b dt{float: left;height: 1.2rem;}
+	.con-b dt img{width: 0.64rem;height: 0.64rem;position: absolute;top: 50%;left:0.29rem;transform: translateY(-50%);}
+	.con-b dd{font-size: 0.26rem;color: #242424;float: left;line-height: 1.2rem;margin-left: 1.13rem;}
+</style>

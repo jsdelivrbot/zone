@@ -1,0 +1,49 @@
+<template>
+    <div class="first">
+    	<div class="nav">
+    		<ul>
+    			<li class="li1"><img src="../../../../images/listbanner.png"/></li>
+    			<li class="li2">安嘎嘎岛坐落在马尔代夫南爱尔瑞环礁 拷贝</li>
+    			<li class="li3">他还没反应过来，忽然就感觉到背后一阵风，一个人从他背后拽住了他的领子 拷贝</li>
+    			<li class="li4"><span class="sp1">2017.07.24</span><span class="sp2">200</span></li>
+    		</ul>
+    		<ul>
+    			<li class="li1"><img src="../../../../images/listbanner.png"/></li>
+    			<li class="li2">安嘎嘎岛坐落在马尔代夫南爱尔瑞环礁 拷贝</li>
+    			<li class="li3">他还没反应过来，忽然就感觉到背后一阵风，一个人从他背后拽住了他的领子 拷贝</li>
+    			<li class="li4"><span class="sp1">2017.07.24</span><span class="sp2">200</span></li>
+    		</ul>
+    	</div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+	.nav{width: 6rem;margin: 0 auto;}
+	.nav ul{box-shadow: 0 0 0.05rem #dedede;margin-bottom: 0.23rem;}
+	.nav ul li{padding: 0 0.2rem;}
+	.nav .li1{width: 6rem;height: 2.6rem;padding: 0;}
+	.li1 img{width: 6rem;height: 2.6rem;display: block;border: 0;}
+	.li2{font-size: 0.25rem;line-height: 0.41rem;margin-top: 0.13rem;}
+	.li3{font-size: 0.21rem;line-height: 0.29rem;color: #a8a8a8;margin-top: 0.04rem;}
+	.li4{height:0.59rem;overflow: hidden;}
+	.li4 span{float: left;line-height: 0.59rem;}
+    .li4{line-height: 0.3rem;color: #949494;font-size: 0.14rem;}
+    .sp1{background: url(../../../../images/fbsj.png) no-repeat 0 50%;background-size: 0.18rem 0.18rem;padding-left: 0.3rem;}
+    .li4 .sp2{background: url(../../../../images/sl.png) no-repeat 0 50%;background-size: 0.19rem 0.19rem;padding-left: 0.22rem;float: right;}
+</style>s

@@ -1,0 +1,475 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import Index from '@/components'
+import Important from '@/components/Index/home.vue'
+import Login from '@/components/Login'
+import Forget from '@/components/Forget'
+import Forget1 from '@/components/Forget/forget1.vue'
+import Register from '@/components/Register'
+import Register1 from '@/components/Register/register1.vue'
+import Chart from '@/components/Chart'
+import Service from '@/components/Service'
+import Details from '@/components/Details'
+import Online from '@/components/Online'
+import Circle from '@/components/Circle'
+import MyCircle from '@/components/Circle/mycircle.vue'
+import LiveCircle from '@/components/LiveCircle'
+import ListCircle from '@/components/ListCircle'
+import Content from '@/components/Content'
+import Big from '@/components/Content/big.vue'
+import Report from '@/components/Content/report.vue'
+import Comment from '@/components/Content/comment.vue'
+import Vote from '@/components/Content/vote.vue'
+import Join from '@/components/Content/join.vue'
+import Permission from '@/components/Content/permission.vue'
+import Exercise from '@/components/Content/exercise.vue'
+import Attend from '@/components/Content/attend.vue'
+import Enter from '@/components/Content/enter.vue'
+
+import Group from '@/components/Group'
+import Setting from '@/components/Setting'
+import Apply from '@/components/Setting/apply.vue'
+import Jiben from '@/components/Setting/child/jiben.vue'
+import Qx from '@/components/Setting/child/quanxian.vue'
+import Gl from '@/components/Setting/child/guanli.vue'
+import Gg from '@/components/Setting/child/gonggao.vue'
+import Tz from '@/components/Setting/child/tiezi.vue'
+import Message from '@/components/Message'
+import Poll from '@/components/Message/poll.vue'
+import Activity from '@/components/Message/activity.vue'
+import Listdetail from '@/components/Listdetail'
+import Boss from '@/components/Listdetail/boss.vue'
+import People from '@/components/Listdetail/people.vue'
+//答疑
+import Query from '@/components/Query'
+import Classify from '@/components/Query/classify.vue'
+import Submit from '@/components/Query/submit.vue'
+import Question from '@/components/Query/question.vue'
+import Subing from '@/components/Query/subing.vue'
+import Subed from '@/components/Query/subed.vue'
+import Appraise from '@/components/Query/appraise.vue'
+
+import News from '@/components/News'
+import Circular from '@/components/News/circular.vue'
+import Notice from '@/components/News/notice.vue'
+import Exit from '@/components/News/exit.vue'
+import Friend from '@/components/News/friend.vue'
+import Nofriend from '@/components/News/nofriend.vue'
+import User from '@/components/News/user.vue'
+
+import Find from '@/components/Find'
+import Info from '@/components/Info'
+import Info1 from '@/components/Info/info1.vue'
+// 礼品商城
+import Shopping from '@/components/Shopping'
+import Gift from '@/components/Shopping/gift.vue'
+import Order from '@/components/Shopping/order.vue'
+import Delivery from '@/components/Shopping/delivery.vue'
+import Finished from '@/components/Shopping/finished.vue'
+//个人中心
+import Personal from '@/components/Personal'
+import Myqz from '@/components/Personal/quanzi/myqz.vue'
+import Fenlei from '@/components/Personal/quanzi/fenlei.vue'
+import Qzname from '@/components/Personal/quanzi/qzname.vue'
+import Qzjieshao from '@/components/Personal/quanzi/qzjieshao.vue'
+import Myrw from '@/components/Personal/renwu/myrw.vue'
+import Dati from '@/components/Personal/renwu/dati.vue'
+import Jianyi from '@/components/Personal/renwu/jianyi.vue'
+import Rwjianyi from '@/components/Personal/renwu/rwjianyi.vue'
+import Datiall from '@/components/Personal/renwu/datiall.vue'
+import Jilu from '@/components/Personal/renwu/jilu.vue'
+import Qiandao from '@/components/Personal/renwu/qiandao.vue'
+import Shoucang from '@/components/Personal/shoucang/shoucang.vue'
+import Mydd from '@/components/Personal/dingdan/mydd.vue'
+import Ddxq from '@/components/Personal/dingdan/ddxq.vue'
+import Mytz from '@/components/Personal/tiezi/mytz.vue'
+import Glshdz from '@/components/Personal/shouhuodizhi/glshdz.vue'
+import Tjshdz from '@/components/Personal/shouhuodizhi/tjshdz.vue'
+import Myzl from '@/components/Personal/ziliao/myziliao.vue'
+import Bjzl from '@/components/Personal/ziliao/bjziliao.vue'
+import Yhrz from '@/components/Personal/yonghurenzheng/yhrz.vue'
+import Zhaq from '@/components/Personal/zhanghuanquan/zhaq.vue'
+import Myjf from '@/components/Personal/jifen/myjf.vue'
+import Yq from '@/components/Personal/yaoqing/yq.vue'
+import Myyq from '@/components/Personal/yaoqing/myyq.vue'
+import Zj from '@/components/Personal/zuji/zj.vue'
+import Mysz from '@/components/Personal/shezhi/mysz.vue'
+import Wurao from '@/components/Personal/shezhi/wurao.vue'
+import Telyz from '@/components/Personal/shezhi/telyz.vue'
+import Newtelyz from '@/components/Personal/shezhi/newtelyz.vue'
+import Gx from '@/components/Personal/shezhi/gx.vue'
+Vue.use(Router)
+export default new Router({
+  routes: [
+    
+    {
+      path: '/',
+      component: Index
+    },
+    {
+      path: '/home',
+      component: Important
+    },
+    {
+      path: '/login',
+      component: Login
+    },
+    {
+      path: '/forget',
+      component: Forget
+    },
+    {
+      path: '/forget1',
+      component: Forget1
+    },
+    {
+      path: '/register',
+      component: Register
+    },
+    {
+      path: '/register1',
+      component: Register1
+    },
+    {
+      path: '/chart',
+      component: Chart
+    },
+    {
+      path: '/service',
+      component: Service
+    },
+    {
+      path: '/details',
+      component: Details
+    },
+    {
+      path: '/online',
+      component: Online
+    },
+    {
+      path: '/circle',
+      component: Circle
+    },
+    {
+      path: '/mycircle',
+      component: MyCircle
+    },
+    {
+      path: '/livecircle',
+      component: LiveCircle
+    },
+    {
+      path: '/listcircle',
+      component: ListCircle
+    },
+    {
+      path: '/content',
+      component: Content
+    },
+    {
+      path: '/big',
+      component: Big
+    },
+    {
+      path: '/report',
+      component: Report
+    },
+    {
+      path: '/comment',
+      component: Comment
+    },
+    {
+      path: '/vote',
+      component: Vote
+    },
+    {
+      path: '/join',
+      component: Join
+    },
+    {
+      path: '/permission',
+      component: Permission
+    },
+    {
+      path: '/group',
+      component: Group
+    },
+    {
+      path: '/setting',
+      component: Setting
+    },
+    {
+      path: '/jiben',
+      component: Jiben
+    },
+    {
+      path: '/quanxian',
+      component:Qx
+    },
+    {
+      path: '/guanli',
+      component: Gl
+    },
+    {
+      path: '/gonggao',
+      component: Gg
+    },
+    {
+      path: '/tiezi',
+      component: Tz
+    },
+    {
+      path: '/apply',
+      component: Apply
+    },
+    {
+      path: '/message',
+      component: Message
+    },
+    {
+      path: '/poll',
+      component: Poll
+    },
+    {
+      path: '/activity',
+      component: Activity
+    },
+    {
+      path: '/listdetail',
+      component: Listdetail
+    },
+    {
+      path: '/boss',
+      component: Boss
+    },
+    {
+      path: '/people',
+      component: People
+    },
+    {
+      path: '/exercise',
+      component: Exercise
+    },
+    {
+      path: '/attend',
+      component: Attend
+    },
+    {
+      path: '/enter',
+      component: Enter
+    },
+    {
+      path: '/query',
+      component: Query
+    },
+    {
+      path: '/news',
+      component: News
+    },
+    {
+      path: '/circular',
+      component: Circular
+    },
+    {
+      path: '/notice',
+      component: Notice
+    },
+    {
+      path: '/exit',
+      component: Exit
+    },
+    {
+      path: '/friend',
+      component: Friend
+    },
+    {
+      path: '/user',
+      component: User
+    },
+    {
+      path: '/nofriend',
+      component: Nofriend
+    },
+    {
+      path: '/find',
+      component: Find
+    },
+    {
+      path: '/info',
+      component: Info
+    },
+    {
+      path: '/info1',
+      component: Info1
+    },
+    {
+      path: '/shopping',
+      component: Shopping
+    },
+    {
+      path: '/gift',
+      component: Gift
+    },
+    {
+      path: '/order',
+      component: Order
+    },
+    {
+      path: '/delivery',
+      component: Delivery
+    },
+    {
+      path: '/finished',
+      component: Finished
+    },
+    {
+      path: '/classify',
+      component: Classify
+    },
+    {
+      path: '/submit',
+      component: Submit
+    },
+    {
+      path: '/question',
+      component: Question
+    },
+    {
+      path: '/subing',
+      component: Subing
+    },
+    {
+      path: '/subed',
+      component: Subed
+    },
+    {
+      path: '/appraise',
+      component: Appraise
+    },
+    //个人中心
+    {
+    	path: '/personal',
+      component: Personal
+    },
+    {
+    	path: '/myqz',
+      component: Myqz
+    },
+    {
+    	path: '/fenlei',
+      component: Fenlei
+    },
+    {
+    	path: '/qzname',
+      component: Qzname
+    },
+    {
+    	path: '/qzjieshao',
+      component: Qzjieshao
+    },
+    {
+    	path: '/myrw',
+      component: Myrw
+    },
+    {
+    	path: '/dati',
+      component: Dati
+    },
+    {
+    	path: '/jianyi',
+      component: Jianyi
+    },
+    {
+    	path: '/rwjianyi',
+      component: Rwjianyi
+    },
+    {
+    	path: '/datiall',
+      component: Datiall
+    },
+    {
+    	path: '/jilu',
+      component: Jilu
+    },
+    {
+    	path: '/qiandao',
+      component: Qiandao
+    },
+    {
+    	path: '/shoucang',
+      component: Shoucang
+    },
+    {
+    	path: '/mydd',
+      component: Mydd
+    },
+    {
+    	path: '/ddxq',
+      component: Ddxq
+    },
+    {
+    	path: '/mytz',
+      component: Mytz
+    },
+    {
+    	path: '/glshdz',
+      component: Glshdz
+    },
+    {
+    	path: '/tjshdz',
+      component: Tjshdz
+    },
+    {
+    	path: '/myzl',
+      component: Myzl
+    },
+    {
+    	path: '/bjzl',
+      component: Bjzl
+    },
+    {
+    	path: '/yhrz',
+      component: Yhrz
+    },
+    {
+    	path: '/zhaq',
+      component: Zhaq
+    },
+    {
+    	path: '/myjf',
+      component: Myjf
+    },
+    {
+    	path: '/myyq',
+      component: Myyq
+    },
+    {
+    	path: '/yq',
+      component: Yq
+    },
+    {
+    	path: '/zuji',
+      component: Zj
+    },
+    {
+    	path: '/mysz',
+      component: Mysz
+    },
+    {
+    	path: '/wurao',
+      component: Wurao
+    },
+    {
+    	path: '/telyz',
+      component: Telyz
+    },
+    {
+    	path: '/newtelyz',
+      component: Newtelyz
+    },
+    {
+    	path: '/gx',
+      component: Gx
+    }
+  ]
+})

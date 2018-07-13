@@ -1,0 +1,78 @@
+<template>
+  <div class="index">
+    <div class="header">
+    	<div class="headerall">
+			<a href="javascript:history.go(-1);" class="a1"></a>
+			<span class="forget">我的任务</span>
+			<a class="a2"></a>
+		</div>
+    </div>
+    <div class="cen">
+    	<div class="cenall">
+    		<div class="cenallt">
+    			<p class="cent">[产品调查]谈谈你对中兴手机的建议!!</p>
+		    	<ul class="cenb">
+	    			<li>已有<span>1000</span>人完成了此任务</li>
+	    			<li class="li2">作者：<span>渣渣</span></li>
+	    		</ul>
+    		</div>
+    		<div class="cenallb">
+    			<div class="cenallb-t">说出几点你认为中兴手机的不足之处,以及你有什么好的建议!!!</div>
+
+    			<div class="nav-r">
+            <textarea></textarea>
+          </div>
+    		</div>
+
+    		<div class="footer">
+    			<ul>
+    				<li class="li2">提交</li>
+    			</ul>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+
+    }
+  },
+  mounted(){
+
+  },
+  methods:{
+
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+	.header{position: fixed;top: 0;width: 100%;height: 0.88rem;}
+	.headerall{width: 5.8rem;margin: 0 auto;}
+	.header .a1{width: 0.18rem;height: 0.34rem;display: block;background: url(../../../images/back.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+	.header .a2{width:0.3rem;height: 0.88rem;display: block;float: right;background: url(../../../images/dian3.png) no-repeat 0 50%;background-size: 0.3rem 0.06rem;}
+	.forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}
+
+	.cen{position: absolute;top: 1.28rem;width: 100%;}
+	.cenall{width: 5.86rem;margin: 0 auto;}
+	.cent{font-size:0.26rem;color: #242424;height: 0.64rem;margin-top: 0.13rem;line-height: 0.64rem;}
+	.cenallt{margin-bottom: 0.23rem;overflow: hidden;}
+	.cen dl dt img{width: 0.61rem;height: 1.65rem;margin: 0 auto;display: block;margin-top: 0.32rem;}
+	.cen dl dd{font-size: 0.29rem;color: #292929;text-align: center;height: 0.73rem;line-height: 0.73rem;}
+	.cenb li{float: left;height: 0.46rem;line-height: 0.46rem;color: #636363;font-size: 0.16rem;}
+	.cenb .li2{float: right;}
+	.cenallb{border-radius: 0.05rem;box-shadow: 0 0 0.05rem #000;overflow: hidden;}
+	.cenallb-t{line-height: 0.35rem;color: #fff;font-size: 0.26rem;background: #46c2ff;padding: 0.17rem 0.32rem;}
+	.cenallb-b{width:5.28rem;margin:0 auto;font-size: 0.21rem;color: #242424;line-height: 0.35rem;padding-top: 0.24rem;padding-bottom: 0.28rem;border-bottom: 0.01rem solid #ebebeb;}
+	.nav-r {overflow: hidden;}
+    .nav-r textarea{height: 4.38rem;width: 100%;background: #fafafa;}
+	.footer{width: 2.08rem;margin: 0 auto;margin-top: 0.4rem;}
+	.footer li{width: 2.08rem;height: 0.54rem;font-size: 0.22rem;border-radius: 0.27rem;line-height: 0.54rem;text-align: center;float: left;}
+	.footer .li2{color: #fff;border: 1px solid #46c2ff;background: #46c2ff;float: right;}
+</style>

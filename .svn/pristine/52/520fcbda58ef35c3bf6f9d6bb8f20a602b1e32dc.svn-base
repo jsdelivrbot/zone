@@ -1,0 +1,54 @@
+<template>
+	<div class="footer">
+		<ul>
+			<li v-for="(data,index) in list" :key="index">
+				<a :href="data.path" :class="{'active':selected===index}" @click="change(index)" >
+					<div><span class="icon"><img :src="data.img" id="aaa"/></span></div>
+					<div><span class="text">{{data.name}}</span></div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</template>
+
+<script>
+	var curindex = 0;
+	export default {
+		name: 'my-footer',
+		data(){
+			return{
+				selected:curindex,
+			}
+		},
+		props: {
+			list: {
+				type: Array,
+				default() {
+					return [
+						{name:'首页',"path":"#/home",img:require("../../images/syw.png")},
+						{name:'圈子',"path":"#/circle",img:require("../../images/qzw.png")},
+						{name:'发现',"path":"#/find",img:require("../../images/fxw.png")},
+						{name:'个人中心',"path":"#/personal",img:require("../../images/grzxw.png")}
+					]
+				}
+			}
+		},
+		methods:{
+			change(index){
+				curindex=index;
+				this.selected=index
+			}
+		}
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+	.footer {position: fixed;bottom: 0;left: 0;width: 100%;border-top: 1px solid #ebebeb;background: #fff;z-index: 10;}
+	.footer ul{height: 0.98rem;}
+	.footer ul li{float: left;height: 0.98rem;width: 25%;}
+	.footer a {display: block;width: 100%;height: 100%;font-size: 0.2rem;text-align: center;margin-top: 0.2rem;color: #c7c7c7;-webkit-tap-highlight-color: transparent;}
+	.footer .active{color: #54c2f0;}
+
+	.icon img{height:0.4rem;width:auto;}
+</style>

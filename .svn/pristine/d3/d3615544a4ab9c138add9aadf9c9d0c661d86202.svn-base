@@ -1,0 +1,140 @@
+<template>
+    <div id="headed">
+        <my-header title="成员管理"></my-header>
+        <div class="taball">
+            <ul class="tab">
+                <li>
+                    <!-- @click="jump(index)
+                        index: 切换颜色   代表切换的路由文件
+                        :class="{'active_color': index==0}
+                        当index等于0的时候显示第一个，index：1 切换排球
+    
+                    -->
+                    <div class="body_bottom" @click="jump(0)" :class="{'active_color': index==0}">所有成员</div>
+                </li>
+                <li>
+                    <div class="body_bottom" @click="jump(1)" :class="{'active_color': index==1}">申请加入的人</div>
+                </li>
+            </ul>
+        </div>
+        <!-- 是否滑动
+             boxNum：代表有几个路由组件
+             marginLeft：偏移量
+        -->
+        <div class="wl">
+	    	<div :class="{shift: isMove}" :style="{width: boxNum * 6.4 + 'rem', marginLeft: marginLeft + 'rem'}" @touchstart="start($event)" @touchmove="move($event)" @touchend="end($event)"   >
+	        <!-- 三个路由组件放置的地方 -->
+	            <first></first>
+	            <second></second>
+	        </div>
+        </div>
+    </div>
+</template>
+ 
+<script>
+    import first from './glchild/first.vue';
+    import second from './glchild/second.vue';
+    export default{
+        data(){
+            return {
+                first:"first",
+                second:"second",
+                tabNum: 1, // tab 切换的页面宽度 ( 通过接口的数据计算 )
+                index: 0, // 选中了第几个选项卡
+                boxNum: 1, // 容器宽度
+                marginLeft: 0, // 偏移量
+                isMove: true, // 是否在滑动
+                startX: 0, startY: 0, moveX: 0, movrY: 0, endX: 0, endY: 0,
+                m_sX: 0, m_sY: 0, e_sX: 0, e_xY: 0, sML: 0
+            }
+        },
+        methods: {
+            jump(index){
+                this.index = index;
+            },
+            start (ev) {
+                ev.stopPropagation();
+                this.isMove = false;
+                this.startX = ev.changedTouches[0].clientX;
+                this.startY = ev.changedTouches[0].clientY;
+                this.sML = this.marginLeft;
+            },
+            move (ev) {
+                ev.stopPropagation();
+                this.moveX = ev.changedTouches[0].clientX;
+                this.moveY = ev.changedTouches[0].clientY;
+                this.m_sX = this.moveX/100 - (this.startX/100);
+                this.m_sY = this.moveY - this.startY;
+                var marginLeft = this.sML + this.m_sX;
+                 
+                marginLeft = marginLeft > 0 ? 0 : marginLeft;
+                marginLeft = marginLeft < 6.4 - this.boxNum * 6.4 ? 6.4 - this.boxNum * 6.4 : marginLeft;
+                this.marginLeft = marginLeft;
+            },
+            end (ev) {
+                this.isMove = true;
+                var multiple = this.m_sX > 0 ? -1 : 1;
+                var index = this.index + multiple;
+                index = index < 0 ? 0 : index;
+                index = index > this.boxNum - 1 ? this.boxNum - 1 : index;
+                this.index = index;
+                this.marginLeft = 0 - this.index * 6.4;
+            }
+        },
+        mounted(){
+            //路由组件的数量
+            this.boxNum =2;
+        },
+        components: {
+            //组件的名称
+            first,
+            second,
+        },
+        watch: {
+            index: function (newValue, oldValue) {
+                this.marginLeft = 0 - this.index * 6.4;
+                 
+            }
+        }
+    }
+</script>
+ 
+<style scoped="scoped">
+	.wl{margin: 0 auto;width: 6.4rem;overflow: hidden;}
+    .first{float:left;width:6.4rem;}
+    #headed{
+        width: 100%;
+        overflow: hidden;
+        float:left;
+    }
+    .taball{border-bottom: 1px solid #ebebeb;}
+    .tab{
+        width:6rem;
+        overflow: hidden;
+        padding: 0;
+        margin: 0 auto;
+        height: 0.76rem;
+        line-height: 0.76rem;
+        
+    }
+    .tab li{
+        float: left;
+        list-style: none;
+        width: 50%;
+        text-align: center;
+    }
+    .body_bottom{
+        height: 0.73rem;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.22rem;
+    }
+    .active_color{
+        color: #008dd3;
+        border-bottom: 0.03rem solid #008dd3 !important;
+    }
+    .shift {
+        transition-property: margin-left;
+        transition-duration: 1s;
+    }
+</style>

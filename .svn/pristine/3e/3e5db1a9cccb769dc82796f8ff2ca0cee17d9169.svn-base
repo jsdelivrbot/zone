@@ -1,0 +1,72 @@
+<template>
+    <div id="headed">
+        <div class="header">
+        	<div class="headerall">
+				<a href="javascript:history.go(-1);" class="a1"></a>
+				<span class="forget">我的订单</span>
+				<a class="a2" @click="toggle()">全部帖子</a>
+				<ul v-show="show">
+					<li><a>待发货</a></li>
+					<li><a>待收货</a></li>
+					<li><a>已完成</a></li>
+				</ul>
+			</div>
+	    </div>
+	    
+	    <div class="nav-c">
+	    	<a href="#/ddxq">
+	    		<div class="nav">
+			    	<div class="navall">
+			    		<img src="../../../images/listbanner.png"/>
+			    		<ul>
+			    			<li class="li1">小主凶<span>1</span>个</li>
+			    			<li class="li2">积分：<span>2000</span>个</li>
+			    		</ul>
+			    		<div class="nav-r">已完成</div>
+			    	</div>
+			    	<div class="line"></div>
+			    </div>
+	    	</a>
+	    </div>
+    </div>
+</template>
+ 
+<script>
+    export default{
+        data(){
+            return {
+                show:false
+            }
+        },
+        methods: {
+            toggle(){
+            	this.show=!this.show
+            }
+        },
+        mounted(){
+            //路由组件的数量
+        },
+        
+    }
+</script>
+ 
+<style scoped="scoped">
+	.header{height: 0.88rem;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;position: fixed;top: 0;width: 100%;}
+	.headerall{width: 6rem;margin: 0 auto;overflow: hidden;}
+	
+	.header .a1{width: 0.18rem;height: 0.34rem;display: block;background: url(../../../images/back.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+	.header .a2{height: 0.39rem;display: block;float: right;background: url(../../../images/backdb.png) no-repeat 1.1rem 50%;background-size: 0.2rem 0.1rem;border: 1px solid #008DD3;font-size: 0.2rem;line-height: 0.39rem;text-align: center;border-radius: 0.05rem;color: #008DD3;margin-top: 0.23rem;padding-left: 0.16rem;padding-right: 0.4rem;}
+	
+	
+	.header ul{position: absolute;right: 0.2rem;top:1.05rem;background: #fff;z-index: 1;}
+	.header ul li{}
+	.header ul li a{font-size:0.2rem;width:1.4rem;height: 0.64rem;line-height: 0.64rem;display: block;border-bottom: 1px solid #ebebeb;text-align: center;}
+	.forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+	.nav-c{width: 100%;padding-top: 1.28rem;overflow: hidden;}
+	.navall{width: 6rem;margin: 0 auto;overflow: hidden;}
+	.navall img{width: 0.96rem;height:0.96rem;border-radius: 0.05rem;display: block;padding: 0.31rem 0;float: left;}
+	.navall ul{float: left;margin-top: 0.39rem;margin-left: 0.26rem;}
+	.navall .li1{font-size:0.26rem;line-height: 0.41rem;color: #242424;}
+	.navall .li2{font-size:0.2rem;color: #008dd3;line-height: 0.42rem;}
+	.navall .nav-r{float: right;font-size: 0.16rem;color: #adadad;background: url(../../../images/backright.png)no-repeat 0.73rem 50%;background-size: 0.1rem 0.2rem ;margin-top: 0.68rem;padding-right: 0.26rem;}
+</style>

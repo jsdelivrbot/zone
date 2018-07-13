@@ -1,0 +1,87 @@
+<template>
+    <div class="enter">
+        <div class="header">
+	        <a class="a1" href="javascript:history.go(-1);"></a>
+	        <span class="forget">内容权限</span>
+	        <a class="a2">保存</a>
+	    </div>
+        <div class="enter-c">
+            <ul class="enter-ul">
+                <li class="li1">注意：</li>
+                <li class="li2">参加此活动将扣除10积分,并且需自己承担自己的支出预计100元左右</li>
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div class="enter-b">
+            <div class="enter-b-l">
+                <ul>
+                    <li class="li2">*</li>
+                    <li class="li1">真实姓名：</li>
+                    
+                </ul>
+                <div class="text"><input type="text"/></div>
+            </div>
+            <div class="enter-b-l">
+                <ul>
+                    <li class="li2">*</li>
+                    <li class="li1">手机号：</li>
+                    
+                </ul>
+                <div class="text"><input type="text"/></div>
+            </div>
+            <div class="enter-b-l">
+                <ul>
+                    <li class="li2">*</li>
+                    <li class="li1">QQ：</li>
+                    
+                </ul>
+                <div class="text"><input type="text"/></div>
+            </div>
+            <div class="enter-b-l">
+                <ul>
+                    <li class="li1">留言：</li>
+                </ul>
+                <div class="text"><textarea></textarea></div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import qs from 'qs'
+export default {
+    name:'manage',
+        data () {
+             return {
+                
+             };
+         },
+         
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+    .header{height: 0.88rem;padding-left: 0.38rem;padding-right: 0.25rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+    .header .a1{width: 0.18rem;height: 0.34rem;display: block;background: url(../../images/back.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+    .header .a2{display: block;font-size:0.2rem;color:#168ed0;float:right;line-height:0.88rem;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+	
+    .enter-c{font-size:0.22rem;color:#008dd3;height:1.2rem;}
+    .enter-ul{width:6rem;margin:0 auto;overflow:hidden;display:flex;}
+    .enter-ul li{float:left;height:1.2rem;margin-top:0.24rem;}
+    .enter-ul .li1{float:left;line-height:0.32rem;height:0.32rem;}
+    .enter-ul .li2{float:left;flex:1;line-height:0.32rem;height:0.72rem;}
+
+    .enter-b{width:6rem;margin:0 auto;}
+    .enter-b-l{margin-top:0.29rem;overflow:hidden;}
+    .enter-b-l ul{height:0.54rem;width:1.41rem;float:left;text-align:right;}
+    .enter-b-l ul li{font-size:0.22rem;float:right;line-height:0.54rem;}
+    .enter-b-l .li2{color:#1094d6;}
+
+    .text{float:left;border:1px solid #d1d1d1;border-radius:0.05rem;margin-left:0.16rem;}
+    .text input{display:block;height:0.54rem;width:4.31rem;padding-left:0.1rem;}
+    .text textarea{width:4.31rem;height:1.98rem;padding-left:0.1rem;}
+    
+</style>

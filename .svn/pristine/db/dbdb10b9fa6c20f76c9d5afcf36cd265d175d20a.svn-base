@@ -1,0 +1,26 @@
+<template>
+    <div class="comment">
+        <my-header title="评论：张林海"></my-header>
+        <textarea  placeholder="说说你的想法"></textarea>
+    </div>
+</template>
+
+<script>
+import qs from 'qs'
+export default {
+    name:'content',
+        data () {
+             return {
+                
+             };
+         },
+         
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+	.comment{height: 100%;}
+	textarea{width:6rem;height:100%;resize: none;outline:none;border:0;display: block;margin: 0 auto;padding-top: 0.3rem;}
+</style>

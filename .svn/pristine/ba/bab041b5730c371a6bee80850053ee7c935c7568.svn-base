@@ -1,0 +1,108 @@
+<template>
+  <div class="index">
+    <my-header title="任务详情"></my-header>
+    <div class="cen">
+    	<div class="cenall">
+    		<div class="cenallt">
+    			<dl class="cent">
+		    		<dt><img src="../../../images/other/dati.png"/></dt>
+		    		<dd>你猜趣味答题</dd>
+		    	</dl>
+		    	<ul class="cenb">
+	    			<li>已有<span>1000</span>人完成了此任务</li>
+	    			<li class="li2">作者：<span>渣渣</span></li>
+	    		</ul>
+    		</div>
+    		<div class="cenallb">
+    			<div class="cenallb-t">第一题</div>
+    			<div class="cenallb-b">
+    				蚂蚁能够安全过冬是因为蚂蚁储存了足够的食物。而蟋蟀因为没有储存食物，冬天里被饿死、冻死的不计其数。那么，是什么原因让蟋蟀没能储
+    			</div>
+    			<div class="nav-r">
+	                <li class="li4">
+	                    <label>
+	                        <input type="checkbox"><b></b>
+	                    </label>
+	                    <span>没有仓库</span>
+	                </li>
+	                <li class="li4">
+	                    <label>
+	                        <input type="checkbox"><b></b>
+	                    </label>
+	                    <span>没有仓库</span>
+	                </li>
+	                <li class="li4">
+	                    <label>
+	                        <input type="checkbox"><b></b>
+	                    </label>
+	                    <span>没有仓库</span>
+	                </li>
+	                <li class="li4">
+	                    <label>
+	                        <input type="checkbox"><b></b>
+	                    </label>
+	                    <span>没有仓库</span>
+	                </li>
+	            </div>
+    		</div>
+    		<div class="cenallf">
+    			<ul>
+    				<li>错误：你的智商真低，快多做练习把， 正确答案是，没有仓库了，因为你笨没猜出来  哈哈哈哈</li>
+    			</ul>
+    		</div>
+    		<div class="footer">
+    			<ul>
+    				<li class="li1">退出任务</li>
+    				<li class="li2">下一题</li>
+    			</ul>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+	.header{position: fixed;top: 0;}
+	.cen{position: absolute;top: 1.28rem;width: 100%;}
+	.cenall{width: 5.86rem;margin: 0 auto;}
+	.cenallt{margin-bottom: 0.23rem;overflow: hidden;}
+	.cen dl dt img{width: 0.61rem;height: 1.65rem;margin: 0 auto;display: block;margin-top: 0.32rem;}
+	.cen dl dd{font-size: 0.29rem;color: #292929;text-align: center;height: 0.73rem;line-height: 0.73rem;}
+	.cenb li{float: left;height: 0.46rem;line-height: 0.46rem;color: #636363;font-size: 0.16rem;}
+	.cenb .li2{float: right;}
+	.cenallb{border-radius: 0.05rem;box-shadow: 0 0 0.05rem #000;overflow: hidden;}
+	.cenallb-t{height: 0.59rem;line-height: 0.59rem;color: #fff;font-size: 0.26rem;text-align: center;background: #46c2ff;}
+	.cenallb-b{width:5.28rem;margin:0 auto;font-size: 0.21rem;color: #242424;line-height: 0.35rem;padding-top: 0.24rem;padding-bottom: 0.28rem;border-bottom: 1px solid #ebebeb;}
+	.nav-r {width:4.98rem;margin: 0 auto;overflow: hidden;}
+    .nav-r .li4{height:0.6rem;float:left;position: relative;width: 100%;}
+    .nav-r span{font-size:0.2rem;color: #242424;display: block;float: left;height: 0.6rem;line-height: 0.6rem;margin-left: 0.15rem;}
+    label{width: 0.24rem;height: 0.24rem;border-radius:50%;display: block;position:relative;z-index:10;top:50%;transform: translateY(-50%);float: left;}
+    input[type="checkbox"] {display: none;position:absolute;}
+	input[type="checkbox"]+b {position:absolute;top:0;left:0;display: inline-block;width: 0.18rem;height: 0.18rem;border: 1px solid #ccc;cursor: pointer;vertical-align: middle;}
+	input[type="checkbox"]:checked+b {background: url(../../../images/other/success.png)no-repeat;background-size:cover;}
+
+	.cenallf{border-radius: 0.05rem;box-shadow: 0 0 0.05rem #000;overflow: hidden;margin-top: 0.3rem;}
+	.cenallf ul{width: 5.2rem;margin: 0 auto;line-height: 0.35rem;font-size: 0.21rem;color: #008dd3;padding: 0.25rem 0;}
+	.footer{width: 4.6rem;margin: 0 auto;margin-top: 0.5rem;margin-bottom: 0.5rem;overflow: hidden;}
+	.footer li{width: 2.08rem;height: 0.54rem;font-size: 0.22rem;border-radius: 0.27rem;line-height: 0.54rem;text-align: center;float: left;}
+	.footer .li1{color: #008DD3;border: 1px solid #008DD3;}
+	.footer .li2{color: #fff;border: 1px solid #46c2ff;background: #46c2ff;float: right;}
+</style>

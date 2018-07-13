@@ -1,0 +1,197 @@
+<template>
+	<div class="index">
+		<div class="top">
+			<div class="topall">
+				<div class="top-left"><a href="#/myzl"><img src="../../images/indexbanner.png"/></a></div>
+				<div class="top-right">
+					<ul class="ul1">
+						<li class="li1">王磊</li>
+						<li class="li2">vip2</li>
+						<li class="li3">铜牌会员</li>
+						<li class="li4"><a href="#/bjzl"></a></li>
+					</ul>
+					<div class="ul2">
+						<span class="li1">还差<span>10000分升级</span></span><span class="li2">
+						<span>10000</span>/<span>300000</span></span>
+						<p><span></span></p>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div> 
+		<div class="nav">
+			<div class="center">
+			<div class="center-top">
+				<img src="../../images/other/wode.png"/>
+			</div>
+			<div class="center-bottom">
+				<table border="0" cellspacing="0" cellpadding="0" frame=below>
+					<tr>
+						<td>
+							<a href="#/myqz">
+								<dl>
+									<dt><img src="../../images/other/quanzi.png"/></dt>
+									<dd>圈子</dd>
+								</dl>
+							</a>
+						</td>
+						<td>
+							<a >
+								<dl>
+									<dt><img src="../../images/other/dayi.png"/></dt>
+									<dd>答疑</dd>
+								</dl>
+							</a>
+						</td>
+						<td>
+							<a href="#/myrw">
+								<dl>
+									<dt><img src="../../images/other/renwu.png"/></dt>
+									<dd>任务</dd>
+								</dl>
+							</a>
+						</td>
+						<td>
+							<dl>
+								<dt><img src="../../images/other/xiaoxi.png"/></dt>
+								<dd>消息</dd>
+							</dl>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#/mytz">
+								<dl>
+									<dt><img src="../../images/other/tiezi.png"/></dt>
+									<dd>帖子</dd>
+								</dl>
+							</a>
+						</td>
+						<td>
+							<a href="#/mydd">
+								<dl>
+									<dt><img src="../../images/other/dingdan.png"/></dt>
+									<dd>订单</dd>
+								</dl>
+							</a>
+						</td>
+						<td>
+							<a href="#/shoucang">
+								<dl>
+									<dt><img src="../../images/other/shoucang.png"/></dt>
+									<dd>收藏</dd>
+								</dl>
+							</a>
+						</td>
+						<td>
+							<dl>
+								<dt><img src="../../images/other/haoyou.png"/></dt>
+								<dd>好友</dd>
+							</dl>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#/glshdz">
+								<dl>
+									<dt><img src="../../images/other/shouhuodizhi.png"/></dt>
+									<dd>收货地址</dd>
+								</dl>
+							</a>
+						</td>
+						<td>
+							<a href="#/myjf">
+								<dl>
+									<dt><img src="../../images/other/jifen.png"/></dt>
+									<dd>积分</dd>
+								</dl>
+							</a>
+						</td>
+						<td>
+							<dl>
+								<dt><img src="../../images/other/yaoqing.png"/></dt>
+								<dd>邀请</dd>
+							</dl>
+						</td>
+						<td>
+							<dl>
+								<dt><img src="../../images/other/zuji.png"/></dt>
+								<dd>足迹</dd>
+							</dl>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+		</div>
+			<div class="center">
+				<div class="center-top">
+					<img src="../../images/other/qita.png"/>
+				</div>
+				<div class="center-bottom">
+					<dl class="dl">
+						<dt><img src="../../images/other/shezhi.png"/></dt>
+						<dd>设置</dd>
+					</dl>
+					<a href="#/yhrz">
+						<dl class="dl">
+							<dt><img src="../../images/other/renzheng.png"/></dt>
+							<dd>认证</dd>
+						</dl>
+					</a>
+				</div>
+				
+			</div>
+		
+		</div>
+		<my-footer></my-footer>
+	</div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+	.index{height: 100%;padding-bottom: 0.98rem;}
+    .top{width: 100%;height: 3.64rem;background: url(../../images/listbanner.png) no-repeat;background-size: cover;}
+    .topall{width: 5rem;margin: 0 auto;display: flex;padding-top: 1.42rem;}
+    .top-left{width: 1.2rem;height: 1.2rem;border-radius: 50%;float: left;padding: 0.1rem;background-color:rgba(255,255,255,0.3);}
+    .top-left img{width: 1.2rem;height: 1.2rem;border-radius: 50%;display: block;float: left;}
+	.top-right{float: left;margin-left: 0.21rem;flex: 1;color: #fff;}
+	.ul1{line-height:0.76rem;font-size:0.16rem;}
+	.ul1 li{float: left;}
+	.ul1 .li1{font-size:0.26rem;}  
+	.ul1 .li2{line-height:0.27rem;height:0.27rem;width:0.62rem;margin: 0 0.13rem;background: #39b6f4;border-radius: 0.05rem;text-align: center;margin-top: 0.25rem;}  
+	.ul1 .li4{width:0.26rem;height:0.76rem;background: url(../../images/other/ziliao.png)no-repeat 0 50%;background-size: 0.22rem 0.26rem;float: right;}     
+	.ul1 .li4 a{display: block;width: 100%;height: 100%;}
+	.ul2{width:100%;line-height: 0.26rem;font-size:0.18rem;float: left;}
+	.ul2 .li2{float: right;}
+	.ul2 p{height: 0.09rem;width: 3.32rem;background:rgba(255,255,255,0.3);border-radius: 0.045rem;margin-top: 0.11rem;}
+	.ul2 p span{height: 0.09rem;width: 3rem;background: #fff;border-radius: 0.045rem;display: block;}
+	.center-top{height:0.77rem;border-bottom: 1px solid #ebebeb;position: relative;}
+	.center-top img{width: 0.33rem;height: 0.33rem;position: absolute;top: 50%;left:0.3rem;transform: translateY(-50%);}
+	.center-bottom table{width: 100%;border-collapse:collapse;}
+	.center-bottom tr{border: 1px solid #ebebeb;}
+	.center-bottom td{width: 25%;border: 1px solid #ebebeb;}
+	.center-bottom dl{height: 1.53rem;cursor: pointer;}
+	.center-bottom dt img{height: 0.36rem;margin: 0 auto;display: block;padding-top: 0.39rem;}
+	.center-bottom dd{font-size: 0.18rem;color: #242424;text-align: center;margin-top: 0.19rem;}
+	
+	.dl{float: left;width: 1.64rem;}
+</style>

@@ -1,0 +1,86 @@
+<template>
+  <div class="delivery">
+    <my-header title="管理收货地址"></my-header>
+    <div class="body">
+        <div class="top">
+            <div class="linebn"></div>
+            <div class="top-center">
+                <ul class="c-ul">
+                    <li class="c-li1"><span class="c-li1">张三</span><span class="c-li2">15633138235</span><span class="c-li3">默认</span></li>
+                    <li class="c-li2"><span>北京</span><span class="c-sp1">北京市</span><span class="c-sp1">朝阳区</span><span class="c-sp1">北京</span>（<span>100200</span>）</li>
+                </ul>
+            </div>
+            <div class="linebn"></div>
+            <div class="top-b">
+            	<ul class="nav-r">
+	                <li class="li4">
+	                    <label>
+	                        <input type="checkbox"><b></b>
+	                    </label>
+	                    
+	                </li>
+	                <span>默认地址</span>
+	            </ul>
+	            <div class="top-right">
+	            	<ul class="nav-r">
+		                <span class="sp1">编辑</span>
+		            </ul>
+		            <ul class="nav-r ml48">
+		                <span class="sp2">删除</span>
+		            </ul>
+	            </div>
+	            
+            </div>
+        </div>
+    	<a href="#/tjshdz"><div class="bottom">管理收货地址</div></a>
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .header{position: fixed;top:0;}
+    
+    .body{padding-top: 1.28rem;}
+    .top{width:6rem;margin:0 auto;box-shadow:0 0 0.2rem #76cef1;padding-top:0.2rem;margin-top:0.2rem;overflow: hidden;}
+    .linebn{height:0.04rem;width:100%;background:url(../../../images/line.png)no-repeat;background-size:contain;}
+    .linebnw{height:0.04rem;width:100%;background:url(../../../images/line-w.png)no-repeat;background-size:cover;}
+    .top-center{font-size:0.24rem;color:#242424;line-height:0.42rem;padding:0.2rem 0.2rem;position:relative;}
+    .c-li1 .c-li2{margin-left:0.15rem;}
+    .c-li3{height:0.24rem;width:0.62rem;background:#54c2f0;color:#fff;font-size:0.18rem;float:right;line-height:0.24rem;text-align:center;} 
+    .c-sp1{margin-left:0.13rem;}
+    
+    .top-b{width: 5.58rem;margin: 0 auto;overflow: hidden;}
+    .nav-r {height:0.73rem;float:left;}
+    .nav-r li{float: left;}
+    .nav-r .li4{width:0.26rem;height:0.73rem;position: relative;}
+    .nav-r span{font-size:0.2rem;color: #242424;line-height: 0.73rem;float: left;margin-left: 0.15rem;}
+    
+    .top-right{float: right;}
+    label{width: 0.26rem;height: 0.26rem;border-radius:50%;display: block;position:relative;z-index:10;top:50%;transform: translateY(-50%);}
+    input[type="checkbox"] {display: none;position:absolute;}
+	input[type="checkbox"]+b {position:absolute;top:0;left:0;display: inline-block;width: 0.25rem;height: 0.25rem;border: 1px solid #ccc;cursor: pointer;border-radius: 50%;vertical-align: middle;}
+	input[type="checkbox"]:checked+b {background: url(../../../images/other/glshdz.png)no-repeat;background-size:cover;border:none;}
+	
+	.sp1{background: url(../../../images/other/bianjiicon.png)no-repeat 0 50%;background-size:0.24rem 0.24rem;padding-left: 0.35rem;}
+	.sp2{background: url(../../../images/other/shanchuicon.png)no-repeat 0 50%;background-size:0.26rem 0.22rem;padding-left: 0.34rem;}
+	
+	.bottom{width: 2.38rem;height: 0.62rem;border-radius: 0.31rem;background: #54c2f0;color: #fff;text-align: center;line-height: 0.62rem;font-size: 0.22rem;cursor: pointer;margin: 0.35rem auto;}
+</style>

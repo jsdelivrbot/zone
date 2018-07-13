@@ -1,0 +1,107 @@
+<template>
+    <div class="setting">
+        <div class="setting1">
+            <div class="setting-all">
+                <a href="javascript:history.go(-1);" class="a1"></a>
+                <span class="forget">帖子分类</span>
+                <a class="a2">添加</a>
+            </div>
+        </div>
+        <div class="srall">
+            <div class="sr">
+                <ul class="sr-ul">
+                    <li class="sr-ul-li1">
+                        <div class="sr-ul-li1-t">
+                            <p class="t-p1">嘻嘻嘻</p>
+                        </div>
+                        <div class="sr-ul-li1-b">
+                            <p class="b-p1">修改</p>
+                            <p class="b-p2">删除</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="up">
+            <div class="up-all">
+                <p class="up-p">添加类别</p>
+                <div class="up-div">
+                    <span class="sp1">类别名称：</span><span>娱乐</span>
+                </div>
+                <ul>
+                    <li class="li1"><a>取消</a></li>
+                    <li class="li2"><a>确定</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="up">
+            <div class="up-all">
+                <p class="up-p">修改类别</p>
+                <div class="up-div">
+                    <span class="sp1">类别名称：</span><span>娱乐</span>
+                </div>
+                <ul>
+                    <li class="li1"><a>取消</a></li>
+                    <li class="li2"><a>确定</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="up1">
+            <div class="up-all1">
+                <ul>
+                    <li class="li1"><a>取消</a></li>
+                    <li class="li2"><a>确定</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+	export default {
+		methods:{
+		}
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  
+  .setting1{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+  .setting-all{width:5.92rem;margin:0 auto;overflow:hidden;}
+  .setting .a1{width: 0.18rem;height: 0.34rem;background: url(../../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+  .setting .a2{width: 0.73rem;height: 0.42rem;color:#008dd3;line-height:0.42rem;text-align:center;color:#008dd3;font-size:0.2rem;border:1px solid #008dd3;border-radius:0.05rem;float:right;display: block;margin-top:0.2rem;}
+  .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  
+  
+  .srall{border-bottom:1px solid #ebebeb;}
+  .sr{height:1.14rem;width:6rem;margin:0 auto;}
+  .sr-ul{overflow:hidden;}
+  .sr-ul-li1-t{float:left;}
+  .sr-ul-li1-b{float:right;}
+  .sr-ul-li1 .t-p1{font-size:0.23rem;color:#1a1a1a;line-height:1.14rem;}
+  .sr-ul-li1-b p{width:0.98rem;height:0.52rem;font-size:0.2rem;border-radius:0.26rem;float:left;line-height:0.52rem;text-align:center;margin-top:0.3rem;}
+  .sr-ul-li1-b .b-p1{background:#54c2f0;border:1px solid #54c2f0;color:#d4f0fb;}
+  .sr-ul-li1-b .b-p2{color:#c7c7c7;border:1px solid #c7c7c7;margin-left:0.14rem;}
+
+  .up{width:6.4rem;height:4.9rem;background:url(../../../images/tanchu.png) no-repeat;background-size:cover;position:absolute;top:50%;left:50%;margin-top:-2.45rem;margin-left:-3.2rem;z-index:10;border-radius:0.05rem;display:block;}
+  .up-all{height:100%;margin:0 auto;}
+  .up-all ul{width:4.4rem;height:0.56rem;margin:0 auto;position: absolute;bottom: 1rem;left: 50%;margin-left: -2.2rem;}
+  .up-all ul li{width:2.08rem;height:0.54rem;float:left;border-radius:0.28rem;border:1px solid #008dd3;}
+  .up-all ul li a{width:2.08rem;height:0.54rem;line-height:0.54rem;color:#008dd3;font-size:0.22rem;display:block;text-align:center;border-radius:0.28rem;}
+  .up-all ul li a:hover{color:#fff;background:#008dd3;}
+  .up-all .li2{float:right;}
+  .up-p{height:0.94rem;margin-top:0.7rem;font-size:0.26rem;color:#fff;text-align:center;line-height:0.94rem;}
+  .up-div{width:3.18rem;height:0.46rem;background:rgba(255,255,255,0.3);margin:0 auto;}
+  .up-div span{color:#fff;font-size:0.2rem;line-height:0.46rem;display:block;float:left;}
+  .up-div .sp1{padding-left:0.09rem;}
+
+
+  .up1{width:6.4rem;height:4.9rem;background:url(../../../images/delete.png) no-repeat;background-size:cover;position:absolute;top:50%;left:50%;margin-top:-2.45rem;margin-left:-3.2rem;z-index:10;border-radius:0.05rem;display:block;}
+  .up-all1{height:100%;margin:0 auto;}
+  .up-all1 ul{width:4.4rem;height:0.56rem;margin:0 auto;position: absolute;bottom: 1rem;left: 50%;margin-left: -2.2rem;}
+  .up-all1 ul li{width:2.08rem;height:0.54rem;float:left;border-radius:0.28rem;border:1px solid #008dd3;}
+  .up-all1 ul li a{width:2.08rem;height:0.54rem;line-height:0.54rem;color:#008dd3;font-size:0.22rem;display:block;text-align:center;border-radius:0.28rem;}
+  .up-all1 ul li a:hover{color:#fff;background:#008dd3;}
+  .up-all1 .li2{float:right;}
+</style>

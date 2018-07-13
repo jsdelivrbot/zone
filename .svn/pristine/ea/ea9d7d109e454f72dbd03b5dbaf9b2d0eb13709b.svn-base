@@ -1,0 +1,104 @@
+<template>
+    <div class="message">
+        <div class="message1">
+            <div class="message-all">
+                <a href="javascript:history.go(-1);" class="a1"></a>
+                <span class="forget">投票</span>
+                <a class="a2"></a>
+            </div>
+        </div>
+        <div class="setting2">
+            <div class="setting2-all lh84">
+                <div class="title lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">标题：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting2-all lh84">
+                <div class="lh84 qz"></div>
+                <div class="sr bt0 lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">内容：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="setting3">
+            <div class="setting2-all lh84">
+                <div class="dl lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">选项一：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting2-all lh84">
+                <div class="dl lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">选项二：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <div class="bo"><a>+增加选项</a></div>
+        </div>
+    </div>
+</template>
+
+<script>
+	export default {
+		data () {
+             return {
+                // show:false,
+                // isshow:false
+             };
+         },
+         
+         methods: {
+         }
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  .message1{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+  .message-all{width:5.92rem;margin:0 auto;overflow:hidden;}
+  .message .a1{width: 0.18rem;height: 0.34rem;background: url(../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+  .message .a2{width: 0.32rem;height: 0.3rem;background: url(../../images/ok.png) no-repeat;background-size: contain;float:right;display: block;margin-top:0.34rem;}
+  .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  
+  .sl{width:0.60rem;height:1.14rem;float:left;background:url(../../images/jiben.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .title{width:0.60rem;height:1.14rem;float:left;background:url(../../images/title.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .qz{width:0.60rem;height:1.14rem;float:left;background:url(../../images/qzjs.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .dl{width:0.60rem;height:1.14rem;float:left;}
+  .setting2-all{width:6rem;overflow:hidden;margin:0 auto;}
+  .sr{height:1.14rem;border-bottom:1px solid #ebebeb;}
+  .bt0{border-bottom:0;}
+  .sr-ul{flex:1;overflow:hidden;float:left;}
+  .sr-ul-li1{font-size:0.22rem;color:#1a1a1a;line-height:0.37rem;}
+  .sr-ul-li2{font-size:0.20rem;color:#575757;line-height:0.36rem;}
+  
+  .setting2-all .lh84{height:0.84rem;line-height:0.84rem;display:flex;}
+  .setting2-all .f{float:left;}
+  .setting2-all .r{float:right;flex:1;}
+  .setting2-all .sr-input{display:block;float:right;text-align:right;flex:1;}
+  
+  .bo{width:2.4rem;height:0.62rem;background:#54c2f0;font-size:0.24rem;color:#fff;text-align:center;line-height:0.62rem;margin:0 auto;border-radius:0.31rem;margin-top:0.6rem;}
+</style>

@@ -1,0 +1,55 @@
+<template>
+	<div class="mytz">
+		<my-header title="我的帖子"></my-header>
+	    <div class="first">
+	        <div class="nav">
+	        	<p class="li2"><img src="../../../images/peo.png"/></p>
+	            <ul>
+	                <li class="li1">有消息称iphone8 可能在6月份发布</li>
+	                <li class="li4">悄然无声</li>
+	                <li class="li5"><span class="sp1">2017.07.24</span><span class="sp2">200</span><span class="sp3">200</span></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+	
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+             
+         },
+         methods: {
+            
+         }
+    }
+</script>
+<style scoped>
+	.header{position: fixed;top: 0;}
+	.first{padding-top: 1.28rem;}
+    .nav{width:5.88rem;margin:0 auto;}
+    .nav ul{margin-top: 0.26rem;overflow: hidden;padding-bottom: 0.25rem;border-bottom: 1px solid #ebebeb;}
+    .nav ul li{float:left;width: 100%;}
+    .li1{line-height:0.41rem;font-size:0.25rem;margin-left: 0.24rem;}
+    .nav .li2{height:0.62rem;width:0.62rem;position: relative;margin-top: 0.06rem;float: left;}
+    .nav .li2 img{width:0.62rem;height:0.62rem;border-radius:50%;position: absolute;top: 50%;-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);-ms-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);}
+    .nav .li3{height:1.24rem;-bottom:1px solid #e0e0e0;width:4.87rem;float:right;position:relative;}
+    .p{height:0.69rem;position: absolute;top: 50%;-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);-ms-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);}
+    .nav .li3 .p1{font-size:0.26rem;line-height:0.38rem;}
+    p{font-size:0.20rem;}
+    .nav .li3 .p2{float:left;line-height:0.31rem;}
+    .nav .li3 .p3{margin-left:0.3rem;}
+    .nav .li4{line-height: 0.38rem;color: #54c2f0;font-size:0.22rem;margin-left: 0.24rem;}
+    .li5 span{float: left;margin-left: 0.24rem;}
+    .li5{line-height: 0.3rem;color: #949494;font-size: 0.14rem;}
+    .sp1{background: url(../../../images/fbsj.png) no-repeat 0 50%;background-size: 0.18rem 0.18rem;padding-left: 0.3rem;}
+    .sp2{background: url(../../../images/sl.png) no-repeat 0 50%;background-size: 0.19rem 0.19rem;padding-left: 0.22rem;}
+    .sp3{background: url(../../../images/hf.png) no-repeat 0 50%;background-size: 0.20rem 0.18rem;padding-left: 0.26rem;}
+</style>

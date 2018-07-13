@@ -1,0 +1,60 @@
+<template>
+  <div class="delivery">
+    <div class="header">
+        <div class="header1">
+            <a href="javascript:history.go(-1);" class="a1"></a>
+            <span class="forget">投票</span>
+            <a class="a2">管理</a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="top">
+            <div class="linebn"></div>
+            <div class="top-center">
+                <ul class="c-ul">
+                    <li class="c-li1"><span class="c-li1">张三</span><span class="c-li2">15633138235</span><span class="c-li3">默认</span></li>
+                    <li class="c-li2"><span>北京</span><span class="c-sp1">北京市</span><span class="c-sp1">朝阳区</span><span class="c-sp1">北京</span>（<span>100200</span>）</li>
+                    
+                </ul>
+            </div>
+            <div class="linebn"></div>
+        </div>
+        
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .header{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+    .header1{width:5.92rem;margin:0 auto;overflow:hidden;}
+    .header .a1{width: 0.18rem;height: 0.34rem;background: url(../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+    .header .a2{width: 0.73rem;height: 0.42rem;float:right;display: block;color:#008dd3;border:1px solid #008dd3;border-radius:0.05rem;line-height:0.42rem;text-align:center;font-size:0.24rem;margin-top:0.25rem;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  
+    
+    .top{width:5.6rem;margin:0 auto;box-shadow:0 0 0.2rem #76cef1;padding-top:0.2rem;margin-top:0.2rem;padding-bottom: 0.2rem;}
+    .linebn{height:0.04rem;width:100%;background:url(../../images/line.png)no-repeat;background-size:contain;}
+    .linebnw{height:0.04rem;width:100%;background:url(../../images/line-w.png)no-repeat;background-size:cover;}
+    .top-center{font-size:0.24rem;color:#242424;line-height:0.42rem;padding:0.2rem 0.2rem;position:relative;}
+    .c-li1 .c-li2{margin-left:0.15rem;}
+    .c-li3{height:0.24rem;width:0.62rem;background:#54c2f0;color:#fff;font-size:0.18rem;float:right;line-height:0.24rem;text-align:center;} 
+    .c-sp1{margin-left:0.13rem;}
+</style>

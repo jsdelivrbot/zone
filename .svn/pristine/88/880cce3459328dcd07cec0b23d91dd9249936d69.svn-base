@@ -1,0 +1,31 @@
+<template>
+	<div class="header">
+		<div class="headerall">
+			<a href="javascript:history.go(-1);"></a>
+			<span class="forget">{{title}}</span>
+		</div>
+		
+    </div>
+</template>
+
+<script>
+	export default {
+		name: 'my-header',
+        props: {
+			title: {
+				type: String,
+				default: "头部标题"
+			}
+		},
+		methods:{
+		}
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .header{height: 0.88rem;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;width: 100%;background: #fff;z-index: 1;}
+	.headerall{width: 6rem;margin: 0 auto;}
+	.header a{width: 0.18rem;height: 0.88rem;display: block;background: url(../../images/back.png) no-repeat 0 50%;background-size: 0.18rem 0.34rem;float:left;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+</style>

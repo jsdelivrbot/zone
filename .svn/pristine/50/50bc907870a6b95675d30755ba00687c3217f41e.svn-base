@@ -1,0 +1,160 @@
+<template>
+    <div class="jiben">
+        <div class="setting1">
+            <div class="setting-all">
+                <a href="javascript:history.go(-1);" class="a1"></a>
+                <span class="forget">基本设置</span>
+                <a class="a2"></a>
+            </div>
+        </div>
+        <div class="setting2">
+            <div class="setting2-all lh84">
+                <div class="sl lh84"></div>
+                <div class="sr bt0 lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">圈子名称:</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="setting2-all lh84" @click="toggle()">
+                <div class="sl lh84 fl"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh87">
+                        <li class="sr-ul-li1 f lh87">所属分类:</li>
+                        <li class="down-ol">产品</li>
+                        <ol class="down-ol-d" v-show="show">
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                                <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                        </ol>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting2-all lh84 lh134">
+                <div class="sl lh84 tx lh134"></div>
+                <div class="sr lh84 l lh134">
+                    <ul class="sr-ul lh134">
+                        <li class="sr-ul-li1 f lh134">圈子头像:</li>
+                        <li class="down-ol lh134 jia"></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="setting2-all lh84 lh134">
+                <div class="sl lh84 bi lh134"></div>
+                <div class="sr lh84 l lh134">
+                    <ul class="sr-ul lh134">
+                        <li class="sr-ul-li1 f lh134">背景图片:</li>
+                        <li class="down-ol lh134 jia"></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="setting2-all lh84 lh98" @click="toggle1()">
+                <div class="sl lh84 bg lh98"></div>
+                <div class="sr lh84 l lh98">
+                    <ul class="sr-ul lh98">
+                        <li class="sr-ul-li1 f lh98">背景遮罩色:</li>
+                        <li class="down-ol lh98">产品</li>
+                        <ol class="down-ol-d t685" v-show="isshow">
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                                <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                        </ol>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="setting2-all lh84">
+                <div class="sl lh84 qzjs"></div>
+                <div class="sr bt0 lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 r lh84">圈子介绍:</li>
+                        <li class="lh84 f">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+	export default {
+		data () {
+             return {
+                show:false,
+                isshow:false
+             };
+         },
+         
+         methods: {
+             toggle(){
+                this.show = !this.show;
+            },
+             toggle1(){
+                this.isshow = !this.isshow;
+            }
+         }
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  
+  .setting1{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+  .setting-all{width:5.92rem;margin:0 auto;overflow:hidden;}
+  .jiben .a1{width: 0.18rem;height: 0.34rem;background: url(../../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+  .jiben .a2{width: 0.32rem;height: 0.3rem;background: url(../../../images/ok.png) no-repeat;background-size: contain;float:right;display: block;margin-top:0.34rem;}
+  .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  
+  
+  
+  .setting2{width:100%;overflow:hidden;box-shadow:0 0 5px #ebebeb;}
+  
+  .setting2 .sl{width:0.60rem;height:1.14rem;float:left;background:url(../../../images/jiben.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .setting2 .fl{width:0.60rem;height:1.14rem;float:left;background:url(../../../images/fenlei.png) no-repeat 50% 50%;background-size:0.22rem 0.22rem;}
+  .setting2 .tx{width:0.60rem;height:1.14rem;float:left;background:url(../../../images/tx.png) no-repeat 50% 50%;background-size:0.22rem 0.22rem;}
+  .setting2 .bi{width:0.60rem;height:1.14rem;float:left;background:url(../../../images/bannericon.png) no-repeat 50% 50%;background-size:0.24rem 0.18rem;}
+  .setting2 .bg{width:0.60rem;height:1.14rem;float:left;background:url(../../../images/background.png) no-repeat 50% 50%;background-size:0.24rem 0.20rem;}
+  .setting2 .qzjs{width:0.60rem;height:1.14rem;float:left;background:url(../../../images/qzjs.png) no-repeat 50% 50%;background-size:0.24rem 0.20rem;}
+  
+  
+  
+  .setting2-all{width:6rem;overflow:hidden;margin:0 auto;}
+  .setting2 .sr{height:1.14rem;border-bottom:1px solid #ebebeb;}
+  .setting2 .bt0{border-bottom:0;}
+  .setting2 .sr-ul{flex:1;overflow:hidden;float:left;}
+  .setting2 .sr-ul-li1{font-size:0.22rem;color:#1a1a1a;line-height:0.37rem;}
+  .setting2 .sr-ul-li2{font-size:0.20rem;color:#575757;line-height:0.36rem;}
+  
+  .setting2-all .lh84{height:0.84rem;line-height:0.84rem;display:flex;}
+  .setting2-all .f{float:left;}
+  .setting2-all .r{float:right;flex:1;}
+  .setting2-all .sr-input{display:block;float:right;text-align:right;flex:1;}
+
+  .setting2-all .lh87{height:0.87rem;line-height:0.87rem;}
+  .setting2-all .down-ol{line-height:0.87rem;color:#8c96a0;font-size:0.2rem;background:url(../../../images/backg.png) no-repeat 0.56rem 50%;background-size:0.24rem 0.12rem;padding-right:0.56rem;float:right;}
+  .setting2-all .down-ol-d{width:5.4rem;line-height:0.6rem;color:#8c96a0;font-size:0.2rem;position:absolute;top:3.15rem;background:#fff;z-index:10;border:1px solid #eeeeee;}
+
+  .setting2-all .lh98{height:0.98rem;line-height:0.98rem;}
+  .setting2-all .t68{position:absolute;top:5.71rem;}
+
+  .setting2-all .lh134{height:1.34rem;line-height:1.34rem;}
+  .setting2-all .jia{width:0.76rem;height:1.34rem;background:url(../../../images/jia.png) no-repeat 0 50%;background-size:0.76rem 0.76rem;float:right;padding-right:0;}
+
+  .setting2-all .t685{position:absolute;top:6.85rem;}
+</style>

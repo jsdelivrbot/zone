@@ -1,0 +1,193 @@
+<template>
+  <div class="online">
+	  <div class="header">
+        <a class="a1" href="javascript:history.go(-1);"></a>
+        <span class="forget">在线咨询</span>
+        <a class="a2"></a>
+    </div>
+    <div class="nav">
+      <p class="p1">咨询的服务</p>
+      <p class="p2">大学校园如何安装wlan网络</p>
+    </div>
+    <div class="line"></div>
+    <div class="form">
+      <p class="form-p">您的联系方式</p>
+      <ul>
+        <li class="li1">
+          <div class="div1">
+            <span class="span1"></span>
+          </div>
+          <p>
+            <span>姓名：</span>
+            <input type="text"/>
+          </p>
+          
+        </li>
+        
+        <li class="li2">
+          <div class="div1">
+            <span class="span2"></span>
+          </div>
+          <p>
+            <span>手机号：</span>
+            <input type="text"/>
+          </p>
+        </li>
+        
+        
+        <li class="li3">
+          <div class="div1">
+            <span class="span3"></span>
+          </div>  
+          <p>
+            <span>邮箱：</span>
+            <input type="text"/>
+          </p>
+        </li>
+        
+        
+        <li class="li4">
+          <div class="div1">
+            <span class="span4"></span>
+          </div>
+          <p>
+            <span>所在省份：</span>
+            <ul class="p-ul">
+              <li class="p-li1">维维吾尔</li>
+              <li class="p-li2" @click="toggle()"></li>
+            </ul>
+          </p>
+        </li>
+        
+        
+        <li class="li5">
+          <div class="div1">
+            <span class="span5"></span>
+          </div>  
+          <p>
+            <span>所在城市：</span>
+            <ul class="p-ul">
+              <li class="p-li1">维维吾尔</li>
+              <li class="p-li2" @click="toggle2()"></li>
+            </ul>
+          </p>
+        </li>
+        <li class="li6">
+          <div class="div1">
+            <span class="span6"></span>
+          </div> 
+          <p class="bt">
+            <span>项目描述</span>
+            <input type="text"/>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="line"></div>
+    <div class="mark" ref="mark">
+
+    </div>
+    <div class="window" ref="window">
+      <div class="window-header">
+        <span class="window-forget">所在省份</span>
+        <a class="window-a2" @click="toggle1()"></a>
+      </div>
+      <p><span>请选择</span></p>
+      <ul>
+        <li>黑</li>
+      </ul>
+    </div>
+
+    <div class="window" ref="city">
+      <div class="window-header">
+        <span class="window-forget">所在城市</span>
+        <a class="window-a2" @click="toggle3()"></a>
+      </div>
+      <p><span>请选择</span></p>
+      <ul>
+        <li>黑</li>
+      </ul>
+    </div>
+    
+  </div>
+  
+</template>
+
+<script>
+	export default {
+		data () {
+             return {
+                show:true,
+                isShow:true
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+            toggle:function(){
+                this.$refs.mark.style.display = "block";
+                this.$refs.window.style.display = "block";
+            },
+            toggle1:function(){
+                this.$refs.mark.style.display = "none";
+                this.$refs.window.style.display = "none";
+            },
+            toggle2:function(){
+                this.$refs.mark.style.display = "block";
+                this.$refs.city.style.display = "block";
+            },
+            toggle3:function(){
+                this.$refs.mark.style.display = "none";
+                this.$refs.city.style.display = "none";
+            }
+         }
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  .bt{border-bottom:none!important;}
+
+  .header{height: 0.88rem;padding-left: 0.38rem;padding-right: 0.25rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+  .header .a1{width: 0.18rem;height: 0.34rem;display: block;background: url(../../images/back.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+  .header .a2{width: 0.32rem;height: 0.20rem;display: block;background: url(../../images/ok.png) no-repeat;background-size: cover;float:right;margin-top:0.34rem;}
+  .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+
+  .nav{margin-top:0.22rem;margin-left:0.22rem;margin-bottom:0.18rem;}
+  .nav .p1{line-height:0.34rem;font-size:0.26rem;color:#008dd3;}
+  .nav .p2{line-height:0.49rem;font-size:0.24rem;color:#575757;}
+
+  .line{height: 0.2rem;background: #f0f0f0;}
+
+  .form{margin-left:0.2rem;overflow:hidden;}
+  .form-p{width:100%;line-height:0.73rem;margin-top:0.07rem;border-bottom:1px solid #e0e0e0;font-size:0.26rem;color:#008dd3;}
+
+  .form li{ width:100%;height:0.88rem;line-height:0.88rem;font-size:0.24rem;float:left;display:flex;}
+  .form p{border-bottom:1px solid #e0e0e0;float:left;flex:1;}
+  .form .div1{width:0.6rem;height:100%;float:left;display: table-cell;vertical-align: middle;text-align: center;}
+  .form .span1{width:0.2rem;height:0.22rem;background:url(../../images/name.png) no-repeat;background-size:cover;display: inline-block;vertical-align: middle;}
+  .form .span2{width:0.16rem;height:0.23rem;background:url(../../images/phone.png) no-repeat;background-size:cover;display: inline-block;vertical-align: middle;}
+  .form .span3{width:0.24rem;height:0.16rem;background:url(../../images/mail.png) no-repeat;background-size:cover;display: inline-block;vertical-align: middle;}
+  .form .span4{width:0.29rem;height:0.26rem;background:url(../../images/china.png) no-repeat;background-size:cover;display: inline-block;vertical-align: middle;}
+  .form .span5{width:0.26rem;height:0.25rem;background:url(../../images/city.png) no-repeat;background-size:cover;display: inline-block;vertical-align: middle;}
+  .form .span6{width:0.2rem;height:0.22rem;background:url(../../images/test.png) no-repeat;background-size:cover;display: inline-block;vertical-align: middle;}
+
+  .form input{height:0.88rem;width:4.17rem;color:#adadad;text-align:right;float:right;padding-right:0.23rem;}
+
+
+  .form .p-ul{float:right;display:flex;}
+  .form .p-li1{height:0.88rem;float:left;flex:1;text-align:center;}
+  .form .p-li2{height:0.24rem;width:0.12rem;float:left;background:url(../../images/backright.png) no-repeat;background-size:cover;margin:0.31rem 0.23rem 0 0.14rem;}
+
+  .mark{width:100%;height:100%;position:fixed;bottom:0;left:0;background:rgba(36,153,200,0.3);display:none;z-index:5;}
+  .window{width:100%;height:6rem;z-index:10;display:none;position:fixed;bottom:0;background:#fff;}
+  .window-header{height: 0.9rem;padding-left: 0.38rem;padding-right: 0.25rem;position: relative;}
+  .window-a2{width: 0.28rem;height: 0.28rem;display: block;background: url(../../images/close.png) no-repeat;background-size: cover;float:right;margin-top:0.34rem;}
+  .window-forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  .window p{height:0.86rem;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;}
+  .window p span{line-height:0.84rem;width:0.84rem;border-bottom:0.03rem solid #008dd3;color:#008dd3;font-size:0.22rem;display:block;margin-left:0.17rem;text-align:center;}
+  
+  .window ul{margin-top:0.16rem;margin-left:0.20rem;}
+  .window ul li{line-height:0.48rem;font-size:0.2rem;color:#242424;}
+</style>

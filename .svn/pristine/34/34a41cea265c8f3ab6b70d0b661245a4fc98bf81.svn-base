@@ -1,0 +1,72 @@
+<template>
+	<div class="index">
+		
+		<div class="top">
+			<div class="header">
+				<div class="headerall">
+					<a href="javascript:history.go(-1);"></a>
+					<span class="forget">我的积分</span>
+				</div>
+				
+		    </div>
+			<div class="top1">
+				<div class="top2">
+					<p class="sp1">1600</p>
+					<p class="sp2">当前积分</p>
+				</div>
+			</div>
+		</div>
+		<div class="body">
+			<p class="p1">收支明细</p>
+			<div class="body-f">
+				<ul>
+					<li class="li1">购物赠送（订单号：<span>541515151515</span>）</li>
+					<li class="li2">2017</li>
+				</ul>
+				<p class="p">+1200</p>
+			</div>
+		</div>
+	</div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+	.index{height: 100%;padding-bottom: 0.98rem;}
+	.header{height: 0.88rem;padding-top: 0.4rem;width: 100%;z-index: 1;position: fixed;top: 0;width: 100%;}
+	.headerall{width: 6rem;margin: 0 auto;}
+	.header a{width: 0.18rem;height: 0.88rem;display: block;background: url(../../../images/backw.png) no-repeat 0 50%;background-size: 0.18rem 0.34rem;float:left;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #fff;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+
+    .top{width: 100%;height: 5.5rem;background: url(../../../images/listbanner.png) no-repeat;background-size: cover;position: relative;}
+    .top1{width: 3rem;height: 3rem;border: 1px solid #fff;border-radius:50%;position: absolute;top:1.5rem;left: 50%;transform: translateX(-50%);}
+    .top2{width: 2.4rem;height: 2.4rem;border: 0.08rem solid #54efd2;border-radius:50%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+	
+	.top2{text-align: center;color: #fff;}
+	.top2 .sp1{font-size: 0.46rem;margin-top: 0.7rem;}
+	.top2 .sp2{font-size: 0.24rem;}
+	
+	.body .p1{height: 0.67rem;border-bottom: 1px solid #ebebeb;padding-left: 0.2rem;line-height: 0.67rem;font-size: 0.25rem;color: #292929;}
+	.body-f{margin-left: 0.2rem;margin-right: 0.2rem;border-bottom: 1px solid #ebebeb;overflow: hidden;padding: 0.23rem 0;}
+	.body-f ul{float: left;}
+	.body-f .li1{font-size: 0.25rem;line-height: 0.41rem;color: #242424;}
+	.body-f .li1 span{font-size: 0.16rem;color: #008dd3;}
+	.body-f .li2{font-size: 0.16rem;color: #afafaf;line-height: 0.32rem;}
+	.body-f .p{float: right;color: #afafaf;line-height: 0.73rem;color: #4abced;font-size: 0.2rem;}
+</style>

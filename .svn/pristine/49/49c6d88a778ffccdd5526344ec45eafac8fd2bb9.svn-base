@@ -1,0 +1,68 @@
+<template>
+    <div class="message">
+        <div class="message1">
+            <div class="message-all">
+                <a href="javascript:history.go(-1);" class="a1"></a>
+                <span class="forget">基本设置</span>
+                <a class="a2"></a>
+            </div>
+        </div>
+        <div class="message2">
+            <div class="message2-all">
+                <ul class="message2-all-ul">
+                    <li class="li1">产品</li>
+                    <li class="li2"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="message3">
+            <div class="message3-all">
+                <div class="message3-top">
+                    <input type="text" placeholder="标题输出"/>
+                </div>
+            </div>
+            <div class="message3-bottom">
+                <textarea placeholder="内容"></textarea>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+	export default {
+		data () {
+             return {
+                // show:false,
+                // isshow:false
+             };
+         },
+         
+         methods: {
+         }
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  .message1{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+  .message-all{width:5.92rem;margin:0 auto;overflow:hidden;}
+  .message .a1{width: 0.18rem;height: 0.34rem;background: url(../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+  .message .a2{width: 0.32rem;height: 0.3rem;background: url(../../images/ok.png) no-repeat;background-size: contain;float:right;display: block;margin-top:0.34rem;}
+  .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  
+  .message2{height:1.29rem;width:5.54rem;margin:0 auto;position:relative;}
+  .message2-all{width:5.52rem;border:1px solid #e0e5ea;border-radius:0.05rem;font-size:0.22rem;color:#8c96a0;line-height:0.68rem;overflow:hidden;padding:0 0.14rem 0 0.22rem;position:absolute;top:50%;transform:translateY(-50%);}
+  .message2-all .li1{float:left;}
+  .message2-all .li2{height:0.68rem;width:0.24rem;background:url(../../images/backg.png) no-repeat 0 50%;background-size:0.24rem 0.12rem;float:right;}
+
+  .message3{height:auto;}
+  .message3-all{width:100%;border-bottom:1px solid #e0e5ea;}
+  input::-webkit-input-placeholder {color: #c7c7c7; }  
+  textarea::-webkit-input-placeholder {color: #c7c7c7; } 
+
+  .message3-top{height:0.97rem;line-height:0.97rem;}
+  .message3-top input{height:0.97rem;line-height:0.97rem;display:block;width:100%;}
+  .message3-bottom textarea{width:5.2rem;padding-top:0.25rem;display:block;height:5rem;}
+  .message3-top,.message3-bottom{width:5.2rem;margin:0 auto;} 
+</style>

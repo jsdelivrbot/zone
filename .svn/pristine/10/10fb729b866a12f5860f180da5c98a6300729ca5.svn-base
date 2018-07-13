@@ -1,0 +1,153 @@
+<template>
+    <div class="report">
+        <my-header title="举报"></my-header>
+        <div class="top">
+            <div class="tip">举报帖子</div>
+            <div class="con">
+            	<div class="con-left">
+            		<img src="../../../node_modules/browserify-zlib/test/fixtures/person.jpg"/>
+            	</div>
+            	<ul>
+        			<li class="li1">高级成衣售卖</li>
+        			<li class="li2">我是开微店的,欢迎大家加为微信号:383信号:383信号:383信号:383信号:3838438, 谢谢</li>
+        		</ul>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="bottom">
+            <div class="tip">举报帖子</div>
+        	<div class="navall">
+        		<div class="nav">
+	            	<ul class="nav-left">
+	                    <li class="li4">
+	                        <label>
+	                            <input type="checkbox"><b></b>
+	                        </label>
+	                    </li>
+	                </ul>
+	                <ul class="nav-right">
+	        			<li class="li1">广告</li>
+	        		</ul>
+	            </div>
+	            <div class="nav">
+	            	<ul class="nav-left">
+	                    <li class="li4">
+	                        <label>
+	                            <input type="checkbox"><b></b>
+	                        </label>
+	                    </li>
+	                </ul>
+	                <ul class="nav-right">
+	        			<li class="li1">色情</li>
+	        		</ul>
+	            </div>
+	            <div class="nav">
+	            	<ul class="nav-left">
+	                    <li class="li4">
+	                        <label>
+	                            <input type="checkbox"><b></b>
+	                        </label>
+	                    </li>
+	                </ul>
+	                <ul class="nav-right">
+	        			<li class="li1">违法/政治敏感</li>
+	        		</ul>
+	            </div>
+	            <div class="nav">
+	            	<ul class="nav-left">
+	                    <li class="li4">
+	                        <label>
+	                            <input type="checkbox"><b></b>
+	                        </label>
+	                    </li>
+	                </ul>
+	                <ul class="nav-right">
+	        			<li class="li1">人身攻击</li>
+	        		</ul>
+	            </div>
+	            <div class="nav">
+	            	<ul class="nav-left">
+	                    <li class="li4">
+	                        <label>
+	                            <input type="checkbox"><b></b>
+	                        </label>
+	                    </li>
+	                </ul>
+	                <ul class="nav-right">
+	        			<li class="li1">内容无意义</li>
+	        		</ul>
+	            </div>
+	            <div class="nav">
+	            	<ul class="nav-left">
+	                    <li class="li4">
+	                        <label>
+	                            <input type="checkbox"><b></b>
+	                        </label>
+	                    </li>
+	                </ul>
+	                <ul class="nav-right">
+	        			<li class="li1 bt0">其他</li>
+	        		</ul>
+	            </div>
+
+        	</div>
+        	<div class="up">
+		        <div class="up-all">
+		            <p><span class="sp1">补充说明(选填)</span></p>
+		            <textarea></textarea>
+		            <ul>
+		                <li class="li1"><a>提交</a></li>
+		            </ul>
+		        </div>
+		    		</div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import qs from 'qs'
+export default {
+    name:'content',
+        data () {
+             return {
+                
+             };
+         },
+         
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+	.bt0{border-bottom: 0!important;}
+    .tip{line-height:0.87rem;padding-left:0.2rem;font-size:0.26rem;color:#292929;border-bottom:1px solid #e0e0e0;}
+    .con-left{width: 0.68rem;height: 0.68rem;border-radius: 50%;float: left;margin: 0.29rem 0.22rem 0 0.2rem;}
+    .con-left img{width: 0.68rem;height: 0.68rem;border-radius: 50%;display: block;}
+    .con{display: flex;}
+    .con ul{margin-top: 0.19rem;float: left;flex: 1;}
+    .con .li1{line-height: 0.68rem;font-size: 0.26rem;color: #292929;border-bottom: 1px solid #ebebeb;}
+    .con .li2{width:5rem;line-height: 0.29rem;font-size: 0.21rem;color: #949494;margin-top: 0.18rem;margin-bottom: 0.28rem;}
+    
+    .navall{border-bottom: 1px solid #ebebeb;margin-left: 0.2rem;}
+    .nav{display: flex;}
+    .bottom .nav-right{float: right;border-bottom: 1px solid #ebebeb;flex: 1;}
+    .bottom .nav-right .li1{color:#292929;font-size: 0.22rem;line-height: 0.85rem;}
+    
+    .nav-left {width:0.16rem;height:0.85rem;float:left;margin: 0 0.46rem 0 0.13rem;}
+    .nav-left .li4{width:0.16rem;height:0.85rem;float:right;position: relative;}
+    label{width: 0.16rem;height: 0.16rem;border-radius:50%;display: block;position:relative;z-index:1;top:50%;transform: translateY(-50%);}
+    input[type="checkbox"] {display: none;position:absolute;}
+	input[type="checkbox"]+b {position:absolute;display: inline-block;width: 0.16rem;height: 0.16rem;border: 1px solid #ccc;cursor: pointer;border-radius: 50%;vertical-align: middle;}
+	input[type="checkbox"]:checked+b {background: url(../../images/checkbox.png)no-repeat;background-size:cover;border:none;}
+	
+	.up{width: 5.58rem;margin: 0 auto;}
+    .up-all{width:5.58rem;height:100%;margin:0 auto;}
+    .up-all p{color:#292929;font-size:0.24rem;line-height:0.66rem;height:0.56rem;padding-top:0.1rem;}
+    .up-all .sp1{color:#292929;}
+    .up-all textarea{width:5.58rem;height:2rem;resize: none;outline:none;border:1px solid #e0e0e0;display: block;}
+    .up-all ul{width:4.4rem;height:0.56rem;margin:0 auto;}
+    .up-all ul li{width:2.08rem;height:0.54rem;border-radius:0.28rem;margin: 0 auto;background: #008dd3;margin-top: 0.59rem;margin-bottom: 0.57rem;}
+    .up-all ul li a{line-height:0.54rem;color:#fff;font-size:0.22rem;display:block;text-align:center;}
+</style>

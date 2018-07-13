@@ -1,0 +1,114 @@
+<template>
+  <div class="login" :style="note">
+    <div class="back">
+      <a href="javascript:history.go(-1);"></a>
+    </div>
+    <div class="nav">
+      <div class="logo">
+        <img src="../../images/logo.png"/>
+      </div>
+      <form>
+        <div class="input">
+          <p class="up up1"></p>
+          <input type="text" placeholder="请输入用户名" class="write" v-model="username">
+        </div>
+        <div class="input">
+          <p class="up up2"></p>
+          <input type="password" placeholder="密码" class="write" v-model="password">
+        </div>
+        <input type="button" value="登入" class="btn input mt5" @click="login()">
+      </form>
+      <ul class="bottom">
+        <a href="#/register"><li class="li1">立即注册</li></a>
+        <li class="li2"></li>
+        <a href="#/forget"><li>忘记密码？</li></a>
+      </ul>
+    </div> 
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  name: 'login',
+  data () {
+    return{
+        showLogin: true,
+        showTishi: false,
+        tishi: '',
+        username:'',
+        password:'',
+        note: {
+          backgroundImage: "url(" + require("../../images/banner.png") + ")",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }
+    }
+  },
+  mounted(){
+    // setCookie(c_name,expires_in,refresh_token)
+    // if(getCookie('username')){
+    //     this.$router.push('/')
+    // }
+    /*接口请求*/
+    getCookie("token")
+    console.log(getCookie("token"))
+  },
+  methods:{
+    login(){
+        if(this.username == "" || this.password == ""){
+            alert("请输入用户名或密码")
+        }else{
+            /*接口请求*/
+            var data = qs.stringify({
+              "client_secret": "4d996cfcd7040021f797ccacfbff869c",
+              "client_id": "ZTEAPP",
+              "username":this.username,
+              "password":this.password,
+              "grant_type":"password"
+            })
+            console.log(data)
+            this.$http.post(`http://openzone.iwsoft.net/login`,data, {
+              headers: {
+                 'Content-Type' : 'application/x-www-form-urlencoded',
+                //"Authorization": "Bearer 4571e3646a074f3a3e97a801677773e4fac31e6b"
+              },
+            })
+            .then((res)=>{
+             /*接口的传值是(0000,用户存在),(其他账号或密码输入错误)，同时还会检测管理员账号的值*/
+              if(res.body.code == 0){
+                  this.tishi = "登陆成功"
+                  this.showTishi = true
+                  this.$router.push('/home')
+              }else{
+                  alert("账号或密码输入错误")
+              }
+              console.log(res)
+          })
+      }
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .nav{margin:0 auto;width:78%;max-width:500px;padding-top:1rem;}
+    .login{height:100%;}
+    .back{width: 0.18rem;height: 0.34rem;background: url(../../images/back.png) no-repeat;background-size: cover;position: absolute;top: 0.67rem;left: 0.28rem;}
+    .back a{width: 0.18rem;height: 0.34rem;display: block;}
+    .logo img{width: 2.57rem;height: 1.92rem;display:block;margin:0 auto;margin-bottom:1.6rem;}
+    .input{width:100%;height: 0.8rem;background:rgba(255, 255, 255, 0.8);border-radius: 0.05rem;margin-top: 0.2rem;}
+    .up{width: 0.22rem;height: 0.26rem;background: url(../../images/passage-3.png) no-repeat;float: left;margin-left: 0.38rem;margin-top: 0.31rem;margin-right: 0.2rem;}
+    .up1{background: url(../../images/user.png) no-repeat;background-size: 100% 100%;}
+    .up2{background: url(../../images/passage-3.png) no-repeat;background-size: 100% 100%;}
+    .write{line-height: 0.21rem;border-left: 1px solid #54c2f0;float: left;margin-top: 0.32rem;font-size: 0.21rem;padding-left: 0.2rem;}
+    input::-webkit-input-placeholder{color: #54c2f0;}
+    .mt5{margin-top: 1rem;text-align: center;background:rgba(18, 157, 222, 0.8);}
+    .btn{font-size: 0.28rem;line-height: 0.8rem;color: #fff;}
+    .bottom{width: 3.1rem;height: 0.2rem;color: #fff;line-height: 0.2rem;font-size: 0.2rem;margin:0 auto;margin-top:0.4rem;}
+    .bottom li{float: left}
+    .bottom a{color:#fff;}
+    .li1{margin-left: 0.22rem;}
+    .li2{width: 0.02rem;height: 0.2rem;background: #fff;margin-left: 0.29rem;margin-right: 0.22rem;}
+</style>

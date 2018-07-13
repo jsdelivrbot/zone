@@ -1,0 +1,65 @@
+<template>
+  <div class="tjshdz">
+    <div class="header">
+        <div class="header1">
+            <a href="javascript:history.go(-1);" class="a1"></a>
+            <span class="forget">账户安全</span>
+            <a class="a2">完成</a>
+        </div>
+    </div>
+    <div class="body">
+    	<div class="list">
+    		<span class="sp1">请输入密码：</span>
+    		<input type="text"/>
+    	</div>
+    	<div class="list">
+    		<span class="sp1">手机号码：</span>
+    		
+    		<input type="text"/>
+    		<span class="sp2">获取验证码</span>
+    	</div>
+    	<div class="list">
+    		<span class="sp1">手机验证码：</span>
+    		<input type="text"/>
+    		
+    	</div>
+    	<div class="line"></div>
+    	
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .header{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+    .header1{width:5.92rem;margin:0 auto;overflow:hidden;}
+    .header .a1{width: 0.18rem;height: 0.34rem;background: url(../../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+    .header .a2{width: 0.73rem;height: 0.42rem;float:right;display: block;color:#008dd3;line-height:0.42rem;text-align:center;font-size:0.24rem;margin-top:0.25rem;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  	
+  	.list{height:0.97rem;line-height:0.97rem;font-size: 0.24rem;border-bottom: 1px solid #ebebeb;padding-left: 0.23rem;display: flex;}
+  	.sp1{color: #242424;}
+  	.spa{flex: 1;color: #9f9f9f;}
+    .list input{color: #9f9f9f;flex: 1;}
+    .sp2{float: right;width:1.6rem;height: 0.5rem;display: block;background: #54C2F0;color: #fff;margin-top: 0.17rem;margin-right:0.2rem;border-radius: 0.25rem;text-align: center;line-height: 0.5rem;}
+	
+
+	
+</style>

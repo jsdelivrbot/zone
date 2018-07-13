@@ -1,0 +1,71 @@
+<template>
+    <div class="first">
+        <div class="figure">
+        	<span class="f-t">群主，管理员</span>
+        	<div class="figure-t">
+        		<ul class="top-b">
+	                <li class="li1">
+	                    <img/>
+	                </li>
+	                <li class="li2">张林海</li>
+	                <li class="li3"></li>
+	                <li class="li6">嘻嘻嘻</li>
+	                <li class="li5">(战狼)</li>
+	                <li class="li4"></li>
+	            </ul> 
+        	</div>
+        </div>
+        <div class="figure1">
+        	<span class="f-t">z</span>
+        	<div class="figure-t">
+        		<ul class="top-b">
+	                <li class="li1">
+	                    <img/>
+	                </li>
+	                <li class="li2">张林海</li>
+	                <li class="li3"></li>
+	                <li class="li6">嘻嘻嘻</li>
+	                <li class="li5">(战狼)</li>
+	                <li class="li4">
+	                	<span class="li4-l"></span>
+	                	<span class="li4-r"></span>
+	                </li>
+	            </ul> 
+        	</div>
+        </div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+             
+         },
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+    .figure-t{border-bottom: 1px solid #e0e0e0;}
+    .f-t{height: 0.5rem;background: #f6f7fb;font-size: 0.22rem;line-height: 0.5rem;height: 0.5rem;width: 100%;background: #f6f7fb;font-size: 0.22rem;line-height: 0.5rem;display: block;padding-left: 0.2rem;}
+    .top-b{overflow:hidden;width:6rem;margin:0 auto;}
+    .top-b li{float:left;height:1.19rem;line-height:1.19rem;font-size:0.26rem;color:#999999;}
+    .top-b .li1{width:0.68rem;height:0.68rem;margin-top:0.2rem;}
+    .top-b .li1 img{width:0.68rem;height:0.68rem;border-radius:50%;display:block;}
+    .top-b .li2{margin-left:0.16rem;margin-right:0.09rem;}
+    .top-b .li3{width:0.68rem;margin-right:0.19rem;background:url(../../../images/cjz.png)no-repeat 0 50%;background-size:0.68rem 0.30rem;}
+    .figure1 .top-b .li3{width:1rem;background:url(../../../images/ptcy.png)no-repeat 0 50%;background-size:1rem 0.30rem;}
+    .top-b .li4{float:right;}
+    .top-b .li5{font-size:0.2rem;color:#adadad;margin-right:0.2rem;}
+    .figure1 .li4{width: 1.07rem;height: 1.29rem;float: right;}
+    .figure1 .li4-l{width: 0.35rem;height: 1.29rem;float: left;background:url(../../../images/tianjia.png)no-repeat 0 50%;background-size:0.35rem 0.35rem;}
+    .figure1 .li4-r{width: 0.35rem;height: 1.29rem;float: left;margin-left: 0.25rem;background:url(../../../images/tichu.png)no-repeat 0 50%;background-size:0.35rem 0.35rem;}
+</style>

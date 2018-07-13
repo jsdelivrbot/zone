@@ -1,0 +1,233 @@
+<template>
+  <div class="friend">
+    <div class="top">
+        <div class="header">
+			<a href="javascript:history.go(-1);"></a>
+			<span class="forget">积分商城</span>
+        </div>
+        <span class="body">
+            <img src="../../images/lv4.png"/>
+        </span>
+        <div class="t-b">
+            <p class="p1">隔壁老王</p>
+            <p class="p2">隔壁老王</p>
+            <p class="p3">隔壁老王</p>
+        </div>
+    </div>
+    <div class="center">
+        <div>
+            <div class="c-t">
+                <ul>
+                    <li class="c-t-li1"><img src="../../images/Lv1.png"/></li>
+                    <li class="c-t-li2">成长值需满50</li>
+                </ul>
+            </div>
+            <div class="c-b">
+                <div class="c-b-all">
+                    <div class="c-b-all-l">
+                        <dl>
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="c-t">
+                <ul>
+                    <li class="c-t-li1"><img src="../../images/Lv2.png"/></li>
+                    <li class="c-t-li2">成长值需满200</li>
+                </ul>
+            </div>
+            <div class="c-b">
+                <div class="c-b-all">
+                    <div class="c-b-all-l">
+                        <dl>
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="c-t">
+                <ul>
+                    <li class="c-t-li1"><img src="../../images/Lv3.png"/></li>
+                    <li class="c-t-li2">成长值需满300</li>
+                </ul>
+            </div>
+            <div class="c-b">
+                <div class="c-b-all">
+                    <div class="c-b-all-l">
+                        <dl>
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="c-t">
+                <ul>
+                    <li class="c-t-li1"><img src="../../images/Lv4.png"/></li>
+                    <li class="c-t-li2">成长值需满500</li>
+                </ul>
+            </div>
+            <div class="c-b">
+                <div class="c-b-all">
+                    <div class="c-b-all-l">
+                        <dl>
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="c-t">
+                <ul>
+                    <li class="c-t-li1"><img src="../../images/Lv5.png"/></li>
+                    <li class="c-t-li2">成长值需满2000,当前还差<span>678</span></li>
+                </ul>
+            </div>
+            <div class="c-b">
+                <div class="c-b-all">
+                    <div class="c-b-all-l">
+                        <dl>
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                        <dl class="l">
+                            <dt><img src="../../images/banner.png"/></dt>
+                            <dd class="d1">数据线</dd>
+                            <dd class="d2">积分<span>150</span></dd>
+                            <dd class="btnw">补货中</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  name: 'login',
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .l{margin-left:0.03rem;}
+    .header{height: 0.88rem;padding-top: 0.4rem;padding-left: 0.28rem;position:relative;}
+    .header a{width: 0.18rem;height: 0.34rem;display: block;background: url(../../images/backw.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #fff;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+    .top{height:4.82rem;width:100%;background:url(../../images/jifenbanner.png) no-repeat;background-size:cover;position:relative;margin-bottom:0.41rem;}
+    .body{width:1.8rem;height:1.8rem;border-radius:50%;display:block;position:absolute;left:50%;margin-left:-0.9rem;background:#fff;margin-top:0.2rem;}
+    .body img{width:0.96rem;height:0.47rem;margin:0 auto;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+
+    .t-b{position:absolute;bottom:0;width:100%;}
+    .top .p1{font-size:0.22rem;text-align:center;line-height:0.66rem;color:#fff;}
+    .top .p2{font-size:0.22rem;text-align:center;line-height:0.37rem;color:#fff;}
+    .top .p3{font-size:0.24rem;text-align:center;line-height:0.37rem;color:#fff;margin-bottom:0.1rem;}
+    
+
+    .center{width:6rem;margin:0 auto;padding-bottom:0.98rem;}
+    .c-t{overflow:hidden;}
+    .c-t ul{overflow:hidden;margin-left:0.3rem;}
+    .c-t li{float:left;}
+    .c-t-li1{width:0.48rem;height:0.48rem;border:1px solid #54c2f0;border-radius:50%;position:relative;}
+    .c-t-li1 img{width:0.31rem;height:0.13rem;display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+    .c-t-li2{line-height:0.48rem;font-size:0.2rem;color:#fff;text-align:center;border-radius:0.24rem;background:#54c2f0;padding:0 0.2rem;margin-left:0.3rem;}
+
+    .c-b,.c-b-all,.c-b-all-l{overflow:hidden;}
+    .c-b-all-l{width:4.92rem;height:3.78rem;border:1px solid #fff;float:right;padding-top:0.2rem;padding-left:0.5rem;border-left:0.02rem solid #54c2f0;}
+    .c-b-all dl{float:left;}
+    .c-b-all dd{text-align:center;}
+    .c-b-all dt{width:1.62rem;height:2.17rem;}
+    .c-b-all dt img{width:1.62rem;height:2.17rem;display:block;}
+    .d1{font-size:0.22rem;color:#242424;line-height:0.38rem;}
+    .d2{font-size:0.18rem;color:#008dd3;line-height:0.38rem;}
+    .btnw{width:1.42rem;line-height:0.46rem;font-size:0.2rem;color:#757575;background:url(../../images/btnw.png) no-repeat;background-size:cover;margin:0 auto;}
+</style>

@@ -1,0 +1,234 @@
+<template>
+    <div class="message">
+        <div class="message1">
+            <div class="message-all">
+                <a href="javascript:history.go(-1);" class="a1"></a>
+                <span class="forget">投票</span>
+                <a class="a2"></a>
+            </div>
+        </div>
+        <div class="setting2">
+            <div class="setting2-all lh84">
+                <div class="title lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">标题：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting2-all lh84">
+                <div class="sj lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">活动时间：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting2-all lh84">
+                <div class="dd lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">活动地点：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting2-all lh84">
+                <div class="cs lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">所在城市：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting2-all lh84">
+                <div class="lx lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">活动类型：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting2-all lh84">
+                <div class="rs lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">所需人数：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="setting2-all lh84">
+                <div class="lh84 xb"></div>
+                <div class="sr bt0 lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">性别要求：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="zl">
+            <div class="zltop">必填资料</div>
+             <div class="setting2-all lh84">
+                <div class="name lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">真实姓名：<span class="sp1">*</span></li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <div class="setting2-all lh84">
+                <div class="phone lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">手机：<span class="sp1">*</span></li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <div class="setting2-all lh84">
+                <div class="qq lh84"></div>
+                <div class="sr bt0 lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">QQ：<span class="sp1">*</span></li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="setting2-all lh84">
+                <div class="jf lh84"></div>
+                <div class="sr lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">消耗积分：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting2-all lh84">
+                <div class="money lh84"></div>
+                <div class="sr bt0 lh84 l">
+                    <ul class="sr-ul lh84">
+                        <li class="sr-ul-li1 f lh84">每人花销：</li>
+                        <li class="lh84 r">
+                            <input type="text" class="sr-input lh84"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="line1">“非官方组织的活动，收取任何费，论坛不予承担任何责任”</div>
+        <div class="setting2-all lh84">
+            <div class="bm lh84"></div>
+            <div class="sr lh84 l">
+                <ul class="sr-ul lh84">
+                    <li class="sr-ul-li1 f lh84">报名截止：</li>
+                    <li class="lh84 r">
+                        <input type="text" class="sr-input lh84"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="setting2-all lh84">
+            <div class="nr lh84"></div>
+            <div class="sr bt0 lh84 l">
+                <ul class="sr-ul lh84">
+                    <li class="sr-ul-li1 f lh84">内容：</li>
+                    <li class="lh84 r">
+                        <input type="text" class="sr-input lh84"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+	export default {
+		data () {
+             return {
+                // show:false,
+                // isshow:false
+             };
+         },
+         
+         methods: {
+         }
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  .line1{line-height:0.51rem;height:0.51rem;text-align:center;width:100%;background:#f5f7fa;color:red;font-size:0.2rem;}
+  .sp1{color:red;}
+  .message1{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+  .message-all{width:5.92rem;margin:0 auto;overflow:hidden;}
+  .message .a1{width: 0.18rem;height: 0.34rem;background: url(../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+  .message .a2{width: 0.32rem;height: 0.3rem;background: url(../../images/ok.png) no-repeat;background-size: contain;float:right;display: block;margin-top:0.34rem;}
+  .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  
+  
+  .title{width:0.60rem;height:1.14rem;float:left;background:url(../../images/title.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .sj{width:0.60rem;height:1.14rem;float:left;background:url(../../images/click.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .dd{width:0.60rem;height:1.14rem;float:left;background:url(../../images/address.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .cs{width:0.60rem;height:1.14rem;float:left;background:url(../../images/captail.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .lx{width:0.60rem;height:1.14rem;float:left;background:url(../../images/fenlei.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .rs{width:0.60rem;height:1.14rem;float:left;background:url(../../images/people.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .xb{width:0.60rem;height:1.14rem;float:left;background:url(../../images/sex.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+
+  .name{width:0.60rem;height:1.14rem;float:left;background:url(../../images/name.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .phone{width:0.60rem;height:1.14rem;float:left;background:url(../../images/phone.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .qq{width:0.60rem;height:1.14rem;float:left;background:url(../../images/qq.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .jf{width:0.60rem;height:1.14rem;float:left;background:url(../../images/jifen.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .money{width:0.60rem;height:1.14rem;float:left;background:url(../../images/money.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .bm{width:0.60rem;height:1.14rem;float:left;background:url(../../images/baoming.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+  .nr{width:0.60rem;height:1.14rem;float:left;background:url(../../images/qzjs.png) no-repeat 50% 50%;background-size:0.24rem 0.24rem;}
+
+
+
+
+
+  .setting2-all{width:6rem;overflow:hidden;margin:0 auto;}
+  .sr{height:1.14rem;border-bottom:1px solid #ebebeb;}
+  .bt0{border-bottom:0;}
+  .sr-ul{flex:1;overflow:hidden;float:left;}
+  .sr-ul-li1{font-size:0.22rem;color:#1a1a1a;line-height:0.37rem;}
+  .sr-ul-li2{font-size:0.20rem;color:#575757;line-height:0.36rem;}
+  
+  .setting2-all .lh84{height:0.84rem;line-height:0.84rem;display:flex;}
+  .setting2-all .f{float:left;}
+  .setting2-all .r{float:right;flex:1;}
+  .setting2-all .sr-input{display:block;float:right;text-align:right;flex:1;}
+  
+
+  .zltop{height:0.84rem;line-height:0.84rem;font-size:0.26rem;color: #008dd3;width:6rem;margin:0 auto;border-bottom:1px solid #ebebeb;}
+  </style>

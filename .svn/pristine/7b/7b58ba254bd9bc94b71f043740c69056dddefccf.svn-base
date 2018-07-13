@@ -1,0 +1,149 @@
+<template>
+    <div class="first">
+        <div class="tip-bottom-all">
+            <div class="tip-bottom">
+                <div class="tip-bottom-l">
+                    <ul class="tip-bottom-l-t">
+                        <li class="li1">
+                            <img/>
+                        </li>
+                        <li class="li2">1qqq</li>
+                        <li class="li3"></li>
+                        <li class="li4">20小时</li>
+                    </ul>
+                    <p>安嘎嘎岛坐落在马尔代夫南 爱尔瑞环礁坐落在马尔代夫南 爱尔瑞</p>
+                </div>
+                <div class="tip-bottom-r">
+                    <img />
+                    <ul>
+                        <li class="li1"></li>
+                        <li class="li2">100</li>
+                        <li class="li3">100</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tip-bottom-all2">
+            <div class="tip-bottom2">
+                <div class="tip-bottom-l">
+                    <ul class="tip-bottom-l-t">
+                        <li class="li1">
+                            <img/>
+                        </li>
+                        <li class="li2">1qqq</li>
+                        <li class="li3"></li>
+                        <li class="li4">20小时</li>
+                    </ul>
+                    <p>安嘎嘎岛坐落在马尔代夫南 爱尔瑞环礁坐落在马尔代夫南 爱尔瑞</p>
+                </div>
+                <div class="tip-bottom-r">
+                    <div class="tip-bottom-r-img">
+                        <div class="tip-bottom-r-all">
+                            <img /><img /><img />
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="li1"></li>
+                        <li class="li2">100</li>
+                        <li class="li3">100</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="tip-bottom-all3">
+            <div class="tip-bottom3">
+                <div class="tip-bottom-l">
+                    <p>安嘎嘎岛坐落在马尔代夫南 爱尔瑞环礁坐落在马尔代夫南 爱尔瑞</p>
+                    <p class="p1 mt50 p2">精</p>
+                    <p class="p1 mt6 p3">置</p>
+                    <p class="p1 mt6 p4">图</p>
+                </div>
+                <div class="tip-bottom-r">
+                    <div class="tip-bottom-r-img">
+                        <div class="tip-bottom-r-all">
+                            <img /><img /><img />
+                        </div>
+                    </div>
+                </div>
+                <ul class="tip-bottom-l-t">
+                    <li class="li1">
+                        <img/>
+                    </li>
+                    <li class="li2">1qqq</li>
+                    <li class="li3"></li>
+                    <li class="li4">20小时</li>
+                    <li class="li5">999</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+             
+         },
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+    .mt50{margin-left:0.5rem;}
+    .mt6{margin-left:0.06rem;}
+    .line{height: 0.2rem;background: #f0f0f0;}
+    .first{padding-bottom:0.98rem;margin-top: 0.3rem;}
+    .tip-bottom-all,.tip-bottom-all2,.tip-bottom-all3{overflow:hidden;border-bottom:1px solid #ededed;}
+    .tip-bottom{width:6rem;margin:0 auto;display: flex;}
+    .tip-bottom-l{float:left;}
+    .tip-bottom-l-t{overflow:hidden;}
+    .tip-bottom-l-t li{float:left;height:0.56rem;line-height:0.56rem;font-size:0.17rem;color:#999999;}
+    .tip-bottom-l-t .li1{width:0.36rem;height:0.36rem;margin-top:0.1rem;}
+    .tip-bottom-l-t .li1 img{width:0.36rem;height:0.36rem;border-radius:50%;display:block;}
+    .tip-bottom-l-t .li2{margin-left:0.13rem;margin-right:0.11rem;}
+    .tip-bottom-l-t .li3{width:0.3rem;margin-right:0.19rem;background:url(../../../../images/VIP.png)no-repeat 0 50%;background-size:0.3rem 0.18rem;}
+    .tip-bottom-l p{flex:1;font-size:0.26rem;line-height:0.36rem;margin-top:0.06rem;color:#242424;}
+
+    .tip-bottom-r{float: left;}
+    .tip-bottom-r img{width: 2.1rem;height: 1.42rem;border-radius:0.1rem;display:block;float:left;}
+    .tip-bottom-r ul{height:0.77rem;line-height:0.77rem;color:#949494;font-size:0.15rem;float:left;}
+    .tip-bottom-r ul li{height:0.77rem;float:left;}
+    .tip-bottom-r .li1{width:0.18rem;height:0.77rem;background:url(../../../../images/ds.png)no-repeat 0 50%;background-size:0.18rem 0.17rem;margin-left:0.1rem;}
+    .tip-bottom-r .li2{height:0.77rem;background:url(../../../../images/xin1.png)no-repeat 0 50%;background-size:0.18rem 0.14rem;padding-left:0.26rem;margin-left:0.31rem;}
+    .tip-bottom-r .li3{height:0.77rem;background:url(../../../../images/hf.png)no-repeat 0 50%;background-size:0.18rem 0.15rem;padding-left:0.25rem;margin-left:0.3rem;}
+
+    .tip-bottom2{width:6rem;margin:0 auto;overflow:hidden;}
+    .tip-bottom2 .tip-bottom-l{width:6rem;}
+    .tip-bottom2 .tip-bottom-l .li4{float:right;}
+    .tip-bottom2 .tip-bottom-r{margin-top:0.28rem;}
+    .tip-bottom-r-all{width:10rem;overflow:hidden;}
+    .tip-bottom2 .tip-bottom-r-img{width:6rem;height:1.42rem;overflow:hidden;}
+    .tip-bottom2 .tip-bottom-r ul{float:right;margin-right:0.4rem;}
+
+
+    .tip-bottom3{width:6rem;margin:0 auto;}
+    .tip-bottom3 ul{float:left;}
+    .tip-bottom3 .tip-bottom-l{float:left;}
+    .tip-bottom3 .tip-bottom-l-t{overflow:hidden;width:100%;}
+    .tip-bottom3 .tip-bottom-l-t li{float:left;height:0.56rem;line-height:0.56rem;font-size:0.17rem;color:#999999;}
+    .tip-bottom3 .tip-bottom-l-t .li1{width:0.36rem;height:0.36rem;margin-top:0.1rem;}
+    .tip-bottom3 .tip-bottom-l-t .li1 img{width:0.36rem;height:0.36rem;border-radius:50%;display:block;}
+    .tip-bottom3 .tip-bottom-l-t .li2{margin-left:0.13rem;margin-right:0.11rem;}
+    .tip-bottom3 .tip-bottom-l-t .li3{width:0.3rem;margin-right:0.19rem;background:url(../../../../images/VIP.png)no-repeat 0 50%;background-size:0.3rem 0.18rem;}
+    .tip-bottom3 .tip-bottom-l-t .li5{float:right;background:url(../../../../images/cx.png)no-repeat 0 50%;background-size:0.2rem 0.15rem;padding-left:0.27rem;}
+    
+    .tip-bottom3 p{width:4.55rem;float:left;margin-top:0.36rem;}
+    .tip-bottom3 .p1{width:0.26rem;height:0.26rem;margin-top:0.39rem;margin-bottom:0.6rem;font-size:0.22rem;text-align:center;line-height:0.26rem;color:#fff;}
+    .tip-bottom3 .p2{background:url(../../../../images/j.png)no-repeat;background-size:cover;}
+    .tip-bottom3 .p3{background:url(../../../../images/z.png)no-repeat;background-size:cover;}
+    .tip-bottom3 .p4{background:url(../../../../images/t.png)no-repeat;background-size:cover;}
+</style>

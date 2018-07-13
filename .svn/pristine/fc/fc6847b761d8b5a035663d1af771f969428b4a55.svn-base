@@ -1,0 +1,112 @@
+<template>
+    <div class="first">
+    	<div class="header">
+			<div class="headerall">
+				<a href="javascript:history.go(-1);" class="a1"></a>
+				<span class="forget">评价</span>
+			</div>
+	    </div>
+		<div class="cen">
+			<div class="cenall">
+				<div class="cen-t">你对本次评价</div>
+				<div class="cen-b">
+					<div class="startop">
+						<ul class="star">
+							<li><img src="../../images/starb.png"/></li>
+							<li><img src="../../images/starb.png"/></li>
+							<li><img src="../../images/starb.png"/></li>
+							<li><img src="../../images/starb.png"/></li>
+							<li><img src="../../images/starb.png"/></li>
+						</ul>
+					</div>
+					<div class="starbottom">
+						<ul>
+							<li>服务态度一般</li>
+							<li>专业度一般</li>
+							<li>稳定性一般</li>
+							<li>不太容易上手</li>
+							<li>功能有待完善</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="cenall">
+				<div class="cen-t">选填</div>
+				<div class="cen-bottom">
+					<p>您的问题是否解决</p>
+					<div class="ul">
+						<ul>
+							<li class="li1"><a>已解决</a></li>
+							<li class="li2"><a>未解决</a></li>
+						</ul>
+					</div>
+					<div class="textarea">
+						<textarea placeholder="为了给您带来更好的服务体验，请告诉我们有待提升的点">
+						
+						</textarea>
+						<span>200字</span>
+					</div>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="footer">提交评价</div>
+		</div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+  	.header{height: 0.88rem;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;position: fixed;top: 0;width: 100%;position: fixed;top: 0;}
+	.headerall{width: 6rem;margin: 0 auto;}
+	.header .a1{width: 0.18rem;height: 0.88rem;display: block;background: url(../../images/back.png) no-repeat 0 50%;background-size: 0.18rem 0.34rem;float:left;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+	
+	.cen{position: absolute;top: 1.28rem;width: 100%;}
+	.cenall{width: 6rem;margin: 0 auto;overflow: hidden;}
+	.cen-t{height: 0.86rem;line-height: 0.86rem;font-size: 0.26rem;color: #242424;border-bottom: 1px solid #ebebeb;}
+	
+	.cen-b{overflow: hidden;margin-bottom: 0.1rem;}
+	.startop{width: 4rem;margin: 0 auto;height: 1.05rem;}
+	.star{overflow: hidden;padding-top: 0.3rem;}
+	.star li{width:20%;height: 0.44rem;float: left;}
+	.star img{width: 0.45rem;height: 0.44rem;display: block;margin: 0 auto;}
+	
+	.starbottom ul li{float: left;margin-bottom: 0.21rem;font-size:0.2rem;color: #a9a9a9;border: 1px solid #ebebeb;padding: 0.2rem 0.3rem;border-radius: 0.3rem;margin-right: 0.2rem;}
+	
+	.cen-bottom{}
+	.cen-bottom p{font-size:0.2rem;color:#adadad;line-height: 0.77rem;}
+	.cen-bottom .ul{border-bottom: 1px solid #ebebeb;}
+	.cen-bottom ul{overflow: hidden;width: 5rem;margin: 0 auto;padding-bottom: 0.24rem;}
+	.cen-bottom ul li{width: 2.18rem;height:0.7rem;line-height: 0.7rem;font-size: 0.2rem;float: left;border-radius: 0.35rem;text-align: center;}
+	.cen-bottom .li1{border: 1px solid #54c2f0;color: #fff;background:#54c2f0;}
+	.cen-bottom .li1 a{background: url(../../images/yesj.png)no-repeat 0 50%;background-size: 0.24rem 0.24rem;padding-left: 0.33rem;}
+	.cen-bottom .li2{border: 1px solid #c7c7c7;color: #c7c7c7;float: right;}
+	.cen-bottom .li2 a{background: url(../../images/noj.png)no-repeat 0 50%;background-size: 0.24rem 0.24rem;padding-left: 0.33rem;}
+	
+	.cen-bottom textarea{font-size: 0.18rem;width: 100%;padding-top: 0.33rem;height: 1.1rem;}
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #8f8f8f;}
+　　input:-moz-placeholder, textarea:-moz-placeholder {color:#8f8f8f;}
+　　input::-moz-placeholder, textarea::-moz-placeholder {color:#8f8f8f;}
+　　input:-ms-input-placeholder, textarea:-ms-input-placeholder {color:#8f8f8f;}
+
+	.textarea span{font-size: 0.18rem;color: #54c2f0;float: right;margin-bottom: 0.34rem;}
+	
+	.footer{width: 3.6rem;height: 0.82rem;background: #54c2f0;font-size: 0.2rem;color:#fff;text-align: center;line-height: 0.82rem;margin: 0.32rem auto;border-radius: 0.41rem;}
+</style>

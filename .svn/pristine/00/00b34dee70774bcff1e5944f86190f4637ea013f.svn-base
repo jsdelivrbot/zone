@@ -1,0 +1,81 @@
+<template>
+    <div class="content">
+        <div class="header">
+	        <a class="a1" href="javascript:history.go(-1);"></a>
+	        <span class="forget">加入方式</span>
+	        <a class="a2"></a>
+	    </div>
+	    <div class="nav-all">
+	    	<div class="nav">
+	    		<div class="nav-a">
+			    	<div class="nav-l">任何人均可加入</div>
+			    	<div class="nav-r">
+		                <li class="li4">
+		                    <label>
+		                        <input type="checkbox"><b></b>
+		                    </label>
+		                </li>
+		            </div>
+	            </div>
+		    </div>
+		    <div class="nav">
+	    		<div class="nav-a">
+			    	<div class="nav-l">需管理员批准后方可加入</div>
+			    	<div class="nav-r">
+		                <li class="li4">
+		                    <label>
+		                        <input type="checkbox"><b></b>
+		                    </label>
+		                </li>
+		            </div>
+	            </div>
+		    </div>
+		    <div class="nav">
+	    		<div class="nav-a">
+			    	<div class="nav-l">邀请加入</div>
+			    	<div class="nav-r">
+		                <li class="li4">
+		                    <label>
+		                        <input type="checkbox"><b></b>
+		                    </label>
+		                </li>
+		            </div>
+	            </div>
+		    </div>
+	    </div>
+    </div>
+</template>
+
+<script>
+import qs from 'qs'
+export default {
+    name:'content',
+        data () {
+             return {
+                
+             };
+         },
+         
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+    .header{height: 0.88rem;padding-left: 0.38rem;padding-right: 0.25rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+    .header .a1{width: 0.18rem;height: 0.34rem;display: block;background: url(../../images/back.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+    .header .a2{width: 0.32rem;height: 0.20rem;display: block;background: url(../../images/ok.png) no-repeat;background-size: cover;float:right;margin-top:0.34rem;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+	.nav-all{overflow: hidden;}
+	.nav{line-height: 0.85rem;font-size: 0.22rem;color: #272727;overflow: hidden;border-bottom: 1px solid #e0e0e0;}
+	
+	.nav-a{width: 6rem;margin: 0 auto;}
+	.nav-l{float: left;}
+	.nav-r {width:0.24rem;height:0.85rem;float:right;}
+    .nav-r .li4{width:0.25rem;height:0.85rem;float:right;position: relative;}
+    label{width: 0.24rem;height: 0.24rem;border-radius:50%;display: block;position:relative;z-index:10;top:50%;transform: translateY(-50%);}
+    input[type="checkbox"] {display: none;position:absolute;}
+	input[type="checkbox"]+b {position:absolute;top:0;left:0;display: inline-block;width: 0.24rem;height: 0.24rem;border: 1px solid #ccc;cursor: pointer;border-radius: 50%;vertical-align: middle;}
+	input[type="checkbox"]:checked+b {background: url(../../images/checkbox.png)no-repeat;background-size:cover;border:none;}
+
+</style>

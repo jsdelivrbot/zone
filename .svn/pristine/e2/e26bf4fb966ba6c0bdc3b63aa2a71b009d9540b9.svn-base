@@ -1,0 +1,146 @@
+<template>
+	<div class="qiandao">
+		<div class="hwq">
+			<div class="headerq">
+	        	<div class="headerallq">
+					<a href="javascript:history.go(-1);" class="a1q"></a>
+					<span class="forgetq">我的签到</span>
+				</div>
+		    </div>
+		    
+		</div>
+	        
+	  	<vue-event-calendar :events="demoEvents">
+		    <template scope="props">
+		    
+		    </template>
+	    </vue-event-calendar>
+	    <div class="line"></div>
+	    <div class="footerq">
+	    	<div class="footerq-t">签到规则</div>
+	    	<div class="footerq-b">
+				<ul>
+					<li class="fli1">1</li>
+					<li class="fli1">2</li>
+					<li class="fli1">3</li>
+					<li class="fli1">4</li>
+					<li class="fli1">5</li>
+				</ul>
+				<ul>
+					<li class="fli2">
+						<span class="fsp1 mt40"></span>
+						<span class="fsp2"></span>
+					</li>
+					<li class="fli2">
+						<span class="fsp1"></span>
+						<span class="fsp2"></span>
+					</li>
+					<li class="fli2">
+						<span class="fsp1"></span>
+						<span class="fsp2"></span>
+					</li>
+					<li class="fli2">
+						<span class="fsp1"></span>
+						<span class="fsp2"></span>
+					</li>
+					<li class="fli2">
+						<span class="fsp1"></span>
+						<span class="fsp2"></span>
+					</li>
+				</ul>
+				<ul class="ful3">
+					<li class="fli3">
+						<p class="fp1">连续签到<span>5</span>天</p>
+						<p class="fp2">即可获得<span>2</span>个云朵</p>
+					</li>
+					<li class="fli3">
+						<p class="fp1">连续签到<span>5</span>天</p>
+						<p class="fp2">即可获得<span>2</span>个云朵</p>
+					</li>
+					<li class="fli3">
+						<p class="fp1">连续签到<span>5</span>天</p>
+						<p class="fp2">即可获得<span>2</span>个云朵</p>
+					</li>
+					<li class="fli3">
+						<p class="fp1">连续签到<span>5</span>天</p>
+						<p class="fp2">即可获得<span>2</span>个云朵</p>
+					</li>
+					<li class="fli3">
+						<p class="fp1">连续签到<span>5</span>天</p>
+						<p class="fp2">神秘礼包等你开启，签到任务重新开始</p>
+					</li>
+				</ul>
+	    	</div>
+	    </div>
+	</div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      demoEvents: [{
+        date: '2016/12/15',
+        title: 'eat',
+        desc: 'longlonglong description'
+      },{
+        date: '2017/9/2',
+        title: 'this is a title'
+      }]
+    }
+  }
+}
+</script>
+<style >
+	
+
+	.__vev_calendar-wrapper .cal-wrapper {width: 100%;}
+	.hwq{width: 100%;height: 4.59rem;background: url(../../../images/listbanner.png)no-repeat;background-size: cover;}
+	.headerq{height: 0.88rem;padding-top: 0.4rem;position: fixed;top: 0;width: 100%;}
+	.headerallq{width: 5.8rem;margin: 0 auto;}
+	.headerq .a1q{width: 0.18rem;height: 0.34rem;display: block;background: url(../../../images/backw.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+	.headerq .a2q{width:0.3rem;height: 0.88rem;display: block;float: right;background: url(../../../images/dianw.png) no-repeat 0 50%;background-size: 0.3rem 0.06rem;}
+	.forgetq{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #fff;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+	
+	.__vev_calendar-wrapper{font-size: 0.22rem;}
+	.__vev_calendar-wrapper .cal-wrapper .cal-body .weeks{font-size: 0.19rem;}
+	.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .date-num{font-size: 0.16rem;}
+	.events-wrapper{display: none;}
+	.__vev_calendar-wrapper .cal-wrapper{padding: 0;}
+	.__vev_calendar-wrapper .cal-wrapper .date-num{line-height: 35px;}
+	.__vev_calendar-wrapper .cal-wrapper .cal-body .dates .item .is-event{border: 0;background: #008DD3!important;}
+	.__vev_calendar-wrapper .cal-wrapper .cal-body .dates{overflow: inherit;}
+	.mt40{margin-top: 0.4rem;}
+	.footerq-t{width: 6rem;margin: 0 auto;font-size: 0.25rem;color: #242424;line-height: 0.78rem;border-bottom: 1px solid #ebebeb;}
+	.footerq-b{margin-top: 0.09rem;width: 6rem;margin: 0 auto;}
+	.footerq-b ul{float: left;}
+	.footerq-b .fli1{width: 0.7rem;height: 0.93rem;line-height: 0.93rem;text-align: center;color: #1a1a1a;font-size: 0.21rem;}
+	.footerq-b .fli2{width: 0.14rem;}
+	.footerq-b .fli2 .fsp1{width: 0.14rem;height: 0.14rem;background: #54c2f0;border-radius: 50%;display: block;}
+	.footerq-b .fli2 .fsp2{width: 1px;height: 0.79rem;background: #ebebeb;display: block;margin: 0 auto;}
+	.footerq-b .fli3{padding: 0.15rem 0;margin-left: 0.3rem;}
+	.footerq-b .fli3 .fp1{font-size: 0.22rem;color: #242424;line-height: 0.32rem;}
+	.footerq-b .fli3 .fp2{font-size: 0.18rem;color: #54c2f0;line-height: 0.31rem;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

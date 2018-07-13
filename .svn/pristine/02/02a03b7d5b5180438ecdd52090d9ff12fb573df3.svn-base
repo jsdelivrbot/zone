@@ -1,0 +1,187 @@
+<template>
+    <div class="chart">
+        
+        <my-header title="生活圈"></my-header>
+        
+        <div class="taball">
+            <ul class="tab">
+                <li>
+                    <!-- @click="jump(index)
+                        index: 切换颜色   代表切换的路由文件
+                        :class="{'active_color': index==0}
+                        当index等于0的时候显示第一个，index：1 切换排球
+    
+                    -->
+                    <div class="body_bottom" @click="jump(0)" :class="{'active_color': index==0}">全部</div>
+                </li>
+                <li>
+                    <div class="body_bottom" @click="jump(1)" :class="{'active_color': index==1}">动漫</div>
+                </li>
+                <li>
+                    <div class="body_bottom" @click="jump(2)" :class="{'active_color': index==2}">IT</div>
+                </li>
+                <li>
+                    <div class="body_bottom" @click="jump(3)" :class="{'active_color': index==3}">综艺</div>
+                </li>
+                <li>
+                    <div class="body_bottom" @click="jump(4)" :class="{'active_color': index==4}">电影</div>
+                </li>
+            </ul>
+        </div>
+        <!-- 是否滑动
+             boxNum：代表有几个路由组件
+             marginLeft：偏移量
+        -->
+        <div class="wl">
+	    	<div :class="{shift: isMove}" :style="{width: boxNum * 6.4 + 'rem', marginLeft: marginLeft + 'rem'}" @touchstart="start($event)" @touchmove="move($event)" @touchend="end($event)"   >
+	        <!-- 三个路由组件放置的地方 -->
+	            <first></first>
+	            <second></second>
+	            <third></third>
+	            <fourth></fourth>
+	            <fifth></fifth>
+	        </div>
+        </div>
+        <div class="up">
+            <div class="up-all">
+                <p><span class="sp1">本圈管理员</span><span>已开启加入圈子认证,请您填写验证信息,耐心等待管理员审核:</span></p>
+                <textarea></textarea>
+                <ul>
+                    <li class="li1"><a>取消</a></li>
+                    <li class="li2"><a>确定</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mark"></div>
+    </div>
+</template>
+
+<script>
+import first from './child/first.vue';
+import second from './child/second.vue';
+import third from './child/third.vue';
+import fourth from './child/fourth.vue';
+import fifth from './child/fifth.vue';
+import qs from 'qs'
+export default{
+        data(){
+            return {
+                first:"first",
+                second:"second",
+                third:"third",
+                fourth:"fourth",
+                fifth:"fifth",
+                tabNum: 1, // tab 切换的页面宽度 ( 通过接口的数据计算 )
+                index: 0, // 选中了第几个选项卡
+                boxNum: 1, // 容器宽度
+                marginLeft: 0, // 偏移量
+                isMove: true, // 是否在滑动
+                startX: 0, startY: 0, moveX: 0, movrY: 0, endX: 0, endY: 0,
+                m_sX: 0, m_sY: 0, e_sX: 0, e_xY: 0, sML: 0
+            }
+        },
+        methods: {
+            jump(index){
+                this.index = index;
+            },
+            start (ev) {
+                ev.stopPropagation();
+                this.isMove = false;
+                this.startX = ev.changedTouches[0].clientX;
+                this.startY = ev.changedTouches[0].clientY;
+                this.sML = this.marginLeft;
+            },
+            move (ev) {
+                ev.stopPropagation();
+                this.moveX = ev.changedTouches[0].clientX;
+                this.moveY = ev.changedTouches[0].clientY;
+                this.m_sX = this.moveX/100 - (this.startX/100);
+                this.m_sY = this.moveY - this.startY;
+                var marginLeft = this.sML + this.m_sX;
+                 
+                marginLeft = marginLeft > 0 ? 0 : marginLeft;
+                marginLeft = marginLeft < 6.4 - this.boxNum * 6.4 ? 6.4 - this.boxNum * 6.4 : marginLeft;
+                this.marginLeft = marginLeft;
+            },
+            end (ev) {
+                this.isMove = true;
+                var multiple = this.m_sX > 0 ? -1 : 1;
+                var index = this.index + multiple;
+                index = index < 0 ? 0 : index;
+                index = index > this.boxNum - 1 ? this.boxNum - 1 : index;
+                this.index = index;
+                this.marginLeft = 0 - this.index * 6.4;
+            }
+        },
+        mounted(){
+            //路由组件的数量
+            this.boxNum =5;
+        },
+        components: {
+            //组件的名称
+            first,
+            second,
+            third,
+            fourth,
+            fifth,
+        },
+        watch: {
+            index: function (newValue, oldValue) {
+                this.marginLeft = 0 - this.index * 6.4;
+                 
+            }
+        }
+    }
+</script>
+<style scoped>
+    .chart{height:100%;position:relative;}
+    .mark{width:100%;height:100%;position:fixed;bottom:0;left:0;background:rgba(36,153,200,0.3);display:none;z-index:5;}
+    .up{width:5.36rem;height:4.09rem;background:#fff;position:absolute;top:50%;left:50%;margin-top:-2.045rem;margin-left:-2.62rem;z-index:10;border-radius:0.05rem;display:none;}
+    .up-all{width:4.6rem;height:100%;margin:0 auto;}
+    .up-all p{color:#292929;font-size:0.25rem;line-height:0.43rem;height:0.84rem;padding-top:0.31rem;margin-bottom:0.16rem;}
+    .up-all .sp1{color:#008dd3;}
+    .up-all textarea{width:4.58rem;height:1.39rem;resize: none;outline:none;border:1px solid #e0e0e0;border-radius:0.05rem;}
+    .up-all ul{width:4.4rem;height:0.56rem;margin:0 auto;}
+    .up-all ul li{width:2.08rem;height:0.54rem;float:left;border-radius:0.28rem;border:1px solid #008dd3;}
+    .up-all ul li a{width:2.08rem;height:0.54rem;line-height:0.54rem;color:#008dd3;font-size:0.22rem;display:block;text-align:center;border-radius:0.28rem;}
+    .up-all ul li a:hover{color:#fff;background:#008dd3;}
+    .up-all .li2{float:right;}
+    
+    .wl{margin: 0 auto;width: 6.4rem;overflow: hidden;}
+    .first{float:left;width:6.4rem;}
+    #headed{
+        width: 100%;
+        overflow: hidden;
+        float:left;
+    }
+    .taball{border-bottom: 1px solid #ebebeb;}
+    .tab{
+        width:6rem;
+        overflow: hidden;
+        padding: 0;
+        margin: 0 auto;
+        height: 0.76rem;
+        line-height: 0.76rem;
+        
+    }
+    .tab li{
+        float: left;
+        list-style: none;
+        width: 20%;
+        text-align: center;
+    }
+    .body_bottom{
+        height: 0.73rem;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.22rem;
+    }
+    .active_color{
+        color: #008dd3;
+        border-bottom: 0.03rem solid #008dd3 !important;
+    }
+    .shift {
+        transition-property: margin-left;
+        transition-duration: 1s;
+    }
+</style>

@@ -1,0 +1,102 @@
+<template>
+  <div class="order">
+    <my-header title="填写订单"></my-header>
+    <div class="top">
+      <div class="linebn mt30"></div>
+      <div class="top-center">
+        <ul class="c-ul">
+          <li class="c-li1"><span class="c-li1">张三</span><span class="c-li2">15633138235</span></li>
+          <li class="c-li2"><span>北京</span><span class="c-sp1">北京市</span><span class="c-sp1">朝阳区</span><span class="c-sp1">北京</span>（<span>100200</span>）</li>
+          <li class="c-li3"></li>
+        </ul>
+      </div>
+      <div class="linebn mb30"></div>
+    </div>
+    <div class="line"></div>
+    <div class="order-line">
+      <div class="order-top">
+        <p>商品清单</p>
+      </div>
+      <div class="order-bottom">
+        <div class="order-b-l"><img src="../../images/banner.png"/></div>
+        <div class="order-b-r">
+          <ul>
+            <li class="oli1">北京北京北京市北京北京北京市北京北京北京市北京北京北京市北京北京北京</li>
+            <li class="oli2"><span>500</span>积分</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="order-line">
+      <div class="order-top bt0">
+        <p>订单备注</p>
+      </div>
+      <div class="order-bottom2">
+        <textarea></textarea>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="bottom">
+      <ul>
+        <li class="bli1"><span class="sp1">商品积分</span><span class="sp2">500<span></span>积分</span></li>
+        <li class="bli2"><span class="sp1">合计</span><span class="sp2">500<span></span>积分</span></li>
+      </ul>
+    </div>
+     <div class="footer">
+        <div class="footer-dh">提交订单</div>
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .mt30{margin-top:0.3rem;}
+    .mb30{margin-bottom:0.3rem;}
+    .top{width:6rem;margin:0 auto;}
+    .linebn{height:0.04rem;width:100%;background:url(../../images/line.png)no-repeat;background-size:contain;}
+    .top-center{font-size:0.24rem;color:#242424;line-height:0.42rem;padding:0.22rem 0;position:relative;}
+    .c-li1 .c-li2{margin-left:0.15rem;}
+    .c-li3{height:0.24rem;width:0.12rem;position:absolute;top:50%;right:0;transform:translateY(-50%);background:url(../../images/backright.png) no-repeat;background-size:cover;}
+    .c-sp1{margin-left:0.13rem;}
+
+
+    .order-top{width:100%;border-bottom:1px solid #ebebeb;}
+    .order-top p{width:6rem;margin:0 auto;font-size:0.26rem;color:#242424;line-height:0.89rem;}
+    .order-bottom{display:flex;width:6rem;margin:0.3rem auto;}
+    .order-b-l{width:1.2rem;height:1.2rem;float:left;flex:1;}
+    .order-b-l img{width:1.2rem;height:1.2rem;display:block;}
+    .order-b-r ul{padding-left:0.21rem;}
+    .order-b-r .oli1{line-height:0.29rem;font-size:0.25rem;color:#242424;margin-top:0.09rem;overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+    .order-b-r .oli2{color:#1094d6;font-size:0.2rem;line-height:0.49rem;margin-top:0.03rem;}
+    .order-bottom2{width:6rem;margin:0 auto;margin-bottom:0.29rem;}
+    .order-bottom2 textarea{width:6rem;height:1.61rem;border:1px solid #ebebeb;}
+    .bt0{border-bottom:0;}
+
+    .bottom{line-height:0.53rem;font-size:0.26rem;width:6rem;margin:0.18rem auto;overflow:hidden;}
+    .bottom li{float:left;width:100%;}
+    .bli1{color:#242424;}
+    .bli2{color:#54c2f0;}
+    .sp1{float:left;}
+    .sp2{float:right;}
+    .footer{height:1.66rem;width:100%;background:#f5f5f5;position:relative;}
+    .footer-dh{width:3.79rem;height:0.82rem;line-height:0.82rem;background:#54c2f0;border-radius:0.41rem;text-align:center;color:#fff;font-size:0.26rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+
+</style>

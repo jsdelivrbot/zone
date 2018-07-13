@@ -1,0 +1,67 @@
+<template>
+    <div class="setting">
+        <div class="setting1">
+            <div class="setting-all">
+                <a href="javascript:history.go(-1);" class="a1"></a>
+                <span class="forget">访问权限</span>
+                <a class="a2"></a>
+            </div>
+        </div>
+        <div class="setting2">
+            <div class="setting2-all">
+                <div class="sl"></div>
+                <div class="sr">
+                    <ul class="sr-ul">
+                        <li class="sr-ul-li1">内容权限</li>
+                        <li class="sr-ul-li2">公开(群组内容公开,所有用户可见)</li>
+                    </ul>
+                    <p class="sr-ul-p1"></p>
+                </div>
+            </div>
+            <div class="setting2-all">
+                <div class="sl fenlei"></div>
+                <div class="sr bt0">
+                    <ul class="sr-ul">
+                        <li class="sr-ul-li1">加入方式</li>
+                        <li class="sr-ul-li2">任何人均可加入</li>
+                    </ul>
+                    <p class="sr-ul-p1"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+	export default {
+		methods:{
+		}
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  
+  .setting1{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+  .setting-all{width:5.92rem;margin:0 auto;overflow:hidden;}
+  .setting .a1{width: 0.18rem;height: 0.34rem;background: url(../../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+  .setting .a2{width: 0.32rem;height: 0.3rem;background: url(../../../images/ok.png) no-repeat;background-size: contain;float:right;display: block;margin-top:0.34rem;}
+  .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  
+  
+  
+  .setting2{width:100%;overflow:hidden;box-shadow:0 0 5px #ebebeb;}
+  .setting2-all{width:6rem;overflow:hidden;margin:0 auto;}
+  .setting2 .sl{width:0.99rem;height:1.14rem;float:left;background:url(../../../images/qx.png) no-repeat 50% 50%;background-size:0.36rem 0.34rem;}
+  .setting2 .fenlei{width:0.99rem;height:1.14rem;float:left;background:url(../../../images/fenlei.png) no-repeat 50% 50%;background-size:0.35rem 0.35rem;}
+  .setting2 .sr{width:5rem;height:1.14rem;border-bottom:1px solid #ebebeb;float:right;}
+  .setting2 .bt0{border-bottom:0;}
+  .setting2 .sr-ul{width:4.85rem;overflow:hidden;float:left;}
+  .setting2 .sr-ul-li1{font-size:0.22rem;color:#008dd3;margin-top:0.23rem;line-height:0.37rem;}
+  .setting2 .sr-ul-li2{font-size:0.20rem;color:#575757;line-height:0.36rem;}
+  .setting2 .sr-ul-p1{width:0.12rem;height:1.14rem;background:url(../../../images/backright.png) no-repeat 0 50%;background-size:0.12rem 0.24rem;float:left;}
+
+  
+
+
+</style>

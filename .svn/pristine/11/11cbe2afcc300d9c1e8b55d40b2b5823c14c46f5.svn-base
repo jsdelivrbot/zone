@@ -1,0 +1,194 @@
+<template>
+  <div class="register" :style="note">
+    <div class="back">
+      <a href="javascript:history.go(-1);"></a>
+      <span class="forget">注册账号</span>
+    </div>
+    <div class="nav">
+      <form>
+        <div class="mt0 input">
+          <input type="text" placeholder="用户名" class="write" v-model="username" ref="username" @blur="yzusername()">
+        </div>
+        <span class="sp1" ref="sp1"></span>
+        <div class="input">
+          <input type="password" placeholder="密码" class="write" v-model="password" ref="password" @blur="yzpassword()">
+        </div>
+        <span class="sp2" ref="sp2"></span>
+        <div class="input">
+          <input type="password" placeholder="确认密码" class="write" v-model="password1" ref="password1" @blur="yzpassword1()">
+        </div>
+        <span class="sp3" ref="sp3"></span>
+        <input type="button" value="立即注册" class="btn input mt5" @click="secondary()">
+      </form>
+    </div> 
+  </div>
+</template>
+<script src="register1.vue" type="text/javascript" charset="utf-8"></script>
+<script>
+import {setCookie,getCookie} from '../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  name: 'register',
+  data () {
+    return{
+        username:'',
+        password:'',
+        password1:'',
+        note: {
+          backgroundImage: "url(" + require("../../images/banner.png") + ")",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }
+    }
+  },
+  mounted(){
+    // getCookie("session");
+    // var token=getCookie("token");
+    var data = qs.stringify({
+           "client_secret": "4d996cfcd7040021f797ccacfbff869c",
+           "client_id": "ZTEAPP",
+           "username": this.username,
+           "password": this.password,
+           "cpassword":this.password1,
+           "skey":getCookie("session"),
+           "grant_type":"password"
+         })
+         this.$http.post(`http://openzone.iwsoft.net/secondary`,data, {
+           headers: {
+              'Content-Type' : 'application/x-www-form-urlencoded',
+           },
+         })
+         .then((res)=>{
+            // setCookie("token",res.body.data.access_token,expireDays);
+            // getCookie("token");
+            // console.log(getCookie("token"))
+            console.log(res)
+       })
+  },
+  methods:{
+      yzusername(){
+          var username = /^[a-zA-Z][0-9a-zA-Z]{3,19}$/;
+          var uname=this.$refs.username
+          var sp1=this.$refs.sp1
+          if(this.username == ""){
+              sp1.innerHTML = "请输入用户名";
+              sp1.style.color = "red";
+              sp1.style.display = "block";
+          }else if( !username.test( uname.value ) ){
+            sp1.innerHTML = "只能是字母开头的字母和数字组合最少4位最多20位";
+            sp1.style.color = "red";
+            sp1.style.display = "block";
+          }else{
+            sp1.style.display = "none";
+          }
+        },
+        yzpassword(){
+          var password = /^[a-zA-Z].{5,}/;
+          var upassword=this.$refs.password
+          var sp2=this.$refs.sp2
+          if(this.password == ""){
+              sp2.innerHTML = "请输入密码";
+              sp2.style.color = "red";
+              sp2.style.display = "block";
+          }else if( !password.test( upassword.value ) ){
+            sp2.innerHTML = "字母开头至少六位";
+            sp2.style.color = "red";
+            sp2.style.display = "block";
+          }else{
+            sp2.style.display = "none";
+          }
+        },
+        yzpassword1(){
+          var sp3=this.$refs.sp3
+          if(this.password == ""){
+              sp3.innerHTML = "请确认密码";
+              sp3.style.color = "red";
+              sp3.style.display = "block";
+          }else if( this.password != this.password1){
+            sp3.innerHTML = "两次输入的密码不一致";
+            sp3.style.color = "red";
+            sp3.style.display = "block";
+          }else{
+            sp3.style.display = "none";
+          }
+        },
+        secondary(){
+          var sp1=this.$refs.sp1;
+          var sp2=this.$refs.sp2;
+          var sp3=this.$refs.sp3;
+          if(this.username == ""){
+              sp1.innerHTML = "请输入用户名";
+              sp1.style.color = "red";
+              sp1.style.display = "block";
+          }
+          if(this.password == ""){
+              sp2.innerHTML = "请输入密码";
+              sp2.style.color = "red";
+              sp2.style.display = "block";
+          }
+          if(this.password1 == ""){
+              sp3.innerHTML = "请确认密码";
+              sp3.style.color = "red";
+              sp3.style.display = "block";
+          }else{
+         /*接口请求*/
+         var data = qs.stringify({
+           "client_secret": "4d996cfcd7040021f797ccacfbff869c",
+           "client_id": "ZTEAPP",
+           "username": this.username,
+           "password": this.password,
+           "cpassword":this.password1,
+           "skey":getCookie("session"),
+           "grant_type":"password"
+         })
+         this.$http.post(`http://openzone.iwsoft.net/secondary`,data, {
+           headers: {
+              'Content-Type' : 'application/x-www-form-urlencoded',
+              // "Authorization": "Bearer token"
+           },
+         })
+         .then((res)=>{
+             if(res.data.code == 0){
+                alert("注册成功")
+                  this.$router.push('/login')
+              }else if(res.data.code != 0){
+                alert("用户已注册")
+                console.log(res)
+                return;
+                
+              }
+              let expireDays = res.body.data.expires_in ;
+              setCookie("token",res.body.data.access_token,expireDays);
+              console.log(res)
+            
+       })
+    }
+  }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .mt0{margin-top: 0!important;}
+    .register{height:100%;}
+    .back{height: 0.88rem;padding-left: 0.38rem;position: relative;padding-top:0.4rem;}
+    .back a{width: 0.18rem;height: 0.34rem;display: block;background: url(../../images/back.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+    .nav{margin:0 auto;width:78%;max-width:500px;padding-top:3.11rem;}
+    .logo img{width: 2.57rem;height: 1.92rem;display:block;margin:0 auto;margin-bottom:1.6rem;}
+    .input{width:100%;height: 0.8rem;background:rgba(255, 255, 255, 0.8);border-radius: 0.05rem;margin-top: 0.3rem;}
+    
+    .write{line-height: 0.8rem;float: left;font-size: 0.21rem;padding-left: 0.41rem;}
+    input::-webkit-input-placeholder{color: #54c2f0;}
+    .mt5{margin-top: 1rem;text-align: center;background:rgba(18, 157, 222, 0.8);}
+    
+    .yzm{width: 1.78rem;height: 100%;background: url(../../images/yzm 7.png) no-repeat;background-size: cover;float: right;font-size: 0.2rem;color: #fff;line-height: 0.88rem;text-align: center;}
+    
+    .btn{font-size: 0.28rem;line-height: 0.8rem;color: #fff;}
+    
+
+    .sp1{font-size:0.21rem;height:0.21rem;float:left;display:none;}
+    .sp2{font-size:0.21rem;height:0.21rem;float:left;display:none;}
+    .sp3{font-size:0.21rem;height:0.21rem;float:left;display:none;}
+</style>

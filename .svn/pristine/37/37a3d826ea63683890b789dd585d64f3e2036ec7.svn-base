@@ -1,0 +1,67 @@
+<template>
+    <div class="jiben">
+        <div class="setting1">
+            <div class="setting-all">
+                <a href="javascript:history.go(-1);" class="a1"></a>
+                <span class="forget">基本设置</span>
+                <a class="a2"></a>
+            </div>
+        </div>
+        <div class="setting2">
+            <div class="setting2-all">
+                <div class="sl"></div>
+                <div class="sr">
+                    <ul class="sr-ul">
+                        <li class="sr-ul-li1">公告发布</li>
+                        <li class="sr-ul-li2">(最多可输入两百个汉字)</li>
+                    </ul>
+                </div>
+            </div>
+            <textarea>dsadasd</textarea>
+            <div class="bottom">清除</div>
+        </div>
+    </div>
+</template>
+
+<script>
+	export default {
+		data () {
+             return {
+                show:false,
+                isshow:false
+             };
+         },
+         
+         methods: {
+             toggle(){
+                this.show = !this.show;
+            },
+             toggle1(){
+                this.isshow = !this.isshow;
+            }
+         }
+	}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  
+  .setting1{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+  .setting-all{width:5.92rem;margin:0 auto;overflow:hidden;}
+  .jiben .a1{width: 0.18rem;height: 0.34rem;background: url(../../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+  .jiben .a2{width: 0.32rem;height: 0.3rem;background: url(../../../images/ok.png) no-repeat;background-size: contain;float:right;display: block;margin-top:0.34rem;}
+  .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  
+
+  .setting2{width:100%;overflow:hidden;}
+  .setting2-all{width:6rem;overflow:hidden;margin:0 auto;}
+  .setting2 .sl{width:0.99rem;height:1.14rem;float:left;background:url(../../../images/qzjs.png) no-repeat 50% 50%;background-size:0.36rem 0.34rem;}
+  .setting2 .sr{width:5rem;height:1.14rem;float:right;}
+  .setting2 .bt0{border-bottom:0;}
+  .setting2 .sr-ul{width:4.85rem;overflow:hidden;float:left;}
+  .setting2 .sr-ul-li1{font-size:0.22rem;color:#1a1a1a;margin-top:0.23rem;line-height:0.37rem;}
+  .setting2 .sr-ul-li2{font-size:0.20rem;color:#adadad;line-height:0.36rem;}
+
+  textarea{width: 5.2rem;height:2.7rem;resize: none;outline: none;border: 0;display: block;margin: 0 auto;background:#f5f5f5;}
+  .bottom{width:1.36rem;height:0.54rem;border-radius:0.27rem;background:#54c2f0;font-size:0.2rem;line-height:0.54rem;text-align:center;color:#fff;float:right;margin:0.3rem 0.6rem 0 0;}
+</style>

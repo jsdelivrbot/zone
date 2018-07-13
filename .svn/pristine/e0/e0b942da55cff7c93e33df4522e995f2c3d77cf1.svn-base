@@ -1,0 +1,141 @@
+<template>
+    <div class="details">
+      <my-header title="资源详情"></my-header>
+      <div class="nav">
+        <ul class="tip">
+            <li class="li1">维保服务</li>
+            <li class="li2">
+                <span class="sp1">200</span>
+                <span class="sp2">200</span>
+                <span class="sp3">2017-5-4 15:31:08</span>
+            </li>
+        </ul>
+        <img url=""/>
+      </div>
+      <div class="line"></div>
+      <div>
+        <div class="nav1" @click="toggle()">
+            <ul class="nav1-tip">
+                <li class="nav1-li1">背景与挑战</li>
+                <li class="nav1-li2"></li>
+            </ul>
+        </div>
+        <div class="nav2" v-show="show">
+            <span class="nav2-content">
+                随着网络规模的不断扩大，网络技术不断发展，如何进行有效的网络维护，让设备在生命周期内得到有
+                效保障是全球网络运营商关随着网络规模的不断扩大，网络技术不断发展，如何进行有效的网络维护，
+                让设备在生命周期内得到有效保障是全球网络运营商关随着网络规模的不断扩大，网络技术不断发展，
+                如何进行有效的网络维护，让设备在生命周期内得到有效保障是全球网络运营商关随着网络规模的不断
+                扩大，网络技术不断发展，如何进行有效的网络维护，让设备在生命周期内得到有效保障是全球网络运
+            </span>
+        </div>
+      </div>
+      <div>
+        <div class="nav1" @click="toggle1()">
+            <ul class="nav1-tip">
+                <li class="nav1-li1">方案调查</li>
+                <li class="nav1-li2"></li>
+            </ul>
+        </div>
+        <div class="nav2" v-show="isShow">
+            <span class="nav2-content">
+                随着网络规模的不断扩大，网络技术不断发展，如何进行有效的网络维护，让设备在生命周期内得到有
+                效保障是全球网络运营商关随着网络规模的不断扩大，网络技术不断发展，如何进行有效的网络维护，
+                让设备在生命周期内得到有效保障是全球网络运营商关随着网络规模的不断扩大，网络技术不断发展，
+                如何进行有效的网络维护，让设备在生命周期内得到有效保障是全球网络运营商关随着网络规模的不断
+                扩大，网络技术不断发展，如何进行有效的网络维护，让设备在生命周期内得到有效保障是全球网络运
+            </span><span class="nav2-sp1 ft20">收藏</span><span class="nav2-sp2 ft20">赞（100）</span>   
+        </div>
+      </div>
+      <div class="line"></div>
+      <div>
+        <div class="nav1" @click="toggle2()">
+            <ul class="nav1-tip">
+                <li class="nav1-li1">相关资讯</li>
+                <li class="nav1-li2"></li>
+            </ul>
+        </div>
+        <div class="nav2 bn" v-show="thisShow">
+            <ul class="nav3-content">
+                <li>维保服务解决方案彩页</li>
+                <li>维保服务解决方案彩页</li>
+                <li>维保服务解决方案彩页</li>
+                <li>维保服务解决方案彩页</li>
+            </ul>
+        </div>
+      </div>
+      <div class="line mt1"></div>
+      <div class="down">
+        <ul class="down-ul">
+            <li class="down-li1"><a>咨询电话</a></li>
+            <li class="down-li2"><a>在线咨询</a></li>
+        </ul>
+      </div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'details',
+        data () {
+             return {
+                show:true,
+                isShow:true,
+                thisShow:true
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+            toggle:function(){
+                this.show = !this.show;
+            },
+            toggle1:function(){
+                this.isShow = !this.isShow;
+            },
+            toggle2:function(){
+                this.thisShow = !this.thisShow;
+            }
+         }
+    }
+</script>
+<style scoped>
+    .mt1{margin-top:-0.02rem;}
+    .f{float:left;}
+    .ft20{font-size:0.2rem;}
+    .bn{border-bottom:none!important;}
+
+    .nav{width:6rem;margin:0 auto;}
+    .tip{margin-top:0.16rem;margin-bottom:0.14rem;}
+    .li1{font-size:0.26rem;line-height:0.44rem;color:#1a1a1a;margin-left:0.04rem;}
+    .li2{font-size:0.16rem;line-height:0.32rem;color:#949494;margin-left:0.03rem;}
+    .li2 .sp1{background:url(../../images/sl.png) no-repeat 0 50%;background-size:0.16rem 0.16rem;padding-left:0.26rem;}
+    .li2 .sp2{background:url(../../images/hf.png) no-repeat 0 50%;background-size:0.16rem 0.16rem;padding-left:0.26rem;}
+    .li2 .sp3{float:right;}
+    .nav img{width:6rem;height:3.2rem;}
+    .line{height: 0.2rem;background: #f5f5f5;}
+
+    .nav1{overflow:hidden;}
+    .nav1 .nav1-tip{width:6rem;margin:0 auto;margin-top:0.3rem;overflow:hidden;padding-bottom:0.2rem;border-bottom:1px solid #ebebeb;}
+    .nav1-li1{font-size:0.26rem;line-height:0.27rem;border-left:0.03rem solid #008dd3;float:left;color:#1a1a1a;padding-left:0.12rem;}
+    .nav1-li2{width:0.24rem;height:0.18rem;background:url(../../images/down.png) no-repeat;background-size:cover;float:right;}
+
+    .nav2{width:100%;border-bottom:1px solid #ebebeb;font-size:0;}
+    .nav2-content{width:6rem;line-height:0.39rem;margin:0 auto;margin-top:0.13rem;display:block;font-size:0.22rem;text-indent: 2em;}
+
+
+    .nav2-sp1,.nav2-sp2{line-height:0.75rem;display:inline-block;}
+    .nav2-sp1{margin-left:0.2rem;background:url(../../images/shoucang.png) no-repeat 0 50%;background-size:0.28rem 0.27rem;padding-left:0.32rem;}
+    .nav2-sp2{margin-left:0.43rem;background:url(../../images/zan.png) no-repeat 0 50%;background-size:0.24rem 0.24rem;padding-left:0.3rem;}
+
+    .nav3-content{width:5.8rem;line-height:0.85rem;margin:0 auto;font-size:0.22rem;}
+    .nav3-content li{border-bottom:1px solid #ebebeb;}
+
+    .down{height:1.64rem;display: flex;flex-direction: column;justify-content: center;}
+    .down ul{width:5.7rem;height:0.66rem;margin:0 auto;}
+    .down-li1{float:left;}
+    .down-li2{float:right;}
+    .down li a{width:2.72rem;height:0.66rem;line-height:0.66rem;border-radius:0.33rem;border:1px solid #54c2f0;font-size:0.25rem;display:block;color:#54c2f0;text-align:center;}
+    .down li a:hover{background:#54c2f0;color:#fff;}
+</style>

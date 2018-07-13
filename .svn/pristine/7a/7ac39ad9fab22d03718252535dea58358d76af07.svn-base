@@ -1,0 +1,49 @@
+<template>
+  <div class="tjshdz">
+    <my-header title="版本更新"></my-header>
+    <div class="body">
+    	<dl>
+    		<dt><img src="../../../images/other/zone.png"/></dt>
+    		<dd>
+    			<p class="p1">Zone线上社区 8.3.9</p>
+    			<p class="p2">未来由您定义</p>
+    		</dd>
+    	</dl>
+    </div>
+    <div class="line">
+    	<ul>
+    		<li class="li1">检查更新</li>
+    		<li class="li2">new</li>
+    	</ul>
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .body dt{width: 1.29rem;height: 1.29rem;margin: 0 auto;}
+  	.body dt img{width: 1.29rem;height: 1.29rem;display: block;margin-top: 1.05rem;}
+  	.body .p1{text-align: center;color: #080808;font-size: 0.24rem;line-height: 0.39rem;margin-top: 0.21rem;}
+  	.body .p2{text-align: center;color: #272727;font-size: 0.2rem;line-height: 0.36rem;margin-bottom: 1.06rem;}
+  	.line{height: 0.74rem;}
+  	.line li{float: left;}
+  	.line .li1{color: #242424;font-size: 0.24rem;line-height: 0.74rem;padding-left: 0.28rem;}
+  	.line .li2{width:0.57rem;height:0.25rem;text-align:center;color: #fff;font-size: 0.12rem;line-height: 0.25rem;float: right;background: #ff0000;border-radius: 0.125rem;position: absolute;right:0.28rem;top: 50%;transform: translateY(-50%);}
+</style>

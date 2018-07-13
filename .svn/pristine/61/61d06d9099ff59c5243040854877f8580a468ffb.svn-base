@@ -1,0 +1,25 @@
+<template>
+    <div class="first">
+      <div class="nav">2</div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+  
+</style>

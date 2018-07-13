@@ -1,0 +1,240 @@
+<template>  
+  <div class="index">
+    <div class="banner">
+    	<div class="slide" v-on:mouseover="stop()" v-on:mouseout="move()" @touchmove="touch()">  
+		    <div class="slideshow">  
+		      <transition-group tag="ul" name="image"  class="slide-top">  
+		        <li v-for="(img, index) in imgData" v-show="index===mark" :key="index">  
+		          <a href="#">  
+		            <img :src='img.ad_link'>
+		            <div class="slide-bottom">{{img.title}}</div>
+		          </a>  
+		        </li>  
+		      </transition-group>  
+		    </div> 
+		  </div>
+      <div class="banner-user">
+        <a href="#/login"></a>
+      </div>
+    </div>
+    <div class="content">
+      <dl>
+        <a href="#/info">
+          <dt><img src="../../images/fw.png"/></dt>
+          <dd>服务资源</dd>
+        </a>
+      </dl>
+      
+      <dl>
+        <a href="#/circle">
+          <dt><img src="../../images/qz.png"/></dt>
+          <dd>圈子</dd>
+        </a>
+      </dl>
+      
+      <dl>
+        <a href="#/info">
+          <dt><img src="../../images/zjzy.png"/></dt>
+          <dd>专家答疑</dd>
+        </a>
+      </dl>
+      
+      <dl>
+        <a href="#/info">
+          <dt><img src="../../images/qd.png"/></dt>
+          <dd>每日签到</dd>
+        </a>
+      </dl>
+      
+      <dl>
+        <a href="#/info">
+          <dt><img src="../../images/zx.png"/></dt>
+          <dd>资讯</dd>
+        </a>
+      </dl>
+      <dl>
+        <a href="#/info">
+          <dt><img src="../../images/shop1.png"/></dt>
+          <dd>礼品商城</dd>
+        </a>
+      </dl>
+        
+      <dl>
+        <a href="#/info">
+          <dt><img src="../../images/phb.png"/></dt>
+          <dd>排行榜</dd>
+        </a>  
+      </dl>
+      
+      <dl>
+        <a href="#/info">
+          <dt><img src="../../images/rw.png"/></dt>
+          <dd>任务大厅</dd>
+        </a>
+      </dl>
+      
+    </div>
+    <div class="line"></div>
+    <div class="tip">
+      <p>新闻资讯</p>
+      <div class="tip-bottom" v-for="(list,index) in newsData" :key="index">
+        <div class="tip-bottom-l">
+          <img :src="list.content.img"/>
+        </div>
+        <div class="tip-bottom-r">
+          <ul>
+            <li class="li1">{{list.title}} </li>
+            <li class="li2" v-html="list.content">{{list.content}}</li>
+            <li class="li3">
+							<span class="li3-p1">{{list.ctime}}</span>
+							<span class="li3-p3">{{list.display_type}}</span>
+							<span class="li3-p2">{{list.ad_type}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+		</div>
+    <input type="button" value="查看更多" class="btn" @click="load()"/>
+    <my-footer></my-footer>
+  </div>
+</template>  
+  
+<script>
+import qs from 'qs';
+import {setCookie,getCookie} from '../../assets/js/cookie.js';
+var token = getCookie('token');
+
+export default {  
+  name: 'index',
+  data () {  
+    return {
+    	newsData:{},
+    	imgData:{},
+      timer: null, //定时器  
+      mark: 0, //比对图片索引的变量
+    }  
+  },  
+  methods: {  
+    autoPlay () {  
+      this.mark++;
+      var l=this.imgData.length-1
+      if (this.mark > l) {  
+        this.mark = 0;
+      }  
+    },  
+    play () {  
+      this.timer = setInterval(this.autoPlay, 2500)  
+    },  
+    stop () {  
+      clearInterval(this.timer)  
+    },  
+    move () {  
+      this.timer = setInterval(this.autoPlay, 2500)  
+    },
+    touch(){
+      this.mark++;
+      var l=this.imgData.length-1
+      if (this.mark > l) {  
+        this.mark = 0;
+      }
+    },
+    load(){
+    	this.$http.get('http://openzone.iwsoft.net/news',{
+//        params:{
+//          type:1
+//        },
+          headers: {
+             // 'Content-Type' : 'application/x-www-form-urlencoded',
+             //"Authorization": "Bearer 4571e3646a074f3a3e97a801677773e4fac31e6b"
+             'Authorization':'Bearer ' +  token
+           },
+        })
+         .then((res)=>{
+            this.newsData = res.body.data
+            console.log(res.body.data)
+       })
+    }
+  },  
+	created () {  
+	    this.play()  
+	},
+  mounted:function(){
+//       var data = qs.stringify({
+//         "type":"1"
+//       })
+//       广告
+         this.$http.get("http://openzone.iwsoft.net/ads",{
+          params:{
+            type:1
+          },
+          headers: {
+             // 'Content-Type' : 'application/x-www-form-urlencoded',
+             //"Authorization": "Bearer 4571e3646a074f3a3e97a801677773e4fac31e6b"
+             'Authorization':'Basic ' +  'b3d970be715bc167161c9ab2a5320abf0cfb9296' 
+           },
+        })
+         .then((res)=>{
+            this.imgData = res.body.data
+            console.log(res.body.data)
+       })
+         //新闻
+         this.$http.get('http://openzone.iwsoft.net/news',{
+//        params:{
+//          type:1
+//        },
+          headers: {
+             // 'Content-Type' : 'application/x-www-form-urlencoded',
+             //"Authorization": "Bearer 4571e3646a074f3a3e97a801677773e4fac31e6b"
+             'Authorization':'Bearer ' +  token
+           },
+        })
+         .then((res)=>{
+            this.newsData = res.body.data
+            console.log(res.body.data)
+       })
+  }
+};  
+</script>  
+  
+<style scoped>
+  a{color:#3d3d3d;}
+  .index{width:100%;}
+  /*轮播图*/
+  .slide{width: 100%;height: 4.98rem;position: relative;}
+	.slide-top img{width: 100%;height: 4.98rem;}
+	.slideshow ul li{height: 4.98rem;position: absolute;top: 0;left: 0;overflow: hidden;width: 100%;}
+	.slideshow a{display: block;height: 4.98rem;}
+	.bullet{width: 3rem;height: 1rem;z-index: 10;margin: 0 auto;position: absolute;bottom: 0;}
+	.active{width: 1rem;height: 1rem;display: block;background: black;float: left;}
+	.sp{background: red;}
+	.slide-bottom{width: 100%;height: 0.66rem;background:rgba(0, 0, 0, 0.5);line-height: 0.66rem;position: absolute;bottom: 0;color: #fff;padding-left: 0.21rem;font-size: 0.24rem;}
+	/*登录图标*/
+  .banner-user{width: 0.5rem;height: 0.5rem;background: url(../../images/loginpic.png) no-repeat;background-size:cover;;position: absolute;top: 0.6rem;right: 0.27rem;}
+  .banner-user a{width: 0.5rem;height: 0.5rem;display: block;}
+  /*功能区*/
+  .content{height: 2.94rem;font-size: 0.2rem;}
+  .content dl{width: 25%;height: 50%;float: left;text-align: center;}
+  .content dl dt{margin-top: 0.4rem; }
+  .content dl dt img{height:0.38rem;width:auto;}
+  .content dl dd{margin-top: 0.24rem; }
+  .line{height: 0.2rem;background: #f0f0f0;}
+  /*列表*/
+  .tip{margin-left: 0.21rem;}
+  .tip p{height: 0.78rem;border-bottom: 0.01px solid #e0e0e0;line-height: 0.78rem;font-size: 0.26rem;}
+  .tip-bottom{height: 2.02rem;display: flex;}
+  .tip-bottom-l{width: 2.11rem;height: 1.42rem;background: red;float: left;margin-top: 0.3rem;}
+  .tip-bottom-r{width: 3.9rem;height: 1.72rem;margin-top: 0.3rem;border-bottom: 1px solid #ebebeb;flex: 1;}
+  .tip-bottom-r ul{height: 1.42rem;}
+  .tip-bottom-r .li1{line-height:0.49rem;font-size: 0.28rem;padding-left: 0.15rem;}
+  .tip-bottom-r .li2{line-height: 0.31rem;font-size: 0.22rem;overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;padding-left: 0.15rem;}
+  
+  .tip-bottom-r .li3{line-height: 0.18rem;height: 0.18rem;font-size: 0.16rem;margin-left: 0.15rem;margin-top: 0.15rem;}
+  .tip-bottom-r span{display: block;float: left;height: 0.18rem;}
+  .tip-bottom-r .li3-p1{background: url(../../images/fbsj.png) no-repeat;background-size: 0.18rem 0.18rem;padding-left: 0.28rem;float: left;}
+  .tip-bottom-r .li3-p2{background: url(../../images/hf.png) no-repeat;background-size: 0.18rem 0.18rem;padding-left: 0.28rem;float: right;}
+  .tip-bottom-r .li3-p3{background: url(../../images/sl.png) no-repeat;background-size: 0.18rem 0.18rem;padding-left: 0.28rem;margin-left:0.21rem;float: right;}
+  
+  
+  
+  .btn{height: 0.62rem;width: 2.4rem;font-size: 0.24rem;background: #54c2f0;border-radius: 0.62rem;display: block;margin: 0 auto;margin-top: 0.35rem;margin-bottom: 1.33rem;}
+</style>  

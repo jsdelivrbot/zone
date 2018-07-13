@@ -1,0 +1,104 @@
+<template>
+    <div class="first">
+      <my-header title="疑问"></my-header>
+      <div class="nav">
+      	<div class="nav-all">
+      		<div class="nav-n">
+      			<div class="nav-l">
+	      			<img src="../../images/banner.png"/>
+	      		</div>
+	      		<div class="nav-r">
+	      			<ul>
+	      				<li class="li1">wo</li>
+	      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+	      				<li class="li3">2017.07.24</li>
+	      			</ul>
+	      		</div>
+      		</div>
+      		<div class="nav-n">
+      			<div class="nav-l">
+	      			<img src="../../images/banner.png"/>
+	      		</div>
+	      		<div class="nav-r">
+	      			<ul>
+	      				<li class="li1">wo</li>
+	      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+	      				<li class="li3">2017.07.24</li>
+	      			</ul>
+	      		</div>
+      		</div>
+      		<div class="nav-n">
+      			<div class="nav-l">
+	      			<img src="../../images/banner.png"/>
+	      		</div>
+	      		<div class="nav-r">
+	      			<ul>
+	      				<li class="li1">wo</li>
+	      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+	      				<li class="li3">2017.07.24</li>
+	      			</ul>
+	      		</div>
+      		</div>
+      		<div class="nav-n">
+      			<div class="nav-l">
+	      			<img src="../../images/banner.png"/>
+	      		</div>
+	      		<div class="nav-r">
+	      			<ul>
+	      				<li class="li1">wo</li>
+	      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+	      				<li class="li3">2017.07.24</li>
+	      			</ul>
+	      		</div>
+      		</div>
+      		<div class="nav-bottom">
+      			<div class="b-l"><img src="../../images/banner.png"/></div>
+      			<div class="b-r"> 请你对本次服务进行评价,评价后您可获得10积分</div>
+      		</div>
+      	</div>
+      	<div class="nav-footer">
+      		<div class="nav-ft">点击去评价</div>
+      	</div>
+      </div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+	.header{position: fixed;top: 0;}
+	.nav{position: absolute;top: 1.28rem;width: 100%;padding-bottom: 1.46rem;}
+	.nav-all{width:6rem;margin: 0 auto;overflow: hidden;}
+	.nav-n{margin-top: 0.27rem;display: flex;}
+	.nav-l{width: 0.82rem;height: 0.68rem;float: left;}
+	.nav-l img{width: 0.68rem;height: 0.68rem;margin: 0 auto;display: block;border-radius: 50%;}
+	.nav-r{float: left;overflow: hidden;flex: 1;margin-left: 0.13rem;border-bottom: 1px solid #ebebeb;}
+	.nav-r li{float: left;}
+	.nav-r .li1{font-size:0.22rem;line-height: 0.33rem;}
+	.nav-r .li2{font-size:0.2rem;line-height: 0.36rem;margin-top: 0.04rem;color: #242424;}
+	.nav-r .li3{font-size:0.14rem;line-height: 0.4rem;background: url(../../images/fbsj.png)no-repeat 0 50%;background-size: 0.18rem 0.18rem;padding-left: 0.29rem;padding-bottom: 0.2rem;}
+
+	.nav-bottom{line-height: 1.04rem; color: #54c2f0;font-size:0.2rem;display: flex;}
+	.nav-bottom .b-l{float: left;width: 0.47rem;height: 0.4rem;margin: 0.31rem 0.26rem 0 0.22rem;}
+	.nav-bottom .b-l img{float: left;width: 0.47rem;height: 0.4rem;display: block;}
+	.nav-bottom .b-r{float: left;flex: 1;}
+	.nav-footer{position: fixed;bottom:0;height: 1.46rem;width: 100%;border-top:0.2rem solid #ebebeb;background: #fff;}
+	.nav-ft{width: 3.6rem;height: 0.82rem;border-radius:0.41rem;text-align: center;line-height: 0.82rem;font-size: 0.26rem;color: #fff;background: #54c2f0;position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%);}
+
+
+
+</style>

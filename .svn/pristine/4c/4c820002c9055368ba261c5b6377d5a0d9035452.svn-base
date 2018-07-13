@@ -1,0 +1,305 @@
+<template>
+    <div class="content">
+        <div class="listbanner">
+            <div class="header">
+                <div class="header-top">
+                    <a href="javascript:history.go(-1);"></a>
+                    <span class="forget">资讯详情</span>
+                    <div class="ld"></div>
+                </div>
+            </div>
+        </div>
+        <div class="top">
+            <ul class="top-t">
+                <li class="li1"><img src="../../images/jing.png"/></li>
+                <li class="li2">美食家；《舌尖上的中国》顾问之一；情感性精神疾病的教授</li>
+            </ul>
+            <ul class="top-b">
+                <li class="li1">
+                    <img/>
+                </li>
+                <li class="li2">习惯孤独</li>
+                <li class="li5">
+                    <span>(</span>
+                    <span>张林海</span>
+                    <span>)</span>
+                </li>
+                <li class="li3"></li>
+                <li class="li4">20小时</li>
+            </ul> 
+        </div>
+        <div class="line"></div>
+        <div class="center">
+            <ul class="center-txt">
+                <div>
+                    <div class="nav1" @click="toggle()">
+                        <ul class="nav1-tip">
+                            <li class="nav1-li1">行业趋势</li>
+                            <li class="nav1-li2"></li>
+                        </ul>
+                    </div>
+                    <div class="nav2" v-show="show">
+                        <span class="nav2-content">
+                            <img src="../../images/banner.png"/>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="nav1" @click="toggle1()">
+                        <ul class="nav1-tip">
+                            <li class="nav1-li1">客户挑战</li>
+                            <li class="nav1-li2"></li>
+                        </ul>
+                    </div>
+                    <div class="nav2" v-show="show1">
+                        <span class="nav2-content">
+                            <img src="../../images/banner.png"/>
+                        </span>
+                    </div>
+                </div>
+                <li class="li3">
+                    <span class="sp1">100</span>
+                    <span class="sp2">100</span>
+                    <span class="sp3">100</span>
+                    <span class="sp4">100</span>
+                </li>
+            </ul> 
+        </div>
+        <div class="line"></div>
+        <div>
+        <div class="nav1">
+            <ul class="nav1-tip">
+                <li class="nav1-li1">相关资讯</li>
+            </ul>
+        </div>
+        <div class="nav2 bn">
+            <ul class="nav3-content">
+                <li>维保服务解决方案彩页</li>
+                <li>维保服务解决方案彩页</li>
+                <li>维保服务解决方案彩页</li>
+                <li class="bn">维保服务解决方案彩页</li>
+            </ul>
+        </div>
+      </div>
+        <div class="line"></div>
+        <div class="list">
+            <div class="list-top">
+                <ul>
+                    <li class="li1">回复</li>
+                    <li class="li2">
+                        <span class="sp1">正序</span>
+                        <span class="sp2"></span>
+                        <span class="l1"></span>
+                        <span class="sp1">倒序</span>
+                        <span class="sp3"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-all">
+                <div class="list-bottom">
+                    <div class="list-bottom-t">
+                        <div class="list-bottom-t">
+                            <p><img/></p>
+                            <ul>
+                                <li class="li1">
+                                    <span class="sp1">习惯孤独</span>
+                                    <span class="sp2"></span>
+                                    <span class="sp3">(</span>
+                                    <span class="sp4">张林海</span>
+                                    <span class="sp5">)</span>
+                                    <span class="sp6"></span>
+                                    <span class="sp7">20</span>
+                                </li>
+                                <li class="li2">就爱上了飞几十块了房间上就爱上了飞几十块了房间上就爱上了飞几十块了房间上就爱上了飞几十块了房间上就爱上了飞几十块了房间上就爱上了飞几十块了房间上</li>
+                                <li class="li3">
+                                    <span class="li-sp1"></span>
+                                    <span class="li-sp2">#</span>
+                                    <span class="li-sp3">1</span>
+                                    <span class="li-sp5"></span>
+                                    <span class="li-sp4"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list-bottom-t2">
+                                <ul>
+                                    <p><img/></p>
+                                    <li class="li1">
+                                        <span class="sp1">习惯孤独</span>
+                                        <span class="sp2"></span>
+                                        <span class="sp3">(</span>
+                                        <span class="sp4">张林海</span>
+                                        <span class="sp5">)</span>
+                                        <span class="sp6"></span>
+                                        <span class="sp7">20</span>
+                                    </li>
+                                    <li class="li2">
+                                        <span class="spa">回复</span>
+                                        <span class="spb">习惯孤独：</span>
+                                        <span class="spc">你这个你这个你这个你这个</span>
+                                    </li>
+                                    <li class="img">
+                                        <img/>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <div class="btn1">
+                        <span>查看更多回复</span>
+                        <span>(</span>
+                        <span>9</span>
+                        <span>)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="form">
+                <div class="text">
+                    <span></span>
+                    <input type="text" placeholder="说点什么吧"/>
+                </div>
+                
+                <input type="button"/>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import qs from 'qs'
+export default {
+    name:'content',
+        data () {
+             return {
+                show:true,
+                show1:true,
+             };
+         },
+         
+         methods: {
+             toggle:function(){
+                this.show = !this.show;
+            },
+             toggle1:function(){
+                this.show1 = !this.show1;
+            },
+         }
+    }
+</script>
+<style scoped>
+    .bn{border-bottom:none!important;}
+    .mt70{margin-left:0.7rem;}
+    .content{position:relative;padding-bottom:0.88rem;}
+    .listbanner{width:100%;margin:0 auto;box-shadow:0 0 5px #ebebeb;}
+    .header{width:5.8rem;height: 0.88rem;margin:0 auto;padding-top: 0.4rem;position: relative;}
+    .header a{width: 0.18rem;height: 0.34rem;display: block;background: url(../../images/back.png) no-repeat;background-size: cover;float:left;margin-top:0.27rem;}
+    .header-top{overflow:hidden;}
+    
+    .ld{width:0.34rem;height:0.88rem;float:right;background:url(../../images/fx.png) no-repeat 0 50%;background-size:0.34rem 0.34rem;}
+    .forget{line-height:0.88rem;font-size:0.28rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+
+    .top{overflow:hidden;}
+    .top-t{width:6.2rem;margin:0 auto;border-bottom:1px solid #ededed;overflow:hidden;padding-bottom:0.2rem;}
+    .top-t li{margin-top:0.32rem;}
+    .top-t .li1{width:0.26rem;height:0.26rem;float:left;margin-right:0.17rem;}
+    .top-t .li1 img{width:0.26rem;height:0.26rem;display:block;float:left;}
+    .top-t .li2{font-size:0.26rem;}
+
+    
+    .top-b{overflow:hidden;width:6rem;margin:0 auto;}
+    .top-b li{float:left;height:1.19rem;line-height:1.19rem;font-size:0.26rem;color:#999999;}
+    .top-b .li1{width:0.68rem;height:0.68rem;margin-top:0.2rem;}
+    .top-b .li1 img{width:0.68rem;height:0.68rem;border-radius:50%;display:block;}
+    .top-b .li2{margin-left:0.16rem;margin-right:0.09rem;}
+    .top-b .li3{width:0.3rem;margin-right:0.19rem;background:url(../../images/VIP.png)no-repeat 0 50%;background-size:0.3rem 0.18rem;}
+    .top-b .li4{float:right;}
+    .top-b .li5{font-size:0.2rem;color:#adadad;margin-right:0.2rem;}
+
+    .nav1{overflow:hidden;}
+    .nav1 .nav1-tip{width:6rem;margin:0 auto;margin-top:0.3rem;overflow:hidden;padding-bottom:0.2rem;border-bottom:1px solid #ebebeb;}
+    .nav1-li1{font-size:0.26rem;line-height:0.27rem;border-left:0.03rem solid #008dd3;float:left;color:#1a1a1a;padding-left:0.12rem;}
+    .nav1-li2{width:0.24rem;height:0.18rem;background:url(../../images/down.png) no-repeat;background-size:cover;float:right;}
+
+    .nav2{width:100%;border-bottom:1px solid #ebebeb;font-size:0;overflow:hidden;}
+    .center-txt .nav2-content{width:6rem;height:3.52rem;margin-top:0.13rem;display:block;padding:0;margin:0;margin-top:0.32rem;}
+    .center-txt .nav2-content img{width:6rem;height:3.52rem;margin-top:0.13rem;display:block;padding:0;margin:0;}
+    .nav3-content{width:5.8rem;line-height:0.85rem;margin:0 auto;font-size:0.22rem;}
+    .nav3-content li{border-bottom:1px solid #ebebeb;}
+
+
+
+    .center{overflow:hidden;}
+    .center-txt{width:6rem;margin:0 auto;}
+    .center-txt .li1{line-height:0.48rem;font-size:0.24rem;color:#adadad;margin:0.18rem 0;}
+    .center-txt .li2{width:6rem;height:3.52rem;}
+    .center-txt .li2 img{width:6rem;height:3.52rem;display:block;}
+    .center-txt .li3{height:0.77rem;line-height:0.77rem;float:right;}
+    .center-txt span{display:block;float:left;margin-left:0.3rem;font-size:0.14rem;color:#adadad;width:0.33rem;padding-left:0.24rem;}
+    .center-txt .sp1{background:url(../../images/sc.png) no-repeat 0 50%;background-size:0.18rem 0.17rem;}
+    .center-txt .sp2{background:url(../../images/zan1.png) no-repeat 0 50%;background-size:0.16rem 0.16rem;}
+    .center-txt .sp3{background:url(../../images/sl.png) no-repeat 0 50%;background-size:0.14rem 0.14rem;}
+    .center-txt .sp4{background:url(../../images/hf.png) no-repeat 0 50%;background-size:0.16rem 0.15rem;}
+
+    .list-top{width:6rem;height:0.77rem;margin:0 auto;border-bottom:1px solid #ebebeb;}
+    
+    .list-top li{float:left;}
+    .list-top li span{display:block;float:left;}
+    .list-top .li1{font-size:0.26rem;color:#1a1a1a;line-height:0.27rem;border-left:0.03rem solid #008dd3;padding-left:0.12rem;margin-top:0.3rem;}
+    .list-top .li2{font-size:0.2rem;color:#949494;line-height:0.34rem;float:right;}
+    .list-top .li2 span{line-height:0.77rem;}
+    .list-top .li2 .l1{margin:0.23rem 0.15rem 0 0.15rem;height:0.34rem;display:block;width:0.02rem;background:#ebebeb;}
+    .list-top .li2 .sp1{margin-right:0.15rem;}
+    .list-top .li2 .sp2{width:0.28rem;height:0.77rem;background:url(../../images/zheng.png) no-repeat 0 50%;background-size:0.28rem 0.23rem;}
+    .list-top .li2 .sp3{width:0.28rem;height:0.77rem;background:url(../../images/fan.png) no-repeat 0 50%;background-size:0.28rem 0.23rem;}
+    .list-all{width:100%;}
+    .list-bottom{width:6rem;margin:0 auto;}
+    .list-bottom p{width:0.68rem;height:0.68rem;float:left;}
+    .list-bottom img{width:0.68rem;height:0.68rem;display:block;border-radius:50%;}
+    .list-bottom-t{margin-top:0.32rem;overflow:hidden;}
+    .list-bottom-t span{float:left;line-height:0.48rem;}
+    .list-bottom-t .sp1{line-height:0.48rem;font-size:0.24rem;color:#008dd3;}
+    .list-bottom-t .sp2{width:0.18rem;height:0.48rem;background:url(../../images/men.png) no-repeat 0 50%;background-size:0.18rem 0.18rem;margin:0 0.08rem 0 0.13rem;}
+    .list-bottom-t .sp3,.sp4,.sp5{font-size:0.22rem;color:#adadad;}
+    .list-bottom-t .sp6{width:0.44rem;height:0.48rem;background:url(../../images/VIP.png) no-repeat 0 50%;background-size:0.44rem 0.26rem;margin-left:0.1rem;}
+    .list-bottom-t .sp7{line-height:0.48rem;font-size:0.24rem;color:#adadad;float:right;margin-right:0.2rem;}
+    .list-bottom-t ul{padding-left:0.22rem;float:left;border-bottom:1px solid #ebebeb;width:5.49rem;}
+    .list-bottom-t .li1{margin-bottom:0.05rem;overflow:hidden;}
+
+
+
+    .list-bottom-t .li2{line-height:0.34rem;color:#242424;font-size:0.22rem;}
+    .list-bottom-t .li3{height:0.78rem;color:#008dd3;font-size:0.16rem;}
+    .list-bottom-t .li3 span{line-height:0.78rem;}
+    .list-bottom-t .li3 .li-sp1{width:0.08rem;height:0.78rem;color:#008dd3;font-size:0.16rem;background:url(../../images/dian.png) no-repeat 0 50%;background-size:0.08rem 0.08rem;}
+    .list-bottom-t .li3 .li-sp2{margin-left:0.06rem;margin-right:0.04rem;}
+    .list-bottom-t .li3 .li-sp4{width:0.24rem;height:0.78rem;background:url(../../images/jbw.png) no-repeat 0 50%;background-size:0.24rem 0.24rem;float:right;}
+    .list-bottom-t .li3 .li-sp5{margin-right:0.2rem;width:0.24rem;height:0.78rem;background:url(../../images/star.png) no-repeat 0 50%;background-size:0.24rem 0.24rem;float:right;margin-left:0.28rem;}
+
+    .list-bottom-t2{overflow:hidden;}
+    .list-bottom-t2 ul{margin-left:0.65rem;margin-top:0.29rem;padding:0;width:5.49rem;}
+    .list-bottom-t2 ul li{overflow:hidden;float:left;}
+    .list-bottom-t2 .li1{width:4.49rem;margin-left:0.1rem;}
+    .list-bottom-t2 .sp1{font-size:0.22rem;color:#adadad;}
+    .list-bottom p{width:0.48rem;height:0.48rem;float:left;}
+    .list-bottom img{width:0.48rem;height:0.48rem;display:block;border-radius:50%;}
+    .list-bottom-t2 .sp6{width:0.44rem;height:0.48rem;background:url(../../images/svip.png) no-repeat 0 50%;background-size:0.44rem 0.26rem;margin-left:0.1rem;}
+    .list-bottom-t2 .sp7{float:right;display:block;}
+    .list-bottom-t2 .li2 .spb{color:#008dd3;margin-left:0.14rem;}
+    .list-bottom-t2 .img{margin:0.3rem 0 0.32rem 0;width:2.11rem;height:1.42rem;}
+    .list-bottom-t2 .img img{width:2.11rem;height:1.42rem;border-radius:0.05rem;}
+
+    .btn{height:0.88rem;line-height:0.88rem;color:#54c2f0;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;width:100%;text-align:center;}
+    .btn span{float:left;font-size:0.22rem;}
+    .btn1{margin:0 auto;height:0.88rem;width:auto;display:inline-block;}
+
+    .footer{width:100%;height:0.88rem;background:#f6f6f6;position:fixed;left:0;bottom:0;}
+    .form{width:6rem;margin:0 auto;padding-top:0.17rem;}
+    .footer input{display:block;}
+    .footer .text{height:0.52rem;width:5.38rem;border:1px solid #e0e0e0;border-radius:0.05rem;float:left;}
+    .footer .text span{margin:0 0.1rem 0 0.11rem;width:0.24rem;height:0.52rem;background:url(../../images/fatie.png) no-repeat 0 50%;background-size:0.24rem 0.24rem;display:block;float:left;}
+    .footer input[type=text]{height:0.52rem;width:4.93rem;}
+    .footer input[type=button]{float:left;width:0.4rem;height:0.52rem;background:url(../../images/fasong.png) no-repeat 0 50%;background-size:0.4rem 0.37rem;margin-left:0.19rem;}
+    input::-webkit-input-placeholder{color: #8f8f8f;font-size:0.16rem;}
+</style>

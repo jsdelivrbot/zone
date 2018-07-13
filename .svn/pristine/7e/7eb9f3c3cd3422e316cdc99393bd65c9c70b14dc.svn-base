@@ -1,0 +1,55 @@
+<template>
+  <div class="tjshdz">
+    <div class="header">
+        <div class="header1">
+            <a href="javascript:history.go(-1);" class="a1"></a>
+            <span class="forget">原手机号验证</span>
+            <a class="a2" href="#/newtelyz">确定</a>
+        </div>
+    </div>
+    <div class="body">
+    	<div class="bodyall">
+    		<div class="body-top">
+    			<input type="text" placeholder="请输入原绑定手机号" class="txt"/>
+    			<input type="button" value="获取验证码"  class="btn"/>
+    		</div>
+    		<div class="body-top">
+    			<input type="text" placeholder="请输入验证码" class="txt"/>
+    		</div>
+    	</div>
+    	
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .header{height: 0.88rem;position: fixed;top:0;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;width: 100%;background: #fff;}
+    .header1{width:5.92rem;margin:0 auto;overflow:hidden;}
+    .header .a1{width: 0.18rem;height: 0.34rem;background: url(../../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+    .header .a2{width: 0.73rem;height: 0.42rem;float:right;display: block;color:#008dd3;line-height:0.42rem;text-align:center;font-size:0.24rem;margin-top:0.25rem;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  	.body{padding-top: 1.28rem;padding-bottom: 0.98rem;width: 5.84rem;margin: 0 auto;}
+  	.bodyall{margin-top: 0.62rem;}
+  	.body-top{width: 5.84rem;height: 0.7rem;background: #f0f0f0;border-radius: 0.35rem;margin-bottom: 0.37rem;}
+  	.body-top input{display: block;float: left;}
+  	.body-top .txt{color: #fff;line-height: 0.7rem;padding-left: 0.31rem;font-size: 0.2rem;color: #adadad;}
+  	.body-top .btn{width: 1.9rem;height: 0.7rem;border-radius: 0.35rem;background: #46c2ff;color: #fff;float: right;}
+</style>

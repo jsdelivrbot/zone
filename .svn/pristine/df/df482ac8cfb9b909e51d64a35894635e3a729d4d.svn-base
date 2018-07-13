@@ -1,0 +1,48 @@
+<template>
+    <div class="first">
+      <div class="nav">
+        <div class="nav-user">
+          <img src="../../../images/tongzhi.png"/>
+          <ul class="nav-ul1">
+            <li class="ul-li1">圈子通知</li>
+            <li class="ul-li2">完美N+1 请求加入 欢乐圈</li>
+          </ul>
+          <ul class="nav-ul2">
+            <li class="ul-li1">07.24</li>
+            <li class="ul-li2">3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+  .first{padding-bottom:0.98rem;}
+  .nav{width:6rem;margin:0 auto;}
+  .nav-user{height:1.28rem;width:100%;border-bottom:1px solid #ebebeb;}
+  .nav-user img{width:0.68rem;height:0.68rem;border-radius:50%;display:block;float:left;margin:0.3rem 0.18rem 0 0.1rem;}
+
+  .nav-ul1{float:left;margin-top:0.26rem;}
+  .nav-ul1 .ul-li1{line-height:0.39rem;font-size:0.26rem;color:#292929;}
+  .nav-ul1 .ul-li2{line-height:0.37rem;font-size:0.22rem;color:#949494;}
+
+  .nav-ul2{float:right;margin-top:0.26rem;}
+  .nav-ul2 .ul-li1{line-height:0.39rem;font-size:0.14rem;color:#949494;}
+  .nav-ul2 .ul-li2{width:0.24rem;height:0.24rem;line-height:0.24rem;text-align:center;font-size:0.14rem;border:1px solid #0892d5;border-radius:50%;font-size:0.14rem;color:#54c2f0;float:right;margin-right:0.13rem;margin-top:0.07rem;}
+</style>

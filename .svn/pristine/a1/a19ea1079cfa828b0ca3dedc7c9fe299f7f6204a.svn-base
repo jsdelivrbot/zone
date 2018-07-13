@@ -1,0 +1,152 @@
+<template>
+    <div class="first">
+      	<div class="header">
+			<div class="headerall">
+				<a href="javascript:history.go(-1);" class="a1"></a>
+				<span class="forget">疑问</span>
+				<a class="a2" @click="toggle()"></a>
+			</div>
+	    </div>
+      	<div class="nav">
+	      	<div class="nav-all">
+	      		<div class="nav-n">
+	      			<div class="nav-l">
+		      			<img src="../../images/banner.png"/>
+		      		</div>
+		      		<div class="nav-r">
+		      			<ul>
+		      				<li class="li1">wo</li>
+		      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+		      				<li class="li3">2017.07.24</li>
+		      			</ul>
+		      		</div>
+	      		</div>
+	      		<div class="nav-n">
+	      			<div class="nav-l">
+		      			<img src="../../images/banner.png"/>
+		      		</div>
+		      		<div class="nav-r">
+		      			<ul>
+		      				<li class="li1">wo</li>
+		      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+		      				<li class="li3">2017.07.24</li>
+		      			</ul>
+		      		</div>
+	      		</div>
+	      		<div class="nav-n">
+	      			<div class="nav-l">
+		      			<img src="../../images/banner.png"/>
+		      		</div>
+		      		<div class="nav-r">
+		      			<ul>
+		      				<li class="li1">wo</li>
+		      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+		      				<li class="li3">2017.07.24</li>
+		      			</ul>
+		      		</div>
+	      		</div>
+	      		<div class="nav-n">
+	      			<div class="nav-l">
+		      			<img src="../../images/banner.png"/>
+		      		</div>
+		      		<div class="nav-r">
+		      			<ul>
+		      				<li class="li1">wo</li>
+		      				<li class="li2">问题描述：您沙发了就撒了疯狂就爱上了飞几十块了房间上课了房间是考虑到附近爱速度快了房间爱是考虑到附近爱速度快了房间爱速度快了房</li>
+		      				<li class="li3">2017.07.24</li>
+		      			</ul>
+		      		</div>
+	      		</div>
+	      	</div>
+	      	<div class="footer">
+	            <div class="footer-all">
+	                <div class="txt">
+	                    <input type="text" placeholder="回复答疑"/>
+	                </div>
+	            </div>
+	        </div>
+      	</div>
+      	
+      	<div class="mark" v-show="show"></div>
+      	<div class="up" v-show="show">
+      		<div class="up-b">
+      			<div class="up1">
+      				<div class="up-l" @click="toggle()">取消</div>
+      				<div class="up-r" @click="toggle1()">关闭答疑</div>
+      			</div>
+      		</div>
+      	</div>
+      	<div class="up-bottom" v-show="isshow">
+	        <div class="up-all">
+	            <ul>
+	                <li class="li1"><a class="a1" @click="toggle();toggle1()">取消</a></li>
+	                <li class="li2"><a class="a2">关闭答疑</a></li>
+	            </ul>
+	        </div>
+	    </div>
+    </div>
+</template>
+<script>
+    import qs from 'qs'
+    export default {
+    name:'first',
+        data () {
+             return {
+                show:false,
+                isshow:false
+             };
+         },
+         mounted(){
+             
+         },
+         methods: {
+             toggle(){
+             	this.show=!this.show
+             },
+             toggle1(){
+             	this.isshow=!this.isshow
+             }
+         }
+    }
+</script>
+<style scoped>
+	.header{position: fixed;top: 0;height: 0.88rem;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;width: 100%;background: #fff;z-index: 1;}
+	.headerall{width: 6rem;margin: 0 auto;}
+	.header .a1{width: 0.18rem;height: 0.88rem;display: block;background: url(../../images/back.png) no-repeat 0 50%;background-size: 0.18rem 0.34rem;float:left;}
+    .header .a2{width: 0.32rem;height: 0.88rem;display: block;background: url(../../images/dian3.png) no-repeat 0 50%;background-size: 0.32rem 0.06rem;float:right;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+
+	.nav{position: absolute;top: 1.28rem;width: 100%;padding-bottom: 1.66rem;}
+	.nav-all{width:6rem;margin: 0 auto;overflow: hidden;}
+	.nav-n{margin-top: 0.27rem;display: flex;}
+	.nav-l{width: 0.82rem;height: 0.68rem;float: left;}
+	.nav-l img{width: 0.68rem;height: 0.68rem;margin: 0 auto;display: block;border-radius: 50%;}
+	.nav-r{float: left;overflow: hidden;flex: 1;margin-left: 0.13rem;border-bottom: 1px solid #ebebeb;}
+	.nav-r li{float: left;}
+	.nav-r .li1{font-size:0.22rem;line-height: 0.33rem;}
+	.nav-r .li2{font-size:0.2rem;line-height: 0.36rem;margin-top: 0.04rem;color: #242424;}
+	.nav-r .li3{font-size:0.14rem;line-height: 0.4rem;background: url(../../images/fbsj.png)no-repeat 0 50%;background-size: 0.18rem 0.18rem;padding-left: 0.29rem;padding-bottom: 0.2rem;}
+
+	
+	.footer{position: fixed;bottom:0;height:1.66rem;width:100%;background:#f5f5f5;position:fixed;bottom:0;left:0;}
+  	.footer-all{width:5.78rem;height:0.8rem;margin:0 auto;border:1px solid #e0e0e0;border-radius:0.4rem;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
+  	input{display:block;}
+  	.txt{width:5.4rem;height:0.8rem;background:url(../../images/tianxie.png) no-repeat 0 50%;background-size:0.35rem 0.31rem;float:right;}
+  	.txt input{width:4.82rem;line-height:0.8rem;padding-left:0.58rem;}
+	
+	.up,.up-b{overflow: hidden;}
+	.up1{width: 5.8rem;margin: 0 auto;position:absolute;top: 50%;left:50%;transform: translate(-50%,-50%);}
+	.up{width: 100%;height: 1.65rem;border-top: 1px solid #ebebeb;background: #fff;position: fixed;bottom: 0;z-index:16;}
+	.up-l{float: left;width: 2.78rem;height: 0.8rem;font-size: 0.27rem;border: 1px solid #008dd3;border-radius: 0.4rem;color: #008dd3;text-align: center;line-height: 0.8rem;}
+	.up-r{float: right;width:2.8rem;height:0.82rem;font-size: 0.27rem;background:#008dd3;border-radius: 0.4rem;color: #fff;text-align: center;line-height: 0.82rem;}
+	.mark{width:100%;height:100%;position:fixed;bottom:0;left:0;background:rgba(36,153,200,0.3);display:block;z-index:5;}
+
+	.up-bottom{width:5.36rem;height:3.8rem;background:url(../../images/yiwen.png)no-repeat;background-size:cover;position:fixed;top:50%;left:50%;margin-top:-2.045rem;margin-left:-2.62rem;z-index:10;border-radius:0.05rem;}
+    .up-all{width:4.6rem;height:100%;margin:0 auto;}
+    
+    .up-all ul{width:4.4rem;height:0.56rem;margin:0 auto;position: absolute;bottom: 0.35rem;left: 50%;transform: translateX(-50%);}
+    .up-all ul li{width:2.08rem;height:0.54rem;float:left;border-radius:0.28rem;border:1px solid #008dd3;}
+    .up-all ul li .a1{width:2.08rem;height:0.54rem;line-height:0.54rem;color:#008dd3;font-size:0.22rem;display:block;text-align:center;border-radius:0.28rem;}
+    .up-all ul li .a2{width:2.08rem;height:0.54rem;line-height:0.54rem;color:#fff;background:#008dd3;font-size:0.22rem;display:block;text-align:center;border-radius:0.28rem;}
+    .up-all .li2{float:right;}
+</style>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name = "format-detection" content = "telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,viewport-fit=cover">-->
+    <title>zone</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+      /*IOS无论什么东西 点击就出现背景颜色*/
+      *{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;}
+
+			html,
+			body,
+			#app {
+				/*font-family: '微软雅黑';*/
+				height: 100%;
+			}
+      body{
+        /*padding-bottom: constant(safe-area-inset-bottom);*/
+      }
+			li {
+				list-style: none;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:hover {
+				-webkit-tap-highlight-color: transparent;
+			}
+			input {
+				border: 0;
+				background: none;
+				outline: none;
+      }
+
+			textarea {
+				resize: none;
+				outline: none;
+				border: 0;
+				display: block;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+			input[type=button] {
+				-webkit-appearance: none;
+				outline: none
+			}
+
+			.line {
+				height: 0.2rem;
+				background: #f0f0f0;
+			}
+
+			.load {
+				padding: 10px;
+				background: none;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				z-index: 9;
+				width: 85px;
+				height: 85px;
+				margin: -42px 0 0 -57px;
+			}
+
+			.load4 .loader {
+				font-size: .5px;
+				margin: 3em auto;
+				width: 1em;
+				height: 1em;
+				border-radius: 50%;
+				position: relative;
+				text-indent: -9999em;
+				-webkit-animation: load4 1.3s infinite linear;
+				animation: load4 1.3s infinite linear;
+				position: relative;
+			}
+
+			.load4 .loader i {
+				display: block;
+				width: 40px;
+				height: 40px;
+				background: url(./static/loading.gif) no-repeat center;
+				background-size: 100%;
+				position: absolute;
+				top: 50%;
+				margin-top: -20px;
+				left: 50%;
+				margin-left: -20px;
+			}
+
+			.loading-layer {
+				width: 100%;
+				height: 60px;
+				text-align: center;
+				font-size: 16px;
+				line-height: 60px;
+				color: #aaa;
+				position: relative;
+			}
+
+			.loading-layer span {
+				display: none;
+			}
+
+			.loading-layer span img {
+				display: block;
+				margin: 8px auto 0;
+			}
+
+			.loading-layer div {
+				display: none;
+			}
+
+			.loading-layer .active {
+				display: inline-block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app"></div>
+	</body>
+	<script src="cordova.js"></script>
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if(!clientWidth) return;
+					if(clientWidth > 414) {
+						docEl.style.fontSize = 100 + 'px';
+					} else {
+						docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+					}
+				};
+			if(!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady(){
+        //StatusBar.overlaysWebView(true);
+        StatusBar.styleDefault();
+        console.log('状态栏：',StatusBar);
+    }
+  </script>
+
+</html>

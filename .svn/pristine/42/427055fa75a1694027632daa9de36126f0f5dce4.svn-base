@@ -1,0 +1,73 @@
+<template>
+  <div class="gift">
+    <my-header title="礼品商城"></my-header>
+    <div class="nav">
+        <div class="nav-t">
+            <div class="nav-t-t">
+                <div class="nav-l nav-c"></div>
+                <div class="shopimg">
+                    <img src="../../images/shop.png"/>
+                </div>
+                <div class="nav-r nav-c"></div>
+            </div>
+            <div class="nav-t-b">
+                <ul class="nav-ul">
+                    <li class="li1">漫步者（EDIFIER）W800BT 立体声蓝 牙耳机 苍穹黑 漫步者全新一代电视音</li>
+                    <li class="li2"><span class="sp1">500积分</span><span class="sp2">已有<span class="sp3">500</span>人兑换</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-b">
+            <ul class="nav-b-ul">
+                <li class="ul-li1">商品详情：</li>
+                <li class="ul-li2">无线耳机时代来临，理想的蓝牙耳机应该是什么样？出色的音质聆听？</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-dh">兑换</div>
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .nav{width:100%;height:100%;background:#008dd3;padding-top:0.2rem;padding-bottom:1.66rem;}
+    .nav-t{width:6rem;height:6.4rem;background:#fff;margin: 0 auto;margin-bottom:0.1rem;}
+    .nav-c{width:0.25rem;height:0.25rem;background:#008dd3;border-radius:50%;position:absolute;top: 4.65rem;}
+    .nav-l{left: -0.3rem;}
+    .nav-r{right: -0.3rem;}
+    .nav-t-t{height:4.8rem;width:5.7rem;margin: 0 auto;position:relative;border-bottom:1px solid #ebebeb;}
+    .nav-t-b{width:5.34rem;margin: 0 auto;}
+    .li1{line-height:0.31rem;font-size:0.26rem;color:#242424;margin-top:0.27rem;}
+    .li2{line-height:0.55rem;font-size:0.2rem;}
+    .li2 .sp1{color:#1094d6;}
+    .li2 .sp2{color:#b7b7b7;float:right;}
+    .li2 .sp3{color:#1094d6;}
+    .shopimg{width:2.2rem;height:2.2rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+    .shopimg img{width:2.2rem;height:2.2rem;display:block;}
+    
+    .nav-b{width:6rem;height:1.6rem;background:#fff;margin: 0 auto;margin-bottom:0.3rem;}
+    .nav-b-ul{width:5.15rem;margin:0 auto;}
+    .ul-li1{font-size:0.26rem;line-height:0.6rem;margin-top:0.12rem;color:#242424;}
+    .ul-li2{font-size:0.22rem;line-height:0.32rem;color:#8f8f8f;}
+    .footer{height:1.66rem;width:100%;position:fixed;bottom:0;background:#fff;}
+    .footer-dh{width:3.79rem;height:0.82rem;line-height:0.82rem;background:#54c2f0;border-radius:0.41rem;text-align:center;color:#fff;font-size:0.26rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+</style>

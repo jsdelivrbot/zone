@@ -1,0 +1,124 @@
+<template>
+  <div class="tjshdz">
+    <div class="header">
+        <div class="header1">
+            <a href="javascript:history.go(-1);" class="a1"></a>
+            <span class="forget">添加收货地址</span>
+            <a class="a2">保存</a>
+        </div>
+    </div>
+    <div class="body">
+    	<div class="list">
+    		<span class="sp1">收货人：</span>
+    		<input type="text"/>
+    	</div>
+    	<div class="list">
+    		<span class="sp1">手机号码：</span>
+    		<input type="text"/>
+    	</div>
+    	<div class="list">
+    		<span class="sp1">所在地区：</span>
+    		<span class="spa">11</span>
+    		<span class="sp2"></span>
+    	</div>
+    	<div class="list">
+    		<span class="sp1">详细地址：</span>
+    		<input type="text"/>
+    	</div>
+    	<div class="list">
+    		<span class="sp1">邮编：</span>
+    		<input type="text"/>
+    	</div>
+    	<div class="line"></div>
+    	<div class="list">
+    		<span class="sp1">默认地址</span>
+    		<div class="checkbox">
+			  <input id="example" type="checkbox">
+			  <label for="example">Check</label>
+			</div>
+    	</div>
+    	<div class="line"></div>
+    </div>
+  </div>
+</template>
+<script>
+import {setCookie,getCookie} from '../../../assets/js/cookie.js'
+import qs from 'qs'
+export default {
+  data () {
+    return{
+        
+    }
+  },
+  mounted(){
+    
+  },
+  methods:{
+    
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+    .header{height: 0.88rem;position: relative;box-shadow:0 0 5px #ebebeb;padding-top: 0.4rem;}
+    .header1{width:5.92rem;margin:0 auto;overflow:hidden;}
+    .header .a1{width: 0.18rem;height: 0.34rem;background: url(../../../images/back.png) no-repeat;background-size: cover;float:left;display: block;margin-top:0.27rem;}
+    .header .a2{width: 0.73rem;height: 0.42rem;float:right;display: block;color:#008dd3;line-height:0.42rem;text-align:center;font-size:0.24rem;margin-top:0.25rem;}
+    .forget{line-height:0.88rem;font-size:0.34rem;display:block;float:left;color: #008dd3;position: absolute;left: 50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}    
+  	
+  	.list{height:0.97rem;line-height:0.97rem;font-size: 0.24rem;border-bottom: 1px solid #ebebeb;padding-left: 0.23rem;display: flex;}
+  	.sp1{color: #242424;}
+  	.spa{flex: 1;color: #9f9f9f;}
+    .list input{color: #9f9f9f;flex: 1;}
+    .sp2{float: right;width:0.24rem;height: 0.97rem;display: block;background: url(../../../images/backright.png) no-repeat 0 50%;background-size: 0.12rem 0.24rem;margin-right: 0.32rem;}
+	.checkbox{flex: 1;}
+	input[type="checkbox"] {
+	  -webkit-appearance: none;
+	  -moz-appearance:none
+	}
+	input[type="checkbox"]:checked + label,
+	input[type="checkbox"]:not(:checked) + label {
+	  background-color: #e0e0e0;
+	  border-radius: 0.2rem;
+	  cursor: pointer;
+	  display: inline-block;
+	  height: 0.4rem;
+	  position: relative;
+	  text-indent: -9999px;
+	  width: 0.84rem;
+	  float: right;
+	  margin-top: 0.3rem;
+	  margin-right: 0.2rem;
+	}
+
+	input[type="checkbox"]:checked + label:after,
+	input[type="checkbox"]:not(:checked) + label:after {
+	  background-color: #fff;
+	  border-radius: 0.19rem;
+	  content: " ";
+	  height: 0.38rem;
+	  left: 0.02rem;
+	  position: absolute;
+	  top: 0.005rem;
+	  width: 0.4rem;
+	}
+	input[type="checkbox"]:checked + label {
+	  background-color: #54c2f0;
+	}
+	
+	input[type="checkbox"]:checked + label:after {
+	  left: 0.43rem;
+	}
+	input[type="checkbox"]:checked + label,
+	input[type="checkbox"]:not(:checked) + label {
+	  -webkit-transition: background-color 0.3s;
+	    transition: background-color 0.3s;
+	}
+	
+	input[type="checkbox"]:checked + label:after,
+	input[type="checkbox"]:not(:checked) + label:after {
+	  -webkit-transition: left 0.3s;
+	    transition: left 0.3s;
+	}
+</style>

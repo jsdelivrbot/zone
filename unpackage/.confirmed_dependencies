@@ -1,0 +1,10 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "static/loading.png"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}

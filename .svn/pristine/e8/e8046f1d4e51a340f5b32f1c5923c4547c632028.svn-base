@@ -1,0 +1,107 @@
+<template>
+    <div class="manage">
+        <my-header title="报名管理"></my-header>
+        <div>
+            <div class="manage-all">
+                <ul class="ul1">
+                    <li class="li1">
+                        <label>
+                            <input type="checkbox"><b></b>
+                        </label>
+                    </li>
+                    <li class="li2">习惯孤独</li>
+                    <li class="li3">2017.07.24</li>
+                </ul>
+                <div class="man">
+                    <div class="man-t">
+                        <ul class="man1">
+                            <li class="li1">真实姓名：</li>
+                            <li class="li2">111</li>
+                        </ul>
+                        <ul class="man2">
+                            <li class="li1">手机号：</li>
+                            <li class="li2">15633138235</li>
+                        </ul>
+                    </div>
+                    <div class="man-b">
+                        <ul class="man3">
+                            <li class="li1">QQ：</li>
+                            <li class="li2">111s</li>
+                        </ul>
+                        <ul class="man4">
+                            <li class="li1">状态：</li>
+                            <li class="li2 cb">111</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="man-down">
+                    <li class="li1">备注：</li>
+                    <li class="li2">111</li>
+                </ul>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="footer">
+            <ul class="ul1">
+                <li class="li1">
+                    <label>
+                        <input type="checkbox"><b></b>
+                    </label>
+                </li>
+                <li class="li2">全选</li>
+                <li class="f-r">
+                    <span>批准</span><span>需完善</span><span>发通知</span><span>拒绝</span>
+                </li>
+            </ul>
+        
+        </div>
+    </div>
+</template>
+
+<script>
+import qs from 'qs'
+export default {
+    name:'manage',
+        data () {
+             return {
+                
+             };
+         },
+         
+         methods: {
+             
+         }
+    }
+</script>
+<style scoped>
+    .manage-all{width:6rem;margin:0 auto;overflow:hidden;}
+    label{width: 0.18rem;height: 0.18rem;display: block;position:relative;z-index:1;top:50%;transform: translateY(-50%);}
+    input[type="checkbox"] {display: none;position:absolute;}
+	input[type="checkbox"]+b {border:1px solid #e0e0e0;position:absolute;display: inline-block;width: 0.18rem;height: 0.18rem;cursor: pointer;border-radius: 0.05rem;vertical-align: middle;}
+	input[type="checkbox"]:checked+b {background: #008dd3}
+   
+    .manage-all .ul1{height:0.76rem;line-height:0.76rem;border-bottom:1px solid #ebebeb;display:flex;width:100%;}
+    .manage-all ul li{float:left;}
+    .manage-all .ul1 .li1{width:0.3rem;height:0.76rem;float:left;position: relative;margin-right:0.1rem;}
+    .manage-all .ul1 .li2{color:#008dd3;font-size:0.22rem;flex:1;}
+    .manage-all .ul1 .li3{color:#949494;font-size:0.2rem;float:right;background:url(../../images/fbsj.png) no-repeat 0 50%;background-size:0.18rem 0.18rem;padding-left:0.28rem;}
+    
+    .man ul{overflow:hidden;width:3.09rem;display:flex;float:left;}
+    .man1,.man3{border-right:1px solid #ebebeb;}
+    .man .li1{height:0.84rem;font-size:0.22rem;color:#949494;line-height:0.84rem;padding-left:0.1rem;}
+    .man .li2{height:0.84rem;font-size:0.22rem;color:#292929;line-height:0.84rem;float:right;flex:1;text-align:right;padding-right:0.15rem;}
+    .man-t,.man-b{float:left;height:0.84rem;border-bottom:1px solid #ebebeb;}
+    .man-t .man2{width:2.9rem;}
+    .man-b .man4{width:2.9rem;}
+    .man4 .cb{color:#008dd3;}
+
+    .man-down{height:0.85rem;line-height:0.85rem;font-size:0.22rem;color:#949494;padding-left:0.1rem;}
+    .man-down .li2{height:0.85rem;line-height:0.85rem;font-size:0.22rem;color:#292929;}
+
+    .footer{position:fixed;bottom:0;left:0;height:0.88rem;background:#f6f6f6;width:100%;border-top:1px solid #ebebeb;}
+    .footer .ul1{height:0.88rem;line-height:0.88rem;display:flex;width:100%;width:6rem;margin:0 auto;}
+    .footer .ul1 .li1{width:0.3rem;height:0.88rem;float:left;position: relative;margin-right:0.1rem;}
+    .footer .ul1 .li2{width:0.39rem;color:#a2a2a2;font-size:0.16rem;}
+    .footer .ul1 .f-r{margin-left:0.17rem;margin-top:0.23rem;}
+    .footer .ul1 .f-r span{width:1.1rem;height:0.42rem;background:#54c2f0;color:#fff;border-radius:0.21rem;display:block;text-align:center;line-height:0.42rem;font-size:0.18rem;display:block;float:left;margin-left:0.14rem;}
+</style>
